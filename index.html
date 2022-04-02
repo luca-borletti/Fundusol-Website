@@ -23,7 +23,7 @@
             <img id = "mobile-cta" class = "mobile-menu" src="assets/menu.svg" alt="Open Navigation">
 
             <nav>
-                <img id = "modile-exit" class = "mobile-menu-exit" src="assets/exit.svg" alt="">
+                <img id = "mobile-exit" class = "mobile-menu-exit" src="assets/exit.svg" alt="">
                 <ul class = "primary-nav">
                     <li><a href="#">Home</a></li>
                     <li><a href="#">Service</a></li>
@@ -69,25 +69,53 @@
             <ul>
                 <li class="page-card">
                     <h1>Understanding agrivoltaics</h1>
-                    <img src="assets/bifacial-vector.svg" alt="">
+                    <img class = "cards-image-special1" src="assets/bifacial-vector.svg" alt="">
                     <p>What is agrivoltaics?</p>
                     <!-- TODO SVG animation arrow -->
                 </li>
                 <li class="page-card">
                     <h1>Revolutionizing agrivoltaics</h1>
-                    <img src="assets/ipo-vector.svg" alt="">
+                    <img class = "cards-image-special2" src="assets/ipo-vector.svg" alt="">
                     <p>The Fundusol Approach</p>
                     <!-- TODO SVG animation arrow -->
                 </li>
                 <li class="page-card">
                     <h1>Expanding agrivoltaics</h1>
-                    <img class = "cards-image-special" src="assets/field-vector.svg" alt="">
+                    <img class = "cards-image-special3" src="assets/field-vector.svg" alt="">
                     <p>Grow with us</p>
                     <!-- TODO SVG animation arrow -->
                 </li>
             </ul>
         </div>
     </section>
+
+    <footer>
+        <div class="container">
+            <div class="contact-info">
+
+            </div>
+            
+            <img src="" alt="">
+
+            <div class="social-medias">
+
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const mobileBtn = document.getElementById("mobile-cta")
+              nav = document.querySelector("nav")
+              mobileBtnExit = document.getElementById("mobile-exit");
+
+        mobileBtn.addEventListener("click", () => {
+            nav.classList.add("menu-btn");
+        })
+
+        mobileBtnExit.addEventListener("click", () => {
+            nav.classList.remove("menu-btn");
+        })
+    </script>
 </body>
 </html>
 
@@ -99,4 +127,3 @@
     <a href="index.html" class="element"> Pricing </a>
     <a href="index.html" class="element"> Mission </a>
     <a href="index.html" class="element"> Team </a> -->
-
