@@ -23,7 +23,7 @@ body { //selector (name of elem or a class),
     padding: 1em;
 
     .logo {
-        height: 2em;
+        height: 3em;
         display: flex;
     }
 
@@ -324,18 +324,21 @@ nav {
         //     display: flex;
         // }
 
-        a {
-            color: black;
-            font-size: 1em;
-            padding: .1em 1em;
-        }
-
+        
         ul.primary-nav {
             margin: 0;
             display: flex;
             li {
-                margin-top: .25em;
+                // vertical-align: middle;
+                display: flex;
+                margin-top: .75em;
                 width: 90px;
+                a {
+                    // text-align: center;
+                    color: black;
+                    font-size: 1em;
+                    padding: .1em 1em;
+                }
             }
         }
 

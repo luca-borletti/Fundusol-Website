@@ -19,7 +19,7 @@ body {
 }
 
 .navbar .logo {
-  height: 2em;
+  height: 3em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -337,11 +337,6 @@ nav li a:hover {
     width: 100%;
     padding: 0;
   }
-  .navbar nav a {
-    color: black;
-    font-size: 1em;
-    padding: .1em 1em;
-  }
   .navbar nav ul.primary-nav {
     margin: 0;
     display: -webkit-box;
@@ -349,8 +344,16 @@ nav li a:hover {
     display: flex;
   }
   .navbar nav ul.primary-nav li {
-    margin-top: .25em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: .75em;
     width: 90px;
+  }
+  .navbar nav ul.primary-nav li a {
+    color: black;
+    font-size: 1em;
+    padding: .1em 1em;
   }
   .hero-image {
     height: 100vh;
