@@ -1,0 +1,22 @@
+\\\/// footer responsiveness DONE!
+
+
+- convert 3 approach side-sections into big sections with side sections within
+
+- color animnations
+
+- survey button
+
+- incorporate images in section headers in service page
+
+- navbar fade to differentiate and also animated
+
+- improve hamburger menu
+
+- Made by Luca font decoration
+file:///Users/lucaborletti/Desktop/Home%20-%20Neuralink.html
+https://www.sliderrevolution.com/resources/css-hamburger-menu/
+
+
+
+

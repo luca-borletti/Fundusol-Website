@@ -67,13 +67,13 @@
     <section class="cards-section">
         <div class="container">
             <ul>
-                <li class="page-card" onclick="location.href='service.html#what-header-container';">
+                <li class="page-card" onclick="location.href='service.html#what-section';">
                     <h1>Understanding agrivoltaics</h1>
                     <img class = "cards-image-special1" src="assets/bifacial-vector.svg" alt="">
                     <p>What is agrivoltaics?</p>
                     <!-- TODO SVG animation arrow -->
                 </li>
-                <li class="page-card" onclick="location.href='service.html#approach-header-container';">
+                <li class="page-card" onclick="location.href='service.html#approach-section';">
                     <h1>Revolutionizing agrivoltaics</h1>
                     <img class = "cards-image-special2" src="assets/ipo-vector.svg" alt="">
                     <p>The Fundusol Approach</p>
@@ -96,7 +96,15 @@
                 Stanford, CA 94309
             </div>
             
-            <a href="index.html"><img class = "footer-logo" src="assets/logo-white.svg" alt="Fundusol"></a>
+            <!-- <a href="index.html"><img class = "footer-logo" src="assets/logo-white.svg" alt="Fundusol"></a> -->
+            <a href="index.html">
+                <picture>
+                    <source media="(min-width: 1080px)" class = "footer-logo" srcset="assets/logo-white.svg">
+                    <!-- <source media="(max-width: 1079px)" class = "footer-logo" srcset="assets/logo-notext.svg"> -->
+                    <img src="assets/logo-notext.svg" class = "footer-logo" alt="">
+                </picture>
+            </a>
+
 
             <div class="social-medias">
                 <a href="https://www.instagram.com/fundusol/"><img class = "instagram-icon" src="assets/instagram-icon.svg" alt=""></a>
@@ -106,7 +114,7 @@
         </div>
         <div class="bottom-container">
             <div class="copyright">
-                Copyright © 2022 Fundusol Inc.
+                © 2022 Fundusol Inc.
             </div>
             <div class="made-by">
                 Made by
