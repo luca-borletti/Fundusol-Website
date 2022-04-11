@@ -2,17 +2,16 @@
 <html lang = "en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Service - Fundusol</title>
-    <!-- <link rel="stylesheet" href="https://use.typekit.net/gch5qou.css">                            -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Expanding agrivoltaics to benefit struggling farms and mitigate the effects of climate change">
     <meta name="author" content="Luca Borletti">
     <meta name="keywords" content="Agrivoltaics, Startup, Solar, Farming">
     <link rel="stylesheet" type="text/css" href="css/main.css"> 
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="icon" href="./assets/icon.png">
-    <!-- <script src="./index_files/jquery.min.js"></script> -->
+    <script src="./index_files/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class = "navbar">
@@ -24,10 +23,26 @@
             <nav>
                 <img id = "mobile-exit" class = "mobile-menu-exit" src="assets/exit.svg" alt="">
                 <ul class = "primary-nav">
-                    <li><a href="./index.html">Home</a></li>
-                    <li><a href="./service.html">Service</a></li>
-                    <li><a href="./partnering.html">Partnering</a></li>
-                    <li><a href="./team.html">Team</a></li>
+                    <li>
+                        <div class="anim-container">
+                            <a class = "underline-anim" href="./index.html">Home</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="anim-container">
+                            <a class = "underline-anim" href="./service.html">Service</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="anim-container">
+                            <a class = "underline-anim" href="./partnering.html">Partnering</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="anim-container">
+                            <a class = "underline-anim"  href="./team.html">Team</a>
+                        </div>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -46,26 +61,47 @@
             <div class="text-col">
                 <h1>The Basics</h1>
                 <p>
-                    Put simply, Agrivoltaics is the placement <br> of
+                    Put simply, Agrivoltaics is the placement of
                     <span class="solar-panels">solar panels</span> 
                     above <span class="crops">crops</span>.
                 </p> 
             </div>
-            <img src="/assets/bifacial-vector.svg" alt="" class="what-bifacial-vector">
+            <div class="img-col">
+                <!-- <div class="spacer"></div> -->
+                <img src="/assets/bifacial-panels-vector.svg" alt="" class="basics">
+                <!-- <img src="/assets/bifacial-vector.svg" alt="" class="basics"> -->
+                <!-- <div class="spacer"></div> -->
+            </div>
         </div>
     </section>
 
     <section class="right-info-pic-section">
         <div class="info-pic-container">
-            <img src="/assets/placeholder.svg" alt="" class="">
+            <div class="img-col">
+                <img src="/assets/placeholder.svg" alt="" class="">
+            </div>
             <div class="text-col">
                 <h1>The Science</h1>
-                <p>
-                    The shade provided by solar panels cools <br>
-                    the air underneath. At the same time, plant <br>
-                    evapotranspiration increases ambient air <br>
-                    moisture, which also reduces temperature.<br>
+                <!-- <p>
+                    The shade provided by the solar panels cools <br>
+                    the air underneath. <br>
                     <br>
+                    At the same time, the plants' evapotranspiration <br>
+                    increases ambient air moisture, which also <br>
+                    reduces temperature.<br>
+                    <br>
+                    The result is a microclimate effect!
+                </p>  -->
+                <p>
+                    The shade provided by the solar panels cools 
+                    the air underneath.
+                </p>
+                <p>
+                    At the same time, the plants' evapotranspiration
+                    increases ambient air moisture, which also
+                    reduces temperature.
+                </p>
+                <p>
                     The result is a microclimate effect!
                 </p> 
             </div>
@@ -77,27 +113,28 @@
             <div class="text-col">
                 <h1>The Benefits</h1>
                 <p>
-                    Under reduced heat stress, shade-tolerant <br>
-                    <span class="crop-yield">crops perform better</span>. <br>
-                    <br>
-                    Lower temperatures reduce evaporation, <br>
-                    which both improves <span class="soil-quality">soil quality</span> and <br>
-                    reduces the amount of <span class="water-use">water needed</span> to <br>
-                    yield the same crop growth.<br>
-                    <br>
-                    Plants act as natural air conditoners <br>
-                    so solar can take advantage of sunlight <br>
-                    without getting too hot to perform <br>
+                    Under reduced heat stress, shade-tolerant
+                    <span class="crop-yield">crops perform better</span>.
+                </p>
+                <p>
+                    Lower temperatures reduce evaporation,
+                    which both improves <span class="soil-quality">soil quality</span> and
+                    reduces the amount of <span class="water-use">water needed</span> to
+                    yield the same crop growth.
+                </p>
+                <p>
+                    Plants act as natural air conditoners 
+                    so solar can take advantage of sunlight
+                    without getting too hot to perform 
                     <span class="solar-output">efficiently</span>.
-                    <!-- Hundreds of studies have shown increases in 
-                    <span class="solar-output">solar output</span>, 
-                    <span class="crop-yield">crop yield</span>, 
-                    <span class="water-use">water-use efficiency</span>, and 
-                    <span class="soil-quality">soil quality—</span>
-                    particularly for shade tolerant crops. -->
                 </p>  
+                <p>
+                    
+                </p>
             </div>
-            <img src="/assets/benefits-vector.svg" alt="" class="science-benefits-vector">
+            <div class="img-col">
+                <img src="/assets/benefits-vector.svg" alt="" class="science-benefits-vector">
+            </div>
         </div>
     </section>
     
@@ -107,60 +144,106 @@
             <p>Optimizing Agrivoltaics for <span>your</span> farm</p>
         </div>
         <div class="approach-facets">
-            <div class="facet">Increasing Crop Yield</div>
-            <div class="facet">Maximizing Solar Output</div>
-            <div class="facet">Boosting Savings</div>
+            <div class="crop-facet">
+                <h1>
+                    Increasing Crop Yield
+                </h1>
+                <!-- <a href="">
+                    <h1>
+                        Increasing Crop Yield
+                    </h1>
+                    <div class="underline-anim">
+                        
+                    </div>
+                </a> -->
+            </div>
+            <div class="solar-facet">
+                <h1>
+                    Maximizing Solar Output
+                </h1>
+            </div>
+            <div class="savings-facet">
+                <h1>
+                    Boosting Savings
+                </h1>
+            </div>
         </div>
     </section>
 
-    <section class="increasing-crop-yield">
+    <div class="farm-data-animation">
+        <!-- need the photo lol -->
+    </div>
+
+    <section class="maximizing-solar-section">
+        <div class="info-pic-container">
+            <div class="text-col">
+                <h1>Maximizing Solar</h1>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    Suspendisse quis dolor in lacus venenatis blandit. Vivamus 
+                    eleifend erat sapien, ut volutpat eros condimentum a. 
+                    Donec dictum volutpat mi eget aliquet. 
+                </p> 
+                <p>
+                    Ut quis laoreet 
+                    magna, in posuere ex. Etiam vel nibh eu ipsum posuere 
+                    consectetur. Donec sollicitudin finibus commodo. 
+                </p>
+                </div>
+            <div class="img-col">
+                <img src="/assets/placeholder.svg" alt="" class="">
+            </div>
+        </div>
+    </section>
+
+    <section class="increasing-crop-yield-section">
         <div class="info-pic-container">
             <div class="text-col">
                 <h1>Increasing Crop Yield</h1>
                 <p>
-                    Drawing on our team's extensive background <br>
-                    in math and computer science, our <br>
-                    computational algorithm is designed to pick <br>
-                    the optimal solar panel array for your crops. <br>
-                    Using shadowing and convection heat modeling, <br>
-                    we quantify the microclimate effect on <br>
-                    temperature and humidity under various <br>
-                    agrivoltaic schemes. Then, we use plant-<br>
-                    specific yield models to predict the resulting <br>
-                    benefits for crop growth and irrigation costs <br>
-                    and select the most efficient possible layout.
-                </p> 
-            </div>
-            <img src="/assets/placeholder.svg" alt="" class="">
-        </div>
-
-
-
-    </section>
-
-    <section class="maximizing-solar">
-        <div class="info-pic-container">
-            <img src="/assets/placeholder.svg" alt="" class="">
-            <div class="text-col">
-                <h1>Maximizing Solar</h1>
+                    Drawing on our team's extensive background
+                    in math and computer science, our
+                    computational algorithm is designed to pick
+                    the optimal solar panel array for your crops.
+                </p>
                 <p>
-                    
-                </p> 
+                    Using shadowing and convection heat modeling,
+                    we quantify the microclimate effect on
+                    temperature and humidity under various
+                    agrivoltaic schemes.
+                </p>
+                <p>
+                    Then, we use plant specific yield models to 
+                    predict the resulting benefits for crop growth 
+                    and irrigation costs and select the most 
+                    efficient possible layout.
+                </p>
+            </div>
+            <div class="img-col">
+                <img src="/assets/placeholder.svg" alt="" class="">
             </div>
         </div>
-
-        
     </section>
 
-    <section class="boosting-savings">
+    <section class="boosting-savings-section">
         <div class="info-pic-container">
             <div class="text-col">
                 <h1>Boosting Savings</h1>
                 <p>
-                    
+                    Aliquam feugiat malesuada mauris, ac aliquet ligula congue 
+                    at. Sed condimentum nisl eu dolor tempus molestie 
+                    pellentesque gravida eros. Praesent ultricies pellentesque 
+                    malesuada. 
                 </p> 
+                <p>
+                    Sed eget orci vel turpis condimentum gravida et 
+                    sit amet ex. Cras massa tellus, varius maximus lacus eu, 
+                    consequat lacinia felis. Nulla sit amet pulvinar magna. 
+                </p>
             </div>
-            <img src="/assets/placeholder.svg" alt="" class="">
+            <div class="img-col">
+                <img src="/assets/placeholder.svg" alt="" class="">
+            </div>
         </div>
 
         
@@ -169,13 +252,22 @@
     <footer>
         <div class="top-container">
             <div class="contact-info">
-                <p>
-                    fundusol.energy@gmail.com
-                    Stanford, CA 94309
-                </p>
+                <!-- <div class="anim-container"></div> -->
+                <!-- class = "underline-anim" -->
+                <a href="mailto:fundusol.energy@gmail.com">fundusol.energy@gmail.com</a>
+                <!-- </div> -->
+                Stanford, CA 94309
             </div>
             
-            <a href="index.html"><img class = "footer-logo" src="assets/logo-white.svg" alt="Fundusol"></a>
+            <!-- <a href="index.html"><img class = "footer-logo" src="assets/logo-white.svg" alt="Fundusol"></a> -->
+            <a href="index.html">
+                <picture>
+                    <source media="(min-width: 1080px)" class = "footer-logo" srcset="assets/logo-white.svg">
+                    <!-- <source media="(max-width: 1079px)" class = "footer-logo" srcset="assets/logo-notext.svg"> -->
+                    <img src="assets/logo-notext.svg" class = "footer-logo" alt="">
+                </picture>
+            </a>
+
 
             <div class="social-medias">
                 <a href="https://www.instagram.com/fundusol/"><img class = "instagram-icon" src="assets/instagram-icon.svg" alt=""></a>
@@ -187,6 +279,15 @@
             <div class="copyright">
                 © 2022 Fundusol Inc.
             </div>
+            <div class="made-by">
+                Made by
+                <div class="wave-container" onclick="location.href='https://github.com/luca-borletti';">
+                    <span style="--i:1">L</span>
+                    <span style="--i:2">u</span>
+                    <span style="--i:3">c</span>
+                    <span style="--i:4">a</span>
+                </div>
+            </div> 
         </div>
     </footer>
 
@@ -203,13 +304,20 @@
             nav.classList.remove("menu-btn");
         })
     </script>
+    <script type="text/javascript" language="javascript">
+        $(function () {
+            const navbar = document.getElementsByClassName("navbar")[0];
+            var $win = $(window);
+            var intFrameWidth = window.innerWidth;
+            $win.scroll(function () {
+                if ($win.scrollTop() != 0) {
+                    $(".navbar").addClass("notTop");
+                }
+                else {
+                    $(".navbar").removeClass("notTop");
+                }
+            });
+        });
+   </script>
 </body>
 </html>
-<!-- <li><a href="#">Mission</a></li> -->
-                    <!-- <li class = "contact-cta"><a href="#">CONTACT US</a></li> -->
-
-<!-- <a href="index.html" class="element"> Service </a>
-    
-    <a href="index.html" class="element"> Pricing </a>
-    <a href="index.html" class="element"> Mission </a>
-    <a href="index.html" class="element"> Team </a> -->

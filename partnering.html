@@ -2,19 +2,17 @@
 <html lang = "en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Partnering - Fundusol</title>
-    <!-- <link rel="stylesheet" href="https://use.typekit.net/gch5qou.css">                            -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Expanding agrivoltaics to benefit struggling farms and mitigate the effects of climate change">
     <meta name="author" content="Luca Borletti">
     <meta name="keywords" content="Agrivoltaics, Startup, Solar, Farming">
     <link rel="stylesheet" type="text/css" href="css/main.css"> 
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="icon" href="./assets/icon.png">
-    <!-- <script src="./index_files/jquery.min.js"></script> -->
+    <script src="./index_files/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
 </head>
-<!-- <body data-new-gr-c-s-check-loaded="14.1045.0" data-gr-ext-installed=""> -->
 <body>
     <div class = "navbar">
         <div class = "container">
@@ -25,10 +23,26 @@
             <nav>
                 <img id = "mobile-exit" class = "mobile-menu-exit" src="assets/exit.svg" alt="">
                 <ul class = "primary-nav">
-                    <li><a href="./index.html">Home</a></li>
-                    <li><a href="./service.html">Service</a></li>
-                    <li><a href="./partnering.html">Partnering</a></li>
-                    <li><a href="./team.html">Team</a></li>
+                    <li>
+                        <div class="anim-container">
+                            <a class = "underline-anim" href="./index.html">Home</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="anim-container">
+                            <a class = "underline-anim" href="./service.html">Service</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="anim-container">
+                            <a class = "underline-anim" href="./partnering.html">Partnering</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="anim-container">
+                            <a class = "underline-anim"  href="./team.html">Team</a>
+                        </div>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -39,42 +53,52 @@
             <div class="text-col">
                 <h1>For Farms</h1>
                 <p>
-                    To help us learn about your farm, contribute <br>
-                    to our agrivoltaics research, and potentially <br>
-                    partner with us in the future, please fill <br>
+                    To help us learn about your farm, contribute
+                    to our agrivoltaics research, and potentially
+                    partner with us in the future, please fill
                     out this 5 minute survey.
                 </p> 
             </div>
-            <img src="/assets/placeholder.svg" alt="" class="">
+            <div class="img-col">
+                <img src="/assets/placeholder.svg" alt="" class="">
+            </div>
         </div>
     </section>
 
     <section class="right-info-pic-section">
         <div class="info-pic-container">
-            <img src="/assets/placeholder.svg" alt="" class="">
+            <div class="img-col">
+                <img src="/assets/placeholder.svg" alt="" class="">
+            </div>
             <div class="text-col">
                 <h1>For Prospective Partners</h1>
                 <p>
-                    If you are affiliated with a company in the <br>
-                    solar or agircultural industries interested <br>
-                    in agrivoltaics, we would love to meet you! <br>
-                    <br>
-                    The result is a microclimate effect!
+                    If you are affiliated with a company in the
+                    solar or agircultural industries interested
+                    in agrivoltaics, we would love to meet you!
                 </p> 
             </div>
         </div>
+
+        <!-- TODO BUTTON -->
     </section>
 
     <footer>
         <div class="top-container">
             <div class="contact-info">
-                <p>
-                    fundusol.energy@gmail.com
-                    Stanford, CA 94309
-                </p>
+                <a href="mailto:fundusol.energy@gmail.com">fundusol.energy@gmail.com</a>
+                Stanford, CA 94309
             </div>
             
-            <a href="index.html"><img class = "footer-logo" src="assets/logo-white.svg" alt="Fundusol"></a>
+            <!-- <a href="index.html"><img class = "footer-logo" src="assets/logo-white.svg" alt="Fundusol"></a> -->
+            <a href="index.html">
+                <picture>
+                    <source media="(min-width: 1080px)" class = "footer-logo" srcset="assets/logo-white.svg">
+                    <!-- <source media="(max-width: 1079px)" class = "footer-logo" srcset="assets/logo-notext.svg"> -->
+                    <img src="assets/logo-notext.svg" class = "footer-logo" alt="">
+                </picture>
+            </a>
+
 
             <div class="social-medias">
                 <a href="https://www.instagram.com/fundusol/"><img class = "instagram-icon" src="assets/instagram-icon.svg" alt=""></a>
@@ -86,6 +110,15 @@
             <div class="copyright">
                 © 2022 Fundusol Inc.
             </div>
+            <div class="made-by">
+                Made by
+                <div class="wave-container" onclick="location.href='https://github.com/luca-borletti';">
+                    <span style="--i:1">L</span>
+                    <span style="--i:2">u</span>
+                    <span style="--i:3">c</span>
+                    <span style="--i:4">a</span>
+                </div>
+            </div> 
         </div>
     </footer>
 
@@ -102,13 +135,20 @@
             nav.classList.remove("menu-btn");
         })
     </script>
+    <script type="text/javascript" language="javascript">
+        $(function () {
+            const navbar = document.getElementsByClassName("navbar")[0];
+            var $win = $(window);
+            var intFrameWidth = window.innerWidth;
+            $win.scroll(function () {
+                if ($win.scrollTop() != 0) {
+                    $(".navbar").addClass("notTop");
+                }
+                else {
+                    $(".navbar").removeClass("notTop");
+                }
+            });
+        });
+   </script>
 </body>
 </html>
-<!-- <li><a href="#">Mission</a></li> -->
-                    <!-- <li class = "contact-cta"><a href="#">CONTACT US</a></li> -->
-
-<!-- <a href="index.html" class="element"> Service </a>
-    
-    <a href="index.html" class="element"> Pricing </a>
-    <a href="index.html" class="element"> Mission </a>
-    <a href="index.html" class="element"> Team </a> -->
