@@ -66,10 +66,10 @@
                     above <span class="crops">crops</span>.
                 </p> 
             </div>
-            <div class="img-col">
+            <div id="cf">
                 <!-- <div class="spacer"></div> -->
-                <img src="/assets/bifacial-panels-vector.svg" alt="" class="basics">
-                <!-- <img src="/assets/bifacial-vector.svg" alt="" class="basics"> -->
+                <img src="/assets/bifacial-panels-vector.svg" alt="" class="bottom">
+                <img src="/assets/bifacial-vector.svg" alt="" class="top">
                 <!-- <div class="spacer"></div> -->
             </div>
         </div>
@@ -190,8 +190,63 @@
                     consectetur. Donec sollicitudin finibus commodo. 
                 </p>
                 </div>
-            <div class="img-col">
-                <img src="/assets/placeholder.svg" alt="" class="">
+            <!-- <div class="img-col"> -->
+                <!-- <img src="/assets/placeholder.svg" alt="" class="">
+            </div> -->
+            <div class="solar-tech-container">
+                <ul>
+                    <li class = "solar-tech" id="drones">
+                        <div class="top-photo">
+                            <img src="assets/drone.svg" alt="">
+                        </div>
+                        <h1>Drone Inspection</h1>
+                        <p>
+                            Our quality assurance is driven by ML, AI, and 
+                            drone technologies. Leveraging powerful aerial 
+                            drones, we work with partner companies to 
+                            cost-effectively detect damages to solar panels and 
+                            replace them before they cause long-term energy 
+                            losses.
+                        </p>
+                    </li>
+                    <li class = "solar-tech" id="bifacial-panels">
+                        <div class="top-photo">
+                            <img src="assets/solar-tech-bifacial.svg" alt="">
+                        </div>
+                        <h1>Bifacial Modules</h1>
+                        <p>
+                            In contrast to opaque back-sheeted panels, bifacial 
+                            panels capture light both directly from the sun and 
+                            from ground reflection. 
+                        </p>
+                        <p>
+                            This additional absorbtion boosts energy production 
+                            by up to 20% while only increasing module costs by 
+                            5%. And because cropland has a higher albedo than 
+                            than bare ground, agrivoltaics augments the energy 
+                            production of bi-facial modules.
+                        </p>
+                    </li>
+                    <li class = "solar-tech" id="backtracking">
+                        <div class="top-photo">
+                            <img src="assets/backtracking-ipo.svg" alt="">
+                        </div>
+                        <h1>Backtracking</h1>
+                        <p>
+                            Traditonal, true tracking algorithms for mounted 
+                            solar arrays treat each row independently. When 
+                            each row operates without consideration of how the 
+                            adjacent rows are oriented, solar panels shade each 
+                            other. 
+                        </p>
+                        <p>
+                            To avoid the losses associated with such shading, 
+                            we implement a backtracking aglorithm that deviates 
+                            the panels from true tracking in cases where such a 
+                            deviation would increase energy yields.
+                        </p>
+                    </li>
+                </ul>
             </div>
         </div>
     </section>
@@ -241,9 +296,92 @@
                     consequat lacinia felis. Nulla sit amet pulvinar magna. 
                 </p>
             </div>
-            <div class="img-col">
+            <!-- <div class="img-col">
                 <img src="/assets/placeholder.svg" alt="" class="">
-            </div>
+            </div> -->
+            <table class="zigzag">
+                <thead>
+                  <tr>
+                    <th>Year</th>
+                    <th>Principal Balance</th>
+                    <th>Tax Credits</th>
+                    <th>Amount Due after Tax Credits</th>
+                    <th>Net Investment</th>
+                    <th>Payment from Client</th>
+                    <th>Profit from Selling to Grid</th>
+                    <th>Loan Interest</th>
+                    <th>Principal Balance</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>$393,750.00</td>
+                    <td>$189,385.88</td>
+                    <td>$204,364.13</td>
+                    <td class ="in-the-red">$77,932.33</td>
+                    <td>$5,850.00</td>
+                    <td>$13,935.16</td>
+                    <td>$8,174.57</td>
+                    <td>$114,821.20</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>$114,821.20</td>
+                    <td>$7,673.40</td>
+                    <td>$107,147.80</td>
+                    <td>$-</td>
+                    <td>$5,850.00</td>
+                    <td>$14,552.31</td>
+                    <td>$4,285.91</td>
+                    <td>$91,031.40</td>
+                  </tr>
+                  <tr>
+                    <td id="inViewport">3</td>
+                    <td>$91,031.40</td>
+                    <td>$4,556.08</td>
+                    <td>$86,475.32</td>
+                    <td>$-</td>
+                    <td>$5,850.00</td>
+                    <td>$15,196.75</td>
+                    <td>$3,459.01</td>
+                    <td>$68,887.58</td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>$68,887.58</td>
+                    <td>$2,762.42</td>
+                    <td>$66,125.16</td>
+                    <td>$-</td>
+                    <td>$5,850.00</td>
+                    <td>$15,869.70</td>
+                    <td>$2,645.01</td>
+                    <td>$47,050.47</td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td>$47,050.47</td>
+                    <td>$2,762.42</td>
+                    <td>$44,288.05</td>
+                    <td>$-</td>
+                    <td>$5,850.00</td>
+                    <td>$16,572.40</td>
+                    <td>$1,771.52</td>
+                    <td>$23,637.17</td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td>$23,637</td>
+                    <td>$1,371.62</td>
+                    <td>$22,265.55</td>
+                    <td>$-</td>
+                    <td>$5,850.00</td>
+                    <td>$17,306.17</td>
+                    <td>$890.62</td>
+                    <td>$0.00</td>
+                  </tr>
+                </tbody>
+              </table>
         </div>
 
         
@@ -254,9 +392,13 @@
             <div class="contact-info">
                 <!-- <div class="anim-container"></div> -->
                 <!-- class = "underline-anim" -->
-                <a href="mailto:fundusol.energy@gmail.com">fundusol.energy@gmail.com</a>
                 <!-- </div> -->
-                Stanford, CA 94309
+                <div class="anim-container">
+                    <a class="underline-anim" href="mailto:fundusol.energy@gmail.com">fundusol.energy@gmail.com</a>
+                </div>
+                <div class="location">
+                    Stanford, CA 94309
+                </div>
             </div>
             
             <!-- <a href="index.html"><img class = "footer-logo" src="assets/logo-white.svg" alt="Fundusol"></a> -->
@@ -291,6 +433,52 @@
         </div>
     </footer>
 
+
+
+    <script type="text/javascript" language="javascript">
+        const drones = document.getElementById("drones")
+              bifacial = document.getElementById("bifacial-panels")
+              backtracking = document.getElementById("backtracking")
+
+        drones.addEventListener("click", () => {
+            if (!drones.classList.contains("expand-member")) {
+                drones.classList.add("expand-member");
+                bifacial.classList.add("disappear-member");
+                backtracking.classList.add("disappear-member");
+            }
+            else {
+                drones.classList.remove("expand-member");
+                bifacial.classList.remove("disappear-member");
+                backtracking.classList.remove("disappear-member");
+            }
+        })
+
+        bifacial.addEventListener("click", () => {
+            if (!bifacial.classList.contains("expand-member")) {
+                bifacial.classList.add("expand-member");
+                drones.classList.add("disappear-member");
+                backtracking.classList.add("disappear-member");
+            }
+            else {
+                bifacial.classList.remove("expand-member");
+                drones.classList.remove("disappear-member");
+                backtracking.classList.remove("disappear-member");
+            }
+        })
+        
+        backtracking.addEventListener("click", () => {
+            if (!backtracking.classList.contains("expand-member")) {
+                backtracking.classList.add("expand-member");
+                drones.classList.add("disappear-member");
+                bifacial.classList.add("disappear-member");
+            }
+            else {
+                backtracking.classList.remove("expand-member");
+                drones.classList.remove("disappear-member");
+                bifacial.classList.remove("disappear-member");
+            }
+        })
+        </script>
     <script>
         const mobileBtn = document.getElementById("mobile-cta")
               nav = document.querySelector("nav")
@@ -317,6 +505,74 @@
                     $(".navbar").removeClass("notTop");
                 }
             });
+        });
+   </script>
+   <!-- <script>
+        // copyright shit
+        const rowsX = Array.from(document.querySelectorAll('tr'));
+
+        function slideOut(row) {
+        row.classList.add('slide-out');
+        }
+
+        function slideIn(row, index) {
+        setTimeout(function() {
+            row.classList.remove('slide-out');
+        }, (index + 5) * 200);  
+        }
+
+        rows.forEach(slideOut);
+
+        rows.forEach(slideIn);
+        
+    </script> -->
+   <script>
+        const rows = Array.from(document.querySelectorAll('tr'));
+
+        function slideOut(row) {
+        row.classList.add('slide-out');
+        }
+
+        function slideIn(row, index) {
+        setTimeout(function() {
+                row.classList.remove('slide-out');
+            }, (index + 5) * 200);  
+        }
+
+        var inviewport = true;
+        $.fn.isOnScreen = function(){
+
+            var win = $(window);
+
+            var viewport = {
+                top : win.scrollTop(),
+                left : win.scrollLeft()
+            };
+            viewport.right = viewport.left + win.width();
+            viewport.bottom = viewport.top + win.height();
+
+            var bounds = this.offset();
+            bounds.right = bounds.left + this.outerWidth();
+            bounds.bottom = bounds.top + this.outerHeight();
+
+            return (!(viewport.right < bounds.left || viewport.left > bounds.right || viewport.bottom < bounds.top || viewport.top > bounds.bottom));
+        };
+        $(document).ready(function(){
+            rows.forEach(slideOut);
+            // rows.forEach(slideIn);
+        $(window).scroll(function(){
+            if ($('#inViewport').isOnScreen() && inviewport) {
+                // The element is visible, do something
+                inviewport = false;
+                // alert("in viewport!");
+                // rows.forEach(slideOut);
+                rows.forEach(slideIn);
+            } else {
+                // inviewport = true;
+                // rows.forEach(slideOut);
+                // The element is NOT visible, do something else
+            }
+        });
         });
    </script>
 </body>

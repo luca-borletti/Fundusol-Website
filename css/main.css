@@ -256,11 +256,17 @@ footer .top-container {
 }
 
 footer .top-container .contact-info {
-  line-height: 2em;
   font-size: 1em;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 200px;
           flex: 0 0 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 footer .top-container .contact-info a {
@@ -374,6 +380,11 @@ nav li a:hover {
   margin: .9em .15em;
   cursor: pointer;
   height: 1.25em;
+}
+
+.anim-container {
+  margin: 0;
+  padding: 0;
 }
 
 a.underline-anim {
@@ -718,6 +729,19 @@ a.underline-anim:focus::after {
     color: white;
     text-decoration: none;
   }
+  footer .top-container .contact-info .anim-container {
+    width: auto;
+  }
+  footer .top-container .contact-info .anim-container a {
+    margin: 0em;
+  }
+  footer .top-container .contact-info .anim-container a.underline-anim {
+    display: inline-block;
+    padding-bottom: 0;
+  }
+  footer .top-container .contact-info .anim-container a.underline-anim::after {
+    background-color: var(--primary-offwhite);
+  }
   footer .top-container .footer-logo {
     height: 4em;
     -webkit-box-flex: 1;
@@ -935,10 +959,10 @@ a.underline-anim:focus::after {
 }
 
 .farm-data-animation {
-  background-image: url("/assets/placeholder.svg");
-  min-height: 1000px;
+  background-image: url("/assets/stanford-farm.jpg");
+  min-height: 600px;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   background-position: center;
 }
 
@@ -981,6 +1005,63 @@ a.underline-anim:focus::after {
   padding: 0;
 }
 
+.left-info-pic-section .info-pic-container #cf, .right-info-pic-section .info-pic-container #cf {
+  position: relative;
+  height: 281px;
+  width: 281px;
+  margin: 0 auto;
+}
+
+.left-info-pic-section .info-pic-container #cf img, .right-info-pic-section .info-pic-container #cf img {
+  position: absolute;
+  left: 0;
+  -webkit-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+
+@-webkit-keyframes cf3FadeInOut {
+  0% {
+    opacity: 1;
+  }
+  45% {
+    opacity: 1;
+  }
+  55% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes cf3FadeInOut {
+  0% {
+    opacity: 1;
+  }
+  45% {
+    opacity: 1;
+  }
+  55% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.left-info-pic-section .info-pic-container #cf img.top, .right-info-pic-section .info-pic-container #cf img.top {
+  -webkit-animation-name: cf3FadeInOut;
+          animation-name: cf3FadeInOut;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+
 .left-info-pic-section .info-pic-container .img-col, .right-info-pic-section .info-pic-container .img-col {
   -webkit-box-flex: 2;
       -ms-flex: 2;
@@ -1010,7 +1091,11 @@ a.underline-anim:focus::after {
   background-color: #EBEBEB;
 }
 
-.right-info-pic-section .info-pic-container {
+.right-info-pic-section .info-pic-container .text-col h1 {
+  text-align: right;
+}
+
+.right-info-pic-section .info-pic-container .text-col p {
   text-align: right;
 }
 
@@ -1027,7 +1112,7 @@ a.underline-anim:focus::after {
 
 .increasing-crop-yield-section .info-pic-container, .maximizing-solar-section .info-pic-container, .boosting-savings-section .info-pic-container {
   border-top: solid var(--primary-darkgray);
-  padding-top: 2em;
+  padding-top: 3.5em;
 }
 
 .increasing-crop-yield-section .info-pic-container .text-col h1, .maximizing-solar-section .info-pic-container .text-col h1, .boosting-savings-section .info-pic-container .text-col h1 {
@@ -1042,6 +1127,47 @@ a.underline-anim:focus::after {
   font-size: 1.7em;
   margin: 0 0 1em 0;
   padding: 0;
+}
+
+.boosting-savings-section table {
+  margin-top: 2em;
+  width: 100%;
+  overflow: hidden;
+}
+
+.boosting-savings-section table th, .boosting-savings-section table td {
+  padding: .75em 1em;
+  text-align: left;
+  vertical-align: top;
+  font-size: 1.15em;
+}
+
+.boosting-savings-section table th {
+  background-color: var(--primary-darkgray);
+  color: var(--primary-offwhite);
+  font-weight: 500;
+}
+
+.boosting-savings-section table .in-the-red {
+  background-color: #C75044 !important;
+  color: var(--primary-offwhite) !important;
+}
+
+.boosting-savings-section table td {
+  background-color: white;
+  border: var(--primary-darkgray);
+  border-width: 2px;
+  font-weight: 300;
+}
+
+.boosting-savings-section table tr {
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+.boosting-savings-section table tr.slide-out {
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
 }
 
 .disappear-member {
@@ -1078,7 +1204,11 @@ section.team-section {
   padding: 0em 2em 5em 2em;
 }
 
-section.team-section .container ul {
+.solar-tech-container {
+  margin-top: 3em;
+}
+
+section.team-section .container ul, .solar-tech-container ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1091,13 +1221,13 @@ section.team-section .container ul {
   transition: all 1s cubic-bezier(0.164, 0.83, 0.43, 1);
 }
 
-section.team-section .container ul li.team-member {
+section.team-section .container ul li.team-member, section.team-section .container ul li.solar-tech, .solar-tech-container ul li.team-member, .solar-tech-container ul li.solar-tech {
   opacity: 1;
   visibility: unset;
   position: unset;
   pointer-events: initial;
-  -webkit-transition: all 1s cubic-bezier(0.164, 0.83, 0.43, 1);
-  transition: all 1s cubic-bezier(0.164, 0.83, 0.43, 1);
+  -webkit-transition: all 0.5s cubic-bezier(0.164, 0.83, 0.43, 1);
+  transition: all 0.5s cubic-bezier(0.164, 0.83, 0.43, 1);
   padding: .75em 1.75em 1.5em 1.5em;
   border-radius: 1.5em;
   -webkit-box-shadow: -0.5em 0.7em 1.5em rgba(0, 0, 0, 0.16);
@@ -1116,32 +1246,43 @@ section.team-section .container ul li.team-member {
   cursor: pointer;
 }
 
-section.team-section .container ul li.team-member h1 {
+section.team-section .container ul li.team-member .top-photo img, section.team-section .container ul li.solar-tech .top-photo img, .solar-tech-container ul li.team-member .top-photo img, .solar-tech-container ul li.solar-tech .top-photo img {
+  max-width: 100%;
+  max-height: 8em;
+}
+
+section.team-section .container ul li.team-member h1, section.team-section .container ul li.solar-tech h1, .solar-tech-container ul li.team-member h1, .solar-tech-container ul li.solar-tech h1 {
   font-size: 1.5em;
   margin: .5em 0 .5em 0;
   font-weight: 350;
 }
 
-section.team-section .container ul li.team-member h2 {
+section.team-section .container ul li.team-member h2, section.team-section .container ul li.solar-tech h2, .solar-tech-container ul li.team-member h2, .solar-tech-container ul li.solar-tech h2 {
   font-size: 1.3em;
   margin: 0 0 .5em 0;
   font-weight: 300;
   text-decoration: underline;
 }
 
-section.team-section .container ul li.team-member p {
+section.team-section .container ul li.team-member p, section.team-section .container ul li.solar-tech p, .solar-tech-container ul li.team-member p, .solar-tech-container ul li.solar-tech p {
   display: none;
   font-size: 1.2em;
   margin: 0 0 1em 0;
   font-weight: 300;
 }
 
-section.team-section .container ul li.team-member .face-shot img {
+section.team-section .container ul li.team-member .face-shot img, section.team-section .container ul li.solar-tech .face-shot img, .solar-tech-container ul li.team-member .face-shot img, .solar-tech-container ul li.solar-tech .face-shot img {
   max-height: 10em;
   margin-top: -6em;
 }
 
-section.team-section .container ul li.team-member::after {
+section.team-section .container ul li.solar-tech, .solar-tech-container ul li.solar-tech {
+  margin: 1em 2em;
+  padding-top: 2em;
+  width: 16em;
+}
+
+section.team-section .container ul li.team-member::after, section.team-section .container ul li.solar-tech::after, .solar-tech-container ul li.team-member::after, .solar-tech-container ul li.solar-tech::after {
   position: absolute;
   z-index: -1;
   opacity: 0;
@@ -1153,13 +1294,13 @@ section.team-section .container ul li.team-member::after {
   transition: all 0.5s cubic-bezier(0.164, 0.83, 0.43, 1);
 }
 
-section.team-section .container ul li.team-member:hover {
+section.team-section .container ul li.team-member:hover, section.team-section .container ul li.solar-tech:hover, .solar-tech-container ul li.team-member:hover, .solar-tech-container ul li.solar-tech:hover {
   -webkit-transform: scale(1.03, 1.03);
   transform: scale(1.03, 1.03);
   opacity: 1;
 }
 
-section.team-section .container ul li.team-member:hover::after {
+section.team-section .container ul li.team-member:hover::after, section.team-section .container ul li.solar-tech:hover::after, .solar-tech-container ul li.team-member:hover::after, .solar-tech-container ul li.solar-tech:hover::after {
   opacity: 1;
 }
 /*# sourceMappingURL=main.css.map */

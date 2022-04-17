@@ -8,6 +8,11 @@ DO ul AND li's THAT CHANGE OPACITY AND COLOR UP IMAGE in benefits
 
 DEFINITELY DO IMAGES FOR SERVICE PAGE LARGE SECTIONS... TOO BLAND
 
+Make 
+
+
+flip the adding/removing of classes for scroll nav animation
+
 
 
 - convert 3 approach side-sections into big sections with side sections within

@@ -227,9 +227,11 @@ footer {
             padding: 20px var(--full-padding);;
     
             .contact-info {
-                line-height: 2em;
+                // line-height: 2em;
                 font-size: 1em;
                 flex: 0 0 200px;
+                display: flex;
+                flex-direction: column;
                 a {
                     font-size: 1em;
                     color: white;
@@ -344,7 +346,10 @@ nav {
 }
 
 
-
+.anim-container {
+    margin: 0;
+    padding: 0;
+}
 
 a.underline-anim {
     overflow: hidden;
@@ -649,6 +654,21 @@ a.underline-anim:focus::after{
                         color: white;
                         text-decoration: none;
                     }
+                    .anim-container {
+                        width: auto;
+                        // padding-bottom: -1em;
+                        // padding-right: -.5em;
+                        a {
+                            margin: 0em;
+                        }
+                        a.underline-anim {
+                            display: inline-block;
+                            padding-bottom: 0;
+                        }
+                        a.underline-anim::after {
+                            background-color: var(--primary-offwhite);
+                        }
+                    }
                 }
                 
                 .footer-logo {
@@ -901,10 +921,11 @@ a.underline-anim:focus::after{
 }
 
 .farm-data-animation {
-    background-image: url("/assets/placeholder.svg");
-    min-height: 1000px;
+    background-image: url("/assets/stanford-farm.jpg");
+    min-height: 600px;
     background-repeat: no-repeat;
-    background-size:contain;
+    // background-size:;
+    background-size: cover;
     background-position: center;
 }
 
@@ -933,6 +954,50 @@ a.underline-anim:focus::after{
                 padding: 0;
             }
         }
+        #cf {
+            position:relative;
+            height:281px;
+            width:281px;
+            margin:0 auto;
+        }
+        
+        #cf img {
+            position:absolute;
+            left:0;
+            -webkit-transition: opacity 1s ease-in-out;
+            -moz-transition: opacity 1s ease-in-out;
+            -o-transition: opacity 1s ease-in-out;
+            transition: opacity 1s ease-in-out;
+        }
+        
+        // #cf img.top:hover {
+        //     opacity:0;
+        // }
+        
+        @keyframes cf3FadeInOut {
+            0% {
+                opacity:1;
+            }
+            45% {
+                opacity:1;
+            }
+            55% {
+                opacity:0;
+            }
+            100% {
+                opacity:0;
+            }
+        }
+        
+        #cf img.top {
+            animation-name: cf3FadeInOut;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+            animation-duration: 4s;
+            animation-direction: alternate;
+        }
+        
+        
         .img-col {
             // flex: 1 1 30%;
             flex: 2;
@@ -943,31 +1008,39 @@ a.underline-anim:focus::after{
             justify-content: right;
             align-items: center;
             // .spacer {
-            //     height: 1px;
-            //     margin: 0;
-            //     width: 1px;
-            // }
-            // img {
-                // height: auto;
-            // }
-            .basics {
-                // flex: 1;
-                display: inline-flex;
-                flex-basis: 0;
-                position:absolute;
-                // height: 19em;
-                // margin-bottom: 10em;
+                //     height: 1px;
+                //     margin: 0;
+                //     width: 1px;
+                // }
+                // img {
+                    // height: auto;
+                    // }
+                    .basics {
+                        // flex: 1;
+                        display: inline-flex;
+                        flex-basis: 0;
+                        position:absolute;
+                        // height: 19em;
+                        // margin-bottom: 10em;
+                    }
+                    // .science {
+
+                    // }
+                }
             }
         }
-    }
-}
-
-
-
+        
 .right-info-pic-section {
     background-color: #EBEBEB;
     .info-pic-container {
-        text-align: right;
+        .text-col {
+            h1 {
+                text-align: right;
+            }
+            p {
+                text-align:right;
+            }
+        }
         .img-col {
             justify-content: left;
         }
@@ -980,7 +1053,7 @@ a.underline-anim:focus::after{
     
     .info-pic-container {
         border-top: solid var(--primary-darkgray);
-        padding-top: 2em;
+        padding-top: 3.5em;
         .text-col {
             // display: flex;
             h1 {
@@ -1003,6 +1076,42 @@ a.underline-anim:focus::after{
     }
 }
 
+
+.boosting-savings-section {
+    table {
+        margin-top: 2em;
+        width: 100%;
+        overflow:hidden;
+        th, td {
+            // border-radius: .25em;
+            padding:.75em 1em;
+            text-align:left;
+            vertical-align:top;
+            font-size: 1.15em;
+        }
+        th {
+            background-color: var(--primary-darkgray);
+            color: var(--primary-offwhite);
+            font-weight: 500;
+        }
+        .in-the-red {
+            background-color: #C75044 !important;
+            color: var(--primary-offwhite) !important;
+        }
+        td {
+            background-color: white;
+            border: var(--primary-darkgray);
+            border-width: 2px;
+            font-weight: 300;
+        }
+        tr {
+            transition:all .5s ease-in-out;
+            &.slide-out {
+              transform:translateX(100%);
+            }
+        }
+    }
+}
 
 ////////////////////////////////////////////////////////////////////////////////
 /////////////////////////// PARTNERING PAGE CLASSES ////////////////////////////
@@ -1056,81 +1165,99 @@ section.team-section {
     //         font-size: 1em;
     //     }
     // }
-    .container {
-        ul {
+}
+.solar-tech-container {
+    margin-top: 3em;
+}
+
+section.team-section .container, .solar-tech-container {
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        // justify-content: space-evenly;
+        justify-content:center;
+        transition: all 1s cubic-bezier(0.164, 0.83, 0.43, 1);
+        
+        li.team-member, li.solar-tech {
+
+            .top-photo {
+                img {
+                    max-width: 100%;
+                    max-height: 8em;
+                }
+            }
+
+            opacity: 1;
+            visibility:unset;
+            position:unset;
+            pointer-events:initial;
+
+            transition: all .5s cubic-bezier(0.164, 0.83, 0.43, 1);
+            padding: .75em 1.75em 1.5em 1.5em;
+            border-radius: 1.5em;
+            box-shadow: -.5em .7em 1.5em rgba(0, 0, 0, 0.16);
+            background: white;
             display: flex;
-            flex-wrap: wrap;
-            // justify-content: space-evenly;
-            justify-content:center;
-            transition: all 1s cubic-bezier(0.164, 0.83, 0.43, 1);
+            flex-direction: column;
+            text-align:center;
+            h1 {
+                font-size: 1.5em;
+                margin: .5em 0 .5em 0;
+                // font-weight: 700;
+                font-weight: 350;
+            }
+            h2 {
+                font-size: 1.3em;
+                margin: 0 0 .5em 0;
+                font-weight: 300;
+                text-decoration: underline;
+            }
+            p {
+                display: none;
+                font-size: 1.2em;
+                margin: 0 0 1em 0;
+                font-weight: 300;
+            }
+            .face-shot {
+                // display: flex;
+                // height: 3em;
+                img {
+                    // flex: 1 1 auto;
+                    max-height: 10em;
+                    margin-top: -6em;
+                }
+            }
+            margin: 9em 2em 0 2em;
+            width: 14em;
+
+            cursor: pointer;
+        }
+        li.solar-tech {
+            margin: 1em 2em;
+            padding-top: 2em;
+            width: 16em;
+            // width: 14em !important;
+        }
+        li.team-member::after, li.solar-tech::after {
+            position: absolute;
+            z-index: -1;
+            opacity: 0;
+            width: 100%;
+            height: 100%;
+            box-shadow: -.5em .7em 1.5em rgba(0, 0, 0, 0.3);
+            -webkit-transition: all 0.5s cubic-bezier(0.164, 0.83, 0.43, 1);
+            transition: all 0.5s cubic-bezier(0.164, 0.83, 0.43, 1);
+        }
+
+        li.team-member:hover, li.solar-tech:hover {
+            -webkit-transform: scale(1.03, 1.03);
+            transform: scale(1.03, 1.03);
+            opacity: 1;
             
-            li.team-member {
-                opacity: 1;
-                visibility:unset;
-                position:unset;
-                pointer-events:initial;
-
-                transition: all 1s cubic-bezier(0.164, 0.83, 0.43, 1);
-                padding: .75em 1.75em 1.5em 1.5em;
-                border-radius: 1.5em;
-                box-shadow: -.5em .7em 1.5em rgba(0, 0, 0, 0.16);
-                background: white;
-                display: flex;
-                flex-direction: column;
-                text-align:center;
-                h1 {
-                    font-size: 1.5em;
-                    margin: .5em 0 .5em 0;
-                    // font-weight: 700;
-                    font-weight: 350;
-                }
-                h2 {
-                    font-size: 1.3em;
-                    margin: 0 0 .5em 0;
-                    font-weight: 300;
-                    text-decoration: underline;
-                }
-                p {
-                    display: none;
-                    font-size: 1.2em;
-                    margin: 0 0 1em 0;
-                    font-weight: 300;
-                }
-                .face-shot {
-                    // display: flex;
-                    // height: 3em;
-                    img {
-                        // flex: 1 1 auto;
-                        max-height: 10em;
-                        margin-top: -6em;
-                    }
-                }
-                margin: 9em 2em 0 2em;
-                width: 14em;
-
-                cursor: pointer;
-            }
-            li.team-member::after {
-                position: absolute;
-                z-index: -1;
-                opacity: 0;
-                width: 100%;
-                height: 100%;
-                box-shadow: -.5em .7em 1.5em rgba(0, 0, 0, 0.3);
-                -webkit-transition: all 0.5s cubic-bezier(0.164, 0.83, 0.43, 1);
-                transition: all 0.5s cubic-bezier(0.164, 0.83, 0.43, 1);
-            }
-    
-            li.team-member:hover {
-                -webkit-transform: scale(1.03, 1.03);
-                transform: scale(1.03, 1.03);
-                opacity: 1;
-                
-    }
-              
-            li.team-member:hover::after {
-                opacity: 1;
-            }
+}
+            
+        li.team-member:hover::after, li.solar-tech:hover::after {
+            opacity: 1;
         }
     }
 }
