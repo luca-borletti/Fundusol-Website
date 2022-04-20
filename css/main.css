@@ -1087,6 +1087,11 @@ a.underline-anim:focus::after {
   position: absolute;
 }
 
+.left-info-pic-section .info-pic-container .img-col .benefits-pic, .right-info-pic-section .info-pic-container .img-col .benefits-pic {
+  max-width: 55%;
+  height: auto;
+}
+
 .right-info-pic-section {
   background-color: #EBEBEB;
 }
@@ -1206,6 +1211,16 @@ section.team-section {
 
 .solar-tech-container {
   margin-top: 3em;
+}
+
+.solar-tech-container ul {
+  -webkit-box-pack: justify !important;
+      -ms-flex-pack: justify !important;
+          justify-content: space-between !important;
+}
+
+.solar-tech-container ul li.solar-tech {
+  width: 20rem !important;
 }
 
 section.team-section .container ul, .solar-tech-container ul {

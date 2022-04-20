@@ -969,6 +969,7 @@ a.underline-anim:focus::after{
             -o-transition: opacity 1s ease-in-out;
             transition: opacity 1s ease-in-out;
         }
+
         
         // #cf img.top:hover {
         //     opacity:0;
@@ -1015,20 +1016,24 @@ a.underline-anim:focus::after{
                 // img {
                     // height: auto;
                     // }
-                    .basics {
+            .basics {
                         // flex: 1;
                         display: inline-flex;
                         flex-basis: 0;
                         position:absolute;
                         // height: 19em;
                         // margin-bottom: 10em;
-                    }
-                    // .science {
+            }
+            // .science-pic {
 
-                    // }
-                }
+            // }
+            .benefits-pic {
+                max-width: 55%; 
+                height: auto;
             }
         }
+    }
+}
         
 .right-info-pic-section {
     background-color: #EBEBEB;
@@ -1168,6 +1173,12 @@ section.team-section {
 }
 .solar-tech-container {
     margin-top: 3em;
+    ul {
+        justify-content:space-between !important;
+        li.solar-tech {
+            width: 20rem !important; 
+        }
+    }
 }
 
 section.team-section .container, .solar-tech-container {
