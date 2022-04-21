@@ -764,12 +764,30 @@ a.underline-anim:focus::after {
   }
   footer .top-container .social-medias .facebook-icon {
     max-height: 3em;
+    -webkit-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+  }
+  footer .top-container .social-medias .facebook-icon:hover {
+    -webkit-filter: opacity(0.5);
+            filter: opacity(0.5);
   }
   footer .top-container .social-medias .instagram-icon {
     max-height: 3em;
+    -webkit-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+  }
+  footer .top-container .social-medias .instagram-icon:hover {
+    -webkit-filter: opacity(0.5);
+            filter: opacity(0.5);
   }
   footer .top-container .social-medias .youtube-icon {
     max-height: 2.25em;
+    -webkit-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+  }
+  footer .top-container .social-medias .youtube-icon:hover {
+    -webkit-filter: opacity(0.5);
+            filter: opacity(0.5);
   }
 }
 
@@ -966,6 +984,36 @@ a.underline-anim:focus::after {
   background-position: center;
 }
 
+@-webkit-keyframes cf3FadeInOut {
+  0% {
+    opacity: 1;
+  }
+  45% {
+    opacity: 1;
+  }
+  55% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes cf3FadeInOut {
+  0% {
+    opacity: 1;
+  }
+  45% {
+    opacity: 1;
+  }
+  55% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 .left-info-pic-section, .right-info-pic-section {
   margin: 0;
   padding: var(--full-padding);
@@ -1019,36 +1067,6 @@ a.underline-anim:focus::after {
   transition: opacity 1s ease-in-out;
 }
 
-@-webkit-keyframes cf3FadeInOut {
-  0% {
-    opacity: 1;
-  }
-  45% {
-    opacity: 1;
-  }
-  55% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-@keyframes cf3FadeInOut {
-  0% {
-    opacity: 1;
-  }
-  45% {
-    opacity: 1;
-  }
-  55% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
 .left-info-pic-section .info-pic-container #cf img.top, .right-info-pic-section .info-pic-container #cf img.top {
   -webkit-animation-name: cf3FadeInOut;
           animation-name: cf3FadeInOut;
@@ -1090,6 +1108,10 @@ a.underline-anim:focus::after {
 .left-info-pic-section .info-pic-container .img-col .benefits-pic, .right-info-pic-section .info-pic-container .img-col .benefits-pic {
   max-width: 55%;
   height: auto;
+}
+
+.constrain {
+  max-width: 25rem !important;
 }
 
 .right-info-pic-section {
@@ -1173,6 +1195,123 @@ a.underline-anim:focus::after {
 .boosting-savings-section table tr.slide-out {
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
+}
+
+@-webkit-keyframes cf3TextFadePanels {
+  0% {
+    font-weight: 600;
+    color: #41588E;
+  }
+  45% {
+    font-weight: 600;
+    color: #41588E;
+  }
+  55% {
+    font-weight: 300;
+    color: black;
+  }
+  100% {
+    font-weight: 300;
+    color: black;
+  }
+}
+
+@keyframes cf3TextFadePanels {
+  0% {
+    font-weight: 600;
+    color: #41588E;
+  }
+  45% {
+    font-weight: 600;
+    color: #41588E;
+  }
+  55% {
+    font-weight: 300;
+    color: black;
+  }
+  100% {
+    font-weight: 300;
+    color: black;
+  }
+}
+
+@-webkit-keyframes cf3TextFadePlants {
+  0% {
+    font-weight: 600;
+    color: #7DD54D;
+  }
+  45% {
+    font-weight: 600;
+    color: #7DD54D;
+  }
+  55% {
+    font-weight: 300;
+    color: black;
+  }
+  100% {
+    font-weight: 300;
+    color: black;
+  }
+}
+
+@keyframes cf3TextFadePlants {
+  0% {
+    font-weight: 600;
+    color: #7DD54D;
+  }
+  45% {
+    font-weight: 600;
+    color: #7DD54D;
+  }
+  55% {
+    font-weight: 300;
+    color: black;
+  }
+  100% {
+    font-weight: 300;
+    color: black;
+  }
+}
+
+span.solar-panels {
+  -webkit-animation-name: cf3TextFadePanels;
+          animation-name: cf3TextFadePanels;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+
+span.crops {
+  -webkit-animation-name: cf3TextFadePlants;
+          animation-name: cf3TextFadePlants;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+
+.stanford-farm {
+  max-height: 40rem;
+  height: auto;
+}
+
+.stanford-img-col {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 30%;
+          flex: 1 1 30%;
+}
+
+.logo-image-col svg {
+  max-height: 20rem;
 }
 
 .disappear-member {
