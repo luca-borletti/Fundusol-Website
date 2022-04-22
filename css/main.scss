@@ -966,7 +966,7 @@ a.underline-anim:focus::after{
         text-align: left;
         .text-col {
             // flex: 1 1 30%;
-            flex: 2;
+            flex: 1;
             h1 {
                 font-weight: 400;
                 font-size: 2.2em;
@@ -982,14 +982,25 @@ a.underline-anim:focus::after{
         }
         #cf {
             position:relative;
-            height:281px;
-            width:281px;
-            margin:0 auto;
+            flex: 1 0 auto;
+            max-width: 75%;
+            float:right;
+            // height: auto;
+            aspect-ratio: 1 / 1;
+            // flex: 1;
         }
+        
+        // #cf:before {
+        //     content: '';
+        //     display: block;
+        //     padding-top: 100%;
+        // }
         
         #cf img {
             position:absolute;
             left:0;
+            width: 100%;
+            height: auto;
             -webkit-transition: opacity 1s ease-in-out;
             -moz-transition: opacity 1s ease-in-out;
             -o-transition: opacity 1s ease-in-out;
@@ -1013,7 +1024,7 @@ a.underline-anim:focus::after{
         
         .img-col {
             // flex: 1 1 30%;
-            flex: 2;
+            flex: 1;
             // margin: auto;
             position:relative;
             display: flex;
@@ -1048,7 +1059,8 @@ a.underline-anim:focus::after{
 }
 
 .constrain {
-    max-width: 25rem !important;
+    max-width: 45% !important;
+    // max-width: 15rem !important;
 }
         
 .right-info-pic-section {
@@ -1135,55 +1147,130 @@ a.underline-anim:focus::after{
 }
 @keyframes cf3TextFadePanels {
     0% {
-        font-weight: 600;
+        // font-weight: 600;
         color: #41588E;
+        text-decoration: underline;
     }
     45% {
-        font-weight: 600;
+        // font-weight: 600;
         color: #41588E;
+        text-decoration: underline;
     }
     55% {
-        font-weight: 300;
+        // font-weight: 300;
         color: black;
+        text-decoration: none;
     }
     100% {
-        font-weight: 300;
+        // font-weight: 300;
         color: black;
+        text-decoration: none;
     }
 }
 @keyframes cf3TextFadePlants {
     0% {
-        font-weight: 600;
+        // font-weight: 600;
         color: #7DD54D;
+        text-decoration: underline;
     }
     45% {
-        font-weight: 600;
+        // font-weight: 600;
         color: #7DD54D;
+        text-decoration: underline;
     }
     55% {
-        font-weight: 300;
+        // font-weight: 300;
         color: black;
+        text-decoration: none;
     }
     100% {
-        font-weight: 300;
+        // font-weight: 300;
         color: black;
+        text-decoration: none;
+        
     }
 }
-span.solar-panels {
-    animation-name: cf3TextFadePanels;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
-    animation-duration: 4s;
-    animation-direction: alternate;
+@keyframes cf3TextFadePlants {
+    0% {
+        // font-weight: 600;
+        color: #7DD54D;
+        text-decoration: underline;
+    }
+    45% {
+        // font-weight: 600;
+        color: #7DD54D;
+        text-decoration: underline;
+    }
+    55% {
+        // font-weight: 300;
+        color: black;
+        text-decoration: none;
+    }
+    100% {
+        // font-weight: 300;
+        color: black;
+        text-decoration: none;
+        
+    }
 }
-span.crops {
-    animation-name: cf3TextFadePlants;
+@keyframes cf3TextFadeWater {
+    0% {
+        // font-weight: 600;
+        color: var(--primary-blue);
+        text-decoration: underline;
+    }
+    45% {
+        // font-weight: 600;
+        color: var(--primary-blue);
+        text-decoration: underline;
+    }
+    55% {
+        // font-weight: 300;
+        color: black;
+        text-decoration: none;
+    }
+    100% {
+        // font-weight: 300;
+        color: black;
+        text-decoration: none;
+        
+    }
+}
+
+span.solar-panels, span.solar-output, span.crops, span.soil-quality, 
+span.crop-yield, span.water-use {
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
     animation-duration: 4s;
     animation-direction: alternate;
 }
 
+span.solar-panels, span.solar-output {
+    animation-name: cf3TextFadePanels;
+}
+
+span.crops, span.crop-yield {
+    animation-name: cf3TextFadePlants;
+}
+
+span.water-use {
+    animation-name: cf3TextFadeWater;
+}
+
+span.crops {
+    animation-name: cf3TextFadePlants;
+}
+
+
+// text-shadow:
+//     -1px -1px 0 #2DD785,
+//     1px -1px 0 #2DD785,
+//     -1px 1px 0 #2DD785,
+//     1px 1px 0 #2DD785;
+//     -webkit-transition: all .5s;
+//     -moz-transition: all .5s;
+//     -o-transition: all .5s;
+//     transition: all .5s;
 
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -1193,6 +1280,7 @@ span.crops {
 .stanford-farm { 
     max-height: 40rem;
     height: auto;
+    border-radius: 0 3em 0 3em;
 }
 .stanford-img-col {
     flex: 1 1 30%;
