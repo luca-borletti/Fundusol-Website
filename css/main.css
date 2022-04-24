@@ -30,6 +30,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  text-decoration: none !important;
 }
 
 .navbar nav {
@@ -977,8 +978,8 @@ a.underline-anim:focus::after {
 }
 
 .farm-data-animation {
-  background-image: url("/assets/stanford-farm.jpg");
-  min-height: 600px;
+  background-image: url("/assets/stanford-farm-1.png");
+  min-height: 750px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -1096,6 +1097,7 @@ a.underline-anim:focus::after {
   -webkit-box-pack: right;
       -ms-flex-pack: right;
           justify-content: right;
+  -webkit-justify-content: flex-end;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1159,6 +1161,10 @@ a.underline-anim:focus::after {
   font-size: 1.7em;
   margin: 0 0 1em 0;
   padding: 0;
+}
+
+.increasing-crop-yield-section .info-pic-container .img-col .heatmap-gif, .maximizing-solar-section .info-pic-container .img-col .heatmap-gif, .boosting-savings-section .info-pic-container .img-col .heatmap-gif {
+  max-width: 50% !important;
 }
 
 .boosting-savings-section table {
@@ -1475,16 +1481,15 @@ section.team-section .container ul li.team-member .top-photo img, section.team-s
 }
 
 section.team-section .container ul li.team-member h1, section.team-section .container ul li.solar-tech h1, .solar-tech-container ul li.team-member h1, .solar-tech-container ul li.solar-tech h1 {
-  font-size: 1.5em;
+  font-size: 1.7em;
   margin: .5em 0 .5em 0;
-  font-weight: 350;
+  font-weight: 400;
 }
 
 section.team-section .container ul li.team-member h2, section.team-section .container ul li.solar-tech h2, .solar-tech-container ul li.team-member h2, .solar-tech-container ul li.solar-tech h2 {
   font-size: 1.3em;
   margin: 0 0 .5em 0;
   font-weight: 300;
-  text-decoration: underline;
 }
 
 section.team-section .container ul li.team-member p, section.team-section .container ul li.solar-tech p, .solar-tech-container ul li.team-member p, .solar-tech-container ul li.solar-tech p {

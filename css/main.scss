@@ -37,7 +37,12 @@ body { //selector (name of elem or a class),
         // height: 3em;
         display: flex;
         // margin-left: 2em;
+        text-decoration: none !important;
     }
+    // .cls-1 {
+    //     font-family: 'Source Sans Pro', sans-serif !important;
+    //     font-weight: 200 !important;
+    // }
 
     nav {
         display: none;
@@ -933,8 +938,9 @@ a.underline-anim:focus::after{
 }
 
 .farm-data-animation {
-    background-image: url("/assets/stanford-farm.jpg");
-    min-height: 600px;
+    // background-image: url("/assets/stanford-farm.jpg");
+    background-image: url("/assets/stanford-farm-1.png");
+    min-height: 750px;
     background-repeat: no-repeat;
     // background-size:;
     background-size: cover;
@@ -1030,6 +1036,9 @@ a.underline-anim:focus::after{
             display: flex;
             // flex-direction: column;
             justify-content: right;
+            // display: -webkit-box;
+            // -webkit-box-pack: right; /* justify-content */
+            -webkit-justify-content: flex-end;
             align-items: center;
             // .spacer {
                 //     height: 1px;
@@ -1103,12 +1112,13 @@ a.underline-anim:focus::after{
             }
         }
 
-        // .img-col {
-
-        // }
+        .img-col {
+            .heatmap-gif {
+                max-width: 50% !important;
+            }
+        }
     }
 }
-
 
 .boosting-savings-section {
     table {
@@ -1380,16 +1390,17 @@ section.team-section .container, .solar-tech-container {
             flex-direction: column;
             text-align:center;
             h1 {
-                font-size: 1.5em;
+                font-size: 1.7em;
                 margin: .5em 0 .5em 0;
                 // font-weight: 700;
-                font-weight: 350;
+                font-weight: 400;
             }
             h2 {
                 font-size: 1.3em;
                 margin: 0 0 .5em 0;
                 font-weight: 300;
-                text-decoration: underline;
+                // font-family: 'Source Sans Pro';
+                // text-decoration: underline;
             }
             p {
                 display: none;
