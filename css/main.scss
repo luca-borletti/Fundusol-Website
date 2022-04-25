@@ -858,6 +858,8 @@ a.underline-anim:focus::after{
 ///////////////////////////// SERVICE PAGE CLASSES /////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
+
+
 #what-section, .team-header-section {
     background-color: var(--primary-darkgray);
     color: var(--primary-offwhite);
@@ -987,12 +989,16 @@ a.underline-anim:focus::after{
             }
         }
         #cf {
+            svg {
+                display: block;
+            }
             position:relative;
             flex: 1 0 auto;
             max-width: 75%;
             float:right;
             // height: auto;
             aspect-ratio: 1 / 1;
+            // aspect-ratio:unset;
             // flex: 1;
         }
         
@@ -1002,11 +1008,12 @@ a.underline-anim:focus::after{
         //     padding-top: 100%;
         // }
         
-        #cf img {
+        #cf img, #cf svg {
             position:absolute;
             left:0;
-            width: 100%;
-            height: auto;
+            max-width: 100%;
+            max-height: 100%;
+            // height: auto;
             -webkit-transition: opacity 1s ease-in-out;
             -moz-transition: opacity 1s ease-in-out;
             -o-transition: opacity 1s ease-in-out;
@@ -1030,6 +1037,7 @@ a.underline-anim:focus::after{
         
         .img-col {
             // flex: 1 1 30%;
+            // height: 100%;
             flex: 1;
             // margin: auto;
             position:relative;
@@ -1067,6 +1075,10 @@ a.underline-anim:focus::after{
     }
 }
 
+.expanding-science-section {
+    min-height: 1000px !important;
+}
+
 .constrain {
     max-width: 45% !important;
     // max-width: 15rem !important;
@@ -1098,23 +1110,42 @@ a.underline-anim:focus::after{
         padding-top: 3.5em;
         .text-col {
             // display: flex;
-            h1 {
+            h1{
                 font-weight: 400;
                 font-size: 2.2em;
                 margin: 0 0 .5em 0;
                 padding: 0;
             }
-            p {
+            p, li::marker, .heatmap-col .text-col p{
                 font-weight: 300;
                 font-size: 1.7em;
                 margin: 0 0 1em 0;
                 padding: 0;
             }
+            li::marker {
+                font-weight: 500;
+                // word-spacing:1em;
+                // margin-right: 1em;
+            }
+            ol li {
+                padding-left:1em;
+            }
         }
 
-        .img-col {
+        .heatmap-col {
+            margin-top: 3em;
             .heatmap-gif {
-                max-width: 50% !important;
+                max-width: 25% !important;
+                border-radius: 1em;
+            }
+            justify-content: space-between;
+            align-items: center;
+            .text-col {
+                margin-left: 5%;
+            }
+            display: flex;
+            svg {
+                margin: 1em;
             }
         }
     }
@@ -1287,6 +1318,14 @@ span.crops {
 /////////////////////////// PARTNERING PAGE CLASSES ////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
+.logo-element {
+    clip-path: url(#logo-circle);
+}
+
+// #logo-circle {
+    // display: none;
+// }
+
 .stanford-farm { 
     max-height: 40rem;
     height: auto;
@@ -1302,6 +1341,62 @@ span.crops {
     }
 }
 
+#convection-currents {
+    transform: rotate(360deg);
+    // -webkit-transform: rotate(360deg);
+    animation-duration: 1s;
+    animation-delay: 0s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+    // -webkit-transition-duration: 1s;
+    // -webkit-transition-delay: now;
+    // -webkit-animation-timing-function: linear;
+    // -webkit-animation-iteration-count: infinite;
+}
+
+
+// @-webkit-keyframes rotating /* Safari and Chrome */ {
+//     from {
+//       -webkit-transform: rotate(0deg);
+//       -o-transform: rotate(0deg);
+//       transform: rotate(0deg);
+//     }
+//     to {
+//       -webkit-transform: rotate(360deg);
+//       -o-transform: rotate(360deg);
+//       transform: rotate(360deg);
+//     }
+//   }
+  @keyframes rotating {
+    from {
+    //   -ms-transform: rotate(0deg);
+    //   -moz-transform: rotate(0deg);
+    //   -webkit-transform: rotate(0deg);
+    //   -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    to {
+    //   -ms-transform: rotate(360deg);
+    //   -moz-transform: rotate(360deg);
+    //   -webkit-transform: rotate(360deg);
+    //   -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  .rotating {
+    // -webkit-animation: rotating 2s linear infinite;
+    // -moz-animation: rotating 2s linear infinite;
+    // -ms-animation: rotating 2s linear infinite;
+    // -o-animation: rotating 2s linear infinite;
+    animation: rotating 2s linear infinite;
+    // transform-origin: 0% 55%;
+    transform-origin: center;
+    transform-box: fill-box;
+    // animation-iteration-count: infinite;
+    // transform-origin: 50% 50%;
+    // display: inline-block;
+  }
 
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////// TEAM PAGE CLASSES ///////////////////////////////

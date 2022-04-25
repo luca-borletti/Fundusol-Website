@@ -1064,11 +1064,15 @@ a.underline-anim:focus::after {
   aspect-ratio: 1 / 1;
 }
 
-.left-info-pic-section .info-pic-container #cf img, .right-info-pic-section .info-pic-container #cf img {
+.left-info-pic-section .info-pic-container #cf svg, .right-info-pic-section .info-pic-container #cf svg {
+  display: block;
+}
+
+.left-info-pic-section .info-pic-container #cf img, .left-info-pic-section .info-pic-container #cf svg, .right-info-pic-section .info-pic-container #cf img, .right-info-pic-section .info-pic-container #cf svg {
   position: absolute;
   left: 0;
-  width: 100%;
-  height: auto;
+  max-width: 100%;
+  max-height: 100%;
   -webkit-transition: opacity 1s ease-in-out;
   transition: opacity 1s ease-in-out;
 }
@@ -1117,6 +1121,10 @@ a.underline-anim:focus::after {
   height: auto;
 }
 
+.expanding-science-section {
+  min-height: 1000px !important;
+}
+
 .constrain {
   max-width: 45% !important;
 }
@@ -1156,15 +1164,45 @@ a.underline-anim:focus::after {
   padding: 0;
 }
 
-.increasing-crop-yield-section .info-pic-container .text-col p, .maximizing-solar-section .info-pic-container .text-col p, .boosting-savings-section .info-pic-container .text-col p {
+.increasing-crop-yield-section .info-pic-container .text-col p, .increasing-crop-yield-section .info-pic-container .text-col li::marker, .increasing-crop-yield-section .info-pic-container .text-col .heatmap-col .text-col p, .maximizing-solar-section .info-pic-container .text-col p, .maximizing-solar-section .info-pic-container .text-col li::marker, .maximizing-solar-section .info-pic-container .text-col .heatmap-col .text-col p, .boosting-savings-section .info-pic-container .text-col p, .boosting-savings-section .info-pic-container .text-col li::marker, .boosting-savings-section .info-pic-container .text-col .heatmap-col .text-col p {
   font-weight: 300;
   font-size: 1.7em;
   margin: 0 0 1em 0;
   padding: 0;
 }
 
-.increasing-crop-yield-section .info-pic-container .img-col .heatmap-gif, .maximizing-solar-section .info-pic-container .img-col .heatmap-gif, .boosting-savings-section .info-pic-container .img-col .heatmap-gif {
-  max-width: 50% !important;
+.increasing-crop-yield-section .info-pic-container .text-col li::marker, .maximizing-solar-section .info-pic-container .text-col li::marker, .boosting-savings-section .info-pic-container .text-col li::marker {
+  font-weight: 500;
+}
+
+.increasing-crop-yield-section .info-pic-container .text-col ol li, .maximizing-solar-section .info-pic-container .text-col ol li, .boosting-savings-section .info-pic-container .text-col ol li {
+  padding-left: 1em;
+}
+
+.increasing-crop-yield-section .info-pic-container .heatmap-col, .maximizing-solar-section .info-pic-container .heatmap-col, .boosting-savings-section .info-pic-container .heatmap-col {
+  margin-top: 3em;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.increasing-crop-yield-section .info-pic-container .heatmap-col .heatmap-gif, .maximizing-solar-section .info-pic-container .heatmap-col .heatmap-gif, .boosting-savings-section .info-pic-container .heatmap-col .heatmap-gif {
+  max-width: 25% !important;
+  border-radius: 1em;
+}
+
+.increasing-crop-yield-section .info-pic-container .heatmap-col .text-col, .maximizing-solar-section .info-pic-container .heatmap-col .text-col, .boosting-savings-section .info-pic-container .heatmap-col .text-col {
+  margin-left: 5%;
+}
+
+.increasing-crop-yield-section .info-pic-container .heatmap-col svg, .maximizing-solar-section .info-pic-container .heatmap-col svg, .boosting-savings-section .info-pic-container .heatmap-col svg {
+  margin: 1em;
 }
 
 .boosting-savings-section table {
@@ -1373,6 +1411,11 @@ span.crops {
           animation-name: cf3TextFadePlants;
 }
 
+.logo-element {
+  -webkit-clip-path: url(#logo-circle);
+          clip-path: url(#logo-circle);
+}
+
 .stanford-farm {
   max-height: 40rem;
   height: auto;
@@ -1387,6 +1430,49 @@ span.crops {
 
 .logo-image-col svg {
   max-height: 20rem;
+}
+
+#convection-currents {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes rotating {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotating {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.rotating {
+  -webkit-animation: rotating 2s linear infinite;
+          animation: rotating 2s linear infinite;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  transform-box: fill-box;
 }
 
 .disappear-member {
