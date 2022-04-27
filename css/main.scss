@@ -1,3 +1,6 @@
+// TODO ……… fix scroll navbar bug
+
+
 // @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
 
 :root {
@@ -130,6 +133,7 @@ section {
                     // *:after{
                     .rot-words {
                         overflow: hidden;
+                        // padding-top: .1em;
                     }
                     span {
                         display: block;
@@ -171,60 +175,9 @@ section {
                     margin: 0.1em 1em .35em 0em;
                     font-size: 2.5em;
                 }
-                .primary-cta {
-                    background: var(--primary-blue);
-                    color: white;
-                    text-decoration: none;
-                    padding: .5em 1.2em;
-                    font-size: 1.4em;
-                    border-radius: 7em;
-                    font-weight: bold;
-                    display: inline-block;
-                    transition: all 0.4s ease 0s;
-                    // transition: all 1s ease-in-out;
-                    // display: flex;
-                    // border: 5px none var(--primary-blue);
-                    // outline: 5px none var(--primary-blue);
-                    span {
-                        display: inline-block;
-                        position: relative;
-                        transition: 0.2s;
-                        // font-size: 2em;
-                        font-family: Arial, Helvetica, sans-serif;
-                    }
-
-                    span:after {
-                        content: '\00bb';
-                        // position: absolute;
-                        opacity: 0;
-                        // top: 0;
-                        // right: -20px;
-                        transition: 0.2s;
-                    }
-
-
-
-                    &:hover {
-                        // transition: all 1s ease-in-out;
-                        // border: 5px solid var(--primary-blue);
-                        transition: all 0.4s ease 0s;
-                        outline: 1px solid var(--primary-blue);
-                        color: var(--primary-blue);
-                        // font-weight:200;
-                        // border-width: thick;
-                        background: white;
-                        
-                        span {
-                            padding-left: 15px;
-                        }
-                        span:after {
-                            opacity: 1;
-                            right: 0;
-                        }
-                    }
-                }
                 .watch-video-cta {
                     display: flex;
+                    flex-direction: row;
                     align-items: center;
                     margin-top: 1em;
                     font-size: 1.25em;
@@ -234,8 +187,70 @@ section {
                         margin-left:.2em;
                         height: 1em;
                     }
+                    p {
+                        margin: 0;
+                    }
                 }
             }
+        }
+    }
+}
+
+.primary-cta {
+    background: var(--primary-blue);
+    color: white;
+    text-decoration: none;
+    padding: .5em 1.2em;
+    font-size: 1.4em;
+    border-radius: 7em;
+    font-weight: bold;
+    display: inline-block;
+    transition: all 0.4s ease 0s;
+
+    p {
+        margin: 0;
+    }
+    // transition: all 1s ease-in-out;
+    // display: flex;
+    // border: 5px none var(--primary-blue);
+    // outline: 5px none var(--primary-blue);
+    span {
+        display: inline-block;
+        position: relative;
+        transition: 0.2s;
+        // font-size: 2em;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    span:after {
+        content: '\00bb';
+        // position: absolute;
+        opacity: 0;
+        // top: 0;
+        // right: -20px;
+        transition: 0.2s;
+        display: none;
+    }
+
+
+
+    &:hover {
+        // transition: all 1s ease-in-out;
+        // border: 5px solid var(--primary-blue);
+        transition: all 0.4s ease 0s;
+        outline: 1px solid var(--primary-blue);
+        color: var(--primary-blue);
+        // font-weight:200;
+        // border-width: thick;
+        background: white;
+        
+        span {
+            padding-left: 15px;
+        }
+        span:after {
+            opacity: 1;
+            right: 0;
+            display: unset;
         }
     }
 }
@@ -373,7 +388,7 @@ nav {
 
 .mobile-menu-exit {
     float: right; 
-    margin: .9em .15em;
+    margin: 1.25em .15em;
     cursor: pointer;
     height: 1.25em;
 }
@@ -386,7 +401,7 @@ nav {
     // align-items: center;
 }
 
-a.underline-anim {
+.underline-anim {
     overflow: hidden;
     display: block;
     position: relative;
@@ -394,7 +409,7 @@ a.underline-anim {
     text-decoration: none;
 }
 
-a.underline-anim::after {
+.underline-anim::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -406,13 +421,13 @@ a.underline-anim::after {
   transition: opacity 300ms, transform 300ms;
 }
 
-a.underline-anim::after {
+.underline-anim::after {
     opacity: 1;
     transform: translate3d(-100%, 0, 0);
 }
 
-a.underline-anim:hover::after,
-a.underline-anim:focus::after{
+.underline-anim:hover::after,
+.underline-anim:focus::after{
     transform: translate3d(0, 0, 0);
 }
 
@@ -422,6 +437,47 @@ a.underline-anim:focus::after{
 ////////////////////////////////////////////////////////////////////////////////
 
 @media only screen and (min-width: 780px) {
+    .left-info-pic-section, .right-info-pic-section  {
+        .info-pic-container {
+            display: flex;
+            .img-col {
+                justify-content: right !important;
+                -webkit-justify-content: flex-end !important;
+            }
+        }
+    }
+    .right-info-pic-section .info-pic-container {
+        .img-col {
+            justify-content: left !important;
+        }
+        .text-col {
+            text-align: center;
+        }
+    }
+    
+    .heatmap-col {
+        align-items: center !important;
+        flex-direction: row !important;
+        .heatmap-gif {
+            max-width: 40% !important;
+        }
+        .text-col {
+            margin-left: 5% !important;
+            // p br {
+                // display: block !important;
+                // margin: 10em 0 !important;
+            // }
+            p {
+                margin-bottom: 5em !important;
+                margin-top: 2em !important;
+            }
+            // line-height:22px;
+            // p {
+            //     content: "awdwad";
+            // }
+        }
+    }
+
     .mobile-menu, .mobile-menu-exit {
         display:none;
     }
@@ -798,7 +854,7 @@ a.underline-anim:focus::after{
             // box-shadow: #262626;
             // filter: drop-shadow(-.5em .7em .75em rgba(0, 0, 0, 0.16));
 
-            box-shadow: -.5em .7em 1em rgba(0, 0, 0, 0.16);
+            box-shadow: -.5em .7em 2em rgba(0, 0, 0, .3);
             // margin: 0 3em 7em 3em;
 
             width: 14em;
@@ -839,8 +895,6 @@ a.underline-anim:focus::after{
                 height: 18em;
                 margin: -1.5em;
             }
-            // .page-card {
-            // }
 
             cursor: pointer;
 
@@ -950,6 +1004,9 @@ a.underline-anim:focus::after{
 }
 
 #approach-section {
+    #approach-anchor {
+        display: block; position: relative; top: -150px; visibility: hidden;
+    }
     background-color: var(--primary-darkgray);
     color: var(--primary-offwhite);
     .approach-header-container {
@@ -1032,13 +1089,11 @@ a.underline-anim:focus::after{
     margin: 0;
     padding: var(--full-padding);
     .info-pic-container {
-        display: flex;
         justify-content: space-between;
         padding: 0;
         align-items: center;
         text-align: left;
         .text-col {
-            // flex: 1 1 30%;
             flex: 1;
             h1 {
                 font-weight: 400;
@@ -1108,30 +1163,16 @@ a.underline-anim:focus::after{
             position:relative;
             display: flex;
             // flex-direction: column;
-            justify-content: right;
-            // display: -webkit-box;
-            // -webkit-box-pack: right; /* justify-content */
-            -webkit-justify-content: flex-end;
+            
+            justify-content: center;
+            margin-top: 3em;
             align-items: center;
-            // .spacer {
-                //     height: 1px;
-                //     margin: 0;
-                //     width: 1px;
-                // }
-                // img {
-                    // height: auto;
-                    // }
+            
             .basics {
-                        // flex: 1;
                         display: inline-flex;
                         flex-basis: 0;
                         position:absolute;
-                        // height: 19em;
-                        // margin-bottom: 10em;
             }
-            // .science-pic {
-
-            // }
             .benefits-pic {
                 max-width: 55%; 
                 height: auto;
@@ -1140,9 +1181,9 @@ a.underline-anim:focus::after{
     }
 }
 
-.expanding-science-section {
-    min-height: 1000px !important;
-}
+// .expanding-science-section {
+//     min-height: 1000px !important;
+// }
 
 .constrain {
     max-width: 45% !important;
@@ -1152,18 +1193,35 @@ a.underline-anim:focus::after{
 .right-info-pic-section {
     background-color: #EBEBEB;
     .info-pic-container {
-        .text-col {
-            h1 {
-                text-align: right;
-            }
-            p {
-                text-align:right;
-            }
-        }
+        // .text-col {
+            // h1 {
+            //     text-align: right;
+            // }
+            // p {
+            //     text-align:right;
+            // }
+        // }
         .img-col {
             justify-content: left;
         }
     }
+}
+
+.science-col {
+    // justify-content: center;
+    // display: flex;
+    // width: 50vh;
+    // width: 20em;
+    // max-height: 100vh;
+    // align-items: center;
+    svg {
+        // max-width: 50%;
+        // align-self: center;
+        width: 50%; height: auto;
+        // display: block;
+        // max-height:
+        // max-height: 100%;
+    }    
 }
 
 .increasing-crop-yield-section, .maximizing-solar-section, .boosting-savings-section  {
@@ -1175,13 +1233,13 @@ a.underline-anim:focus::after{
         padding-top: 3.5em;
         .text-col {
             // display: flex;
-            h1{
+            h1, .boosting-col .text-col h1{
                 font-weight: 400;
                 font-size: 2.2em;
                 margin: 0 0 .5em 0;
                 padding: 0;
             }
-            p, li::marker, .heatmap-col .text-col p{
+            p, li::marker, .heatmap-col .text-col p, .boosting-col .text-col p{
                 font-weight: 300;
                 font-size: 1.7em;
                 margin: 0 0 1em 0;
@@ -1200,20 +1258,41 @@ a.underline-anim:focus::after{
         .heatmap-col {
             margin-top: 3em;
             .heatmap-gif {
-                max-width: 25% !important;
-                border-radius: 1em;
+                max-width: 80%;
+                // max-width: 50% !important;
+                border-radius: 1.7em;
+                margin-bottom: 3em;
             }
             justify-content: space-between;
-            align-items: center;
             .text-col {
-                margin-left: 5%;
+                // margin-left: 5%;
+                // CHANGE FROM MOBILE
+                align-self: left;
             }
             display: flex;
+            flex-direction: column;
             svg {
                 margin: 1em;
             }
         }
     }
+}
+
+.boosting-col {
+    display: flex;
+    flex-direction: column;
+    .svg-col {
+        svg {
+            width: 100%;
+            height: auto;
+            // CHANGE FROM MOBILE
+        }
+    }
+    flex-direction: row;
+    // ADD DIVIDER IN PC VERSION
+    // .text-col {
+        
+    // }
 }
 
 .boosting-savings-section {
@@ -1345,27 +1424,36 @@ a.underline-anim:focus::after{
 
 span.solar-panels, span.solar-output, span.crops, span.soil-quality, 
 span.crop-yield, span.water-use {
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
-    animation-duration: 2s;
-    animation-direction: alternate;
+    // animation-timing-function: ease-in-out;
+    // animation-iteration-count: infinite;
+    // animation-duration: 2s;
+    // animation-direction: alternate;
+    font-weight: 600;
 }
 
 span.solar-panels, span.solar-output {
-    animation-name: cf3TextFadePanels;
+    // animation-name: cf3TextFadePanels;
+    color: #41588E;
 }
 
 span.crops, span.crop-yield {
-    animation-name: cf3TextFadePlants;
+    // animation-name: cf3TextFadePlants;
+    color: #7DD54D;
 }
 
 span.water-use {
-    animation-name: cf3TextFadeWater;
+    // animation-name: cf3TextFadeWater;
+    color: var(--primary-blue);
 }
 
-span.crops {
-    animation-name: cf3TextFadePlants;
+span.soil-quality {
+    // animation-name: cf3TextFadeWater;
+    color: #9c6137;
 }
+
+// span.crops {
+    // animation-name: cf3TextFadePlants;
+// }
 
 
 // text-shadow:
