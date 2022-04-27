@@ -466,6 +466,12 @@ nav li a:hover {
 }
 
 @media only screen and (min-width: 780px) {
+  .boosting-col .svg-col {
+    max-width: 50%;
+    padding-right: 3em;
+    border-right: solid black;
+    margin: 3em 0;
+  }
   .left-info-pic-section .info-pic-container, .right-info-pic-section .info-pic-container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -914,7 +920,7 @@ nav li a:hover {
   opacity: 1;
 }
 
-.dia-button, .dia-button1 {
+.dia-button {
   cursor: pointer;
   pointer-events: all;
 }
@@ -929,12 +935,8 @@ nav li a:hover {
 
 .dia-button:hover {
   opacity: 1;
-  fill: #be1616;
-}
-
-.dia-button1:hover {
-  opacity: 1;
-  fill: #27be16;
+  -webkit-filter: drop-shadow(10px 10px 2px rgba(0, 0, 0, 0.3));
+          filter: drop-shadow(10px 10px 2px rgba(0, 0, 0, 0.3));
 }
 
 #what-section, .team-header-section {

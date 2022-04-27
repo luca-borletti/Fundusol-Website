@@ -432,11 +432,28 @@ nav {
 }
 
 
+.dia-clicked {
+
+}
+
+.dia-unclicked {
+
+}
+
 ////////////////////////////////////////////////////////////////////////////////
 /////////////////////////// CHANGING TO 780 VIEWPORT ///////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
 @media only screen and (min-width: 780px) {
+    .boosting-col .svg-col {
+        max-width: 50%;
+        padding-right: 3em;
+        // border-right: #262626;
+        // border-width: 5px;
+        border-right: solid black;
+        margin: 3em 0;
+    }
+    
     .left-info-pic-section, .right-info-pic-section  {
         .info-pic-container {
             display: flex;
@@ -944,7 +961,7 @@ nav {
 ////////////////////////////////////////////////////////////////////////////////
 
 
-.dia-button, .dia-button1 {
+.dia-button {
     cursor: pointer;
     pointer-events:all;
 }
@@ -954,9 +971,11 @@ nav {
     user-select: none;
 }
 // .dia-button::after {
-//     box-shadow: -.5em .7em 1.5em rgba(0, 0, 0, 0.3);
+    // box-shadow: -.5em .7em 1.5em rgba(0, 0, 0, 1);
 //     z-index: -1;
 //     opacity: 0;
+//     fill: red;
+//     transition: all 0.5s cubic-bezier(0.164, 0.83, 0.43, 1);
 //     position: absolute;
 //     width: 100%;
 //     height: 100%;
@@ -964,17 +983,22 @@ nav {
 .dia-button:hover {
     // transform: scale(1.03, 1.03);
     opacity: 1;
-    fill:rgba(190, 22, 22, 1);
+    // box-shadow: -.5em .7em 1.5em rgba(0, 0, 0, 1);
+    // fill:rgba(190, 22, 22, 1);
+    // filter:blur(4px);
+    filter:drop-shadow(10px 10px 2px rgba(0, 0, 0, 0.3));
+    // filter:invert();
+
     // transform-origin: center;
     // transform-box: fill-box;
 }
-.dia-button1:hover {
+// .dia-button1:hover {
     // transform: scale(1.03, 1.03);
-    opacity: 1;
-    fill:rgb(39, 190, 22);
+    // opacity: 1;
+    // fill:rgb(39, 190, 22);
     // transform-origin: center;
     // transform-box: fill-box;
-}
+// }
 // .dia-button:hover::after {
 //     opacity: 1;
 // }
@@ -1285,6 +1309,7 @@ nav {
         svg {
             width: 100%;
             height: auto;
+            // padding: 3em;
             // CHANGE FROM MOBILE
         }
     }
