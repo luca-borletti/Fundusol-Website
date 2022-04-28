@@ -1496,6 +1496,73 @@ span.soil-quality {
 /////////////////////////// PARTNERING PAGE CLASSES ////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
+@keyframes hillsAnim {
+    0% {
+        fill: var(--primary-green);
+    }
+    5% {
+        fill: var(--primary-green);
+    }
+    25% {
+        fill: var(--primary-green);
+    }
+    30% {
+        fill: #EBEBEB;
+    }
+    45% {
+        fill: #EBEBEB;
+    }
+    60% {
+        fill: #EBEBEB;
+    }
+    70% {
+        transform: translateX(100%);
+    }
+    88% {
+        fill: #EBEBEB;
+    }
+    100% {
+        fill: #EBEBEB;
+    }
+}
+// @keyframes hillsAnim {
+//     0% {
+//         fill: var(--primary-green);
+//     }
+//     5% {
+//         fill: #EBEBEB;
+//     }
+//     25% {
+//         fill: #EBEBEB;
+//         transform: translateX(100%); 
+//     }
+//     45% {
+//         fill: #EBEBEB;
+//         // transform:none;
+//     }
+//     60% {
+//         fill: #EBEBEB;
+//     }
+//     88% {
+//         fill: var(--primary-green);
+//     }
+//     100% {
+//         fill: var(--primary-green);
+        
+//     }
+// }
+
+.logo-hills {
+    animation-name: hillsAnim;
+    animation-timing-function: ease-in-out;
+    animation-duration: 3s;
+    animation-direction:reverse;
+    animation-delay: 3s;
+    animation-iteration-count: infinite;
+    // transition: all ease-in-out;
+}
+
+
 .logo-element {
     clip-path: url(#logo-circle);
 }
@@ -1507,7 +1574,7 @@ span.soil-quality {
 .stanford-farm { 
     max-height: 40rem;
     height: auto;
-    border-radius: 0 3em 0 3em;
+    border-radius: 2em;
 }
 .stanford-img-col {
     flex: 1 1 30%;

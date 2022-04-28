@@ -1482,6 +1482,82 @@ span.soil-quality {
   color: #9c6137;
 }
 
+@-webkit-keyframes hillsAnim {
+  0% {
+    fill: var(--primary-green);
+  }
+  5% {
+    fill: var(--primary-green);
+  }
+  25% {
+    fill: var(--primary-green);
+  }
+  30% {
+    fill: #EBEBEB;
+  }
+  45% {
+    fill: #EBEBEB;
+  }
+  60% {
+    fill: #EBEBEB;
+  }
+  70% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  88% {
+    fill: #EBEBEB;
+  }
+  100% {
+    fill: #EBEBEB;
+  }
+}
+
+@keyframes hillsAnim {
+  0% {
+    fill: var(--primary-green);
+  }
+  5% {
+    fill: var(--primary-green);
+  }
+  25% {
+    fill: var(--primary-green);
+  }
+  30% {
+    fill: #EBEBEB;
+  }
+  45% {
+    fill: #EBEBEB;
+  }
+  60% {
+    fill: #EBEBEB;
+  }
+  70% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  88% {
+    fill: #EBEBEB;
+  }
+  100% {
+    fill: #EBEBEB;
+  }
+}
+
+.logo-hills {
+  -webkit-animation-name: hillsAnim;
+          animation-name: hillsAnim;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  animation-direction: reverse;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
 .logo-element {
   -webkit-clip-path: url(#logo-circle);
           clip-path: url(#logo-circle);
@@ -1490,7 +1566,7 @@ span.soil-quality {
 .stanford-farm {
   max-height: 40rem;
   height: auto;
-  border-radius: 0 3em 0 3em;
+  border-radius: 2em;
 }
 
 .stanford-img-col {
