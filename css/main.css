@@ -66,7 +66,7 @@ section {
 }
 
 .hero-image {
-  background-image: url("/assets/agri-front-page.jpeg");
+  background-image: url("/assets/agri-front-page.jpg");
   background-color: var(--primary-offwhite);
   min-height: 500px;
   position: relative;
@@ -805,21 +805,11 @@ nav li a:hover {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-  }
-  footer .top-container .social-medias .facebook-icon {
-    max-height: 3em;
-    -webkit-transition: all 0.25s ease-in-out;
-    transition: all 0.25s ease-in-out;
-  }
-  footer .top-container .social-medias .facebook-icon:hover {
-    -webkit-filter: opacity(0.5);
-            filter: opacity(0.5);
   }
   footer .top-container .social-medias .instagram-icon {
     max-height: 3em;
@@ -868,6 +858,8 @@ nav li a:hover {
   cursor: pointer;
   -webkit-transition: all 0.5s cubic-bezier(0.164, 0.83, 0.43, 1);
   transition: all 0.5s cubic-bezier(0.164, 0.83, 0.43, 1);
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
 }
 
 .cards-section .container li h1 {
@@ -909,6 +901,8 @@ nav li a:hover {
   height: 100%;
   -webkit-box-shadow: -1em 1.4em 3em black;
           box-shadow: -1em 1.4em 3em black;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
   -webkit-transition: all 0.5s cubic-bezier(0.164, 0.83, 0.43, 1);
   transition: all 0.5s cubic-bezier(0.164, 0.83, 0.43, 1);
 }
@@ -917,10 +911,14 @@ nav li a:hover {
   -webkit-transform: scale(1.03, 1.03);
   transform: scale(1.03, 1.03);
   opacity: 1;
+  -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
 }
 
 .cards-section .container li:hover::after {
   opacity: 1;
+  -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
 }
 
 #boosting-dia-h1 {
@@ -1176,8 +1174,8 @@ nav li a:hover {
   left: 0;
   max-width: 100%;
   max-height: 100%;
-  -webkit-transition: opacity 1s ease-in-out;
-  transition: opacity 1s ease-in-out;
+  -webkit-transition: opacity 3s ease-in-out;
+  transition: opacity 3s ease-in-out;
 }
 
 .left-info-pic-section .info-pic-container #cf img.top, .right-info-pic-section .info-pic-container #cf img.top {
@@ -1187,8 +1185,8 @@ nav li a:hover {
           animation-timing-function: ease-in-out;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
   -webkit-animation-direction: alternate;
           animation-direction: alternate;
 }
@@ -1523,6 +1521,10 @@ span.water-use {
 
 span.soil-quality {
   color: #9c6137;
+}
+
+.cta-partner-contact:hover {
+  background: var(--primary-offwhite) !important;
 }
 
 @-webkit-keyframes fadeBg {

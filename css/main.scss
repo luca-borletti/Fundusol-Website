@@ -82,7 +82,7 @@ section {
 }
 
 .hero-image {
-    background-image: url("/assets/agri-front-page.jpeg");
+    background-image: url("/assets/agri-front-page.jpg");
     background-color: var(--primary-offwhite);
     min-height: 500px;
     position: relative;
@@ -796,17 +796,18 @@ nav {
     
                     display: flex;
         
-                    justify-content: space-between;
+                    justify-content:space-around;
+                    // justify-content: space-between;
     
                     align-items: center;
     
-                    .facebook-icon {
-                        max-height: 3em;
-                        transition: all 0.25s ease-in-out;
-                        &:hover {
-                            filter: opacity(.5);
-                        }
-                    }
+                    // .facebook-icon {
+                    //     max-height: 3em;
+                    //     transition: all 0.25s ease-in-out;
+                    //     &:hover {
+                    //         filter: opacity(.5);
+                    //     }
+                    // }
                     .instagram-icon {
                         max-height: 3em;
                         transition: all 0.25s ease-in-out;
@@ -840,6 +841,10 @@ nav {
     .container {
         display:block;
         li {
+
+            // img {
+                // filter: grayscale(100%);
+            // }
             // display:inline-block;
             padding: 1.5em 3.5em .75em 3.5em;
             background: var(--primary-offwhite);
@@ -923,6 +928,7 @@ nav {
 
             -webkit-transition: all 0.5s cubic-bezier(0.164, 0.83, 0.43, 1);
             transition: all 0.5s cubic-bezier(0.164, 0.83, 0.43, 1);
+            filter: grayscale(100%);
         }
         
         li::after {
@@ -933,7 +939,7 @@ nav {
             height: 100%;
             box-shadow: -1em 1.4em 3em rgba(0, 0, 0, 1);
             // color: black;
-
+            filter: grayscale(100%);
             
         
             -webkit-transition: all 0.5s cubic-bezier(0.164, 0.83, 0.43, 1);
@@ -945,6 +951,7 @@ nav {
             transform: scale(1.03, 1.03);
             
             opacity: 1;
+            filter: grayscale(0%);
             
             // color: black;
             // .cards-image-special1, .cards-image-special3 { //.cards-image-special2,
@@ -956,6 +963,7 @@ nav {
           
         li:hover::after {
             opacity: 1;
+            filter: grayscale(0%);
         }
 
     }
@@ -1182,10 +1190,10 @@ nav {
             max-width: 100%;
             max-height: 100%;
             // height: auto;
-            -webkit-transition: opacity 1s ease-in-out;
-            -moz-transition: opacity 1s ease-in-out;
-            -o-transition: opacity 1s ease-in-out;
-            transition: opacity 1s ease-in-out;
+            -webkit-transition: opacity 3s ease-in-out;
+            -moz-transition: opacity 3s ease-in-out;
+            -o-transition: opacity 3s ease-in-out;
+            transition: opacity 3s ease-in-out;
         }
 
         
@@ -1198,7 +1206,7 @@ nav {
             animation-name: cf3FadeInOut;
             animation-timing-function: ease-in-out;
             animation-iteration-count: infinite;
-            animation-duration: 2s;
+            animation-duration: 4s;
             animation-direction: alternate;
         }
         
@@ -1271,6 +1279,10 @@ nav {
         // max-height: 100%;
     }    
 }
+
+// .boosting-savings-section  {
+//     margin-bottom: 10em !important;
+// }
 
 .increasing-crop-yield-section, .maximizing-solar-section, .boosting-savings-section  {
     margin: 0;
@@ -1529,6 +1541,12 @@ span.soil-quality {
 /////////////////////////// PARTNERING PAGE CLASSES ////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
+.cta-partner-contact {
+    &:hover {
+        background: var(--primary-offwhite) !important;
+    }
+}
+
 @keyframes fadeBg {
     30% {
         fill: var(--primary-darkgray);
@@ -1655,6 +1673,8 @@ span.soil-quality {
     animation-delay: 3s;
     animation-iteration-count: infinite;
 }
+
+
 
 
 // .logo-element {
@@ -1980,3 +2000,14 @@ section.team-section .container, .solar-tech-container {
 //         }
 //     }
 // }
+
+
+// @media not all and (min-resolution:.001dpcm) { 
+//     @supports (-webkit-appearance: none) {
+//       /* Safari Only CSS here */
+//       source.footer-logo {
+//         content:srcset("assets/logo-notext.svg");
+//         // content:url("logo-notext.svg");
+//       }
+//     }
+//   }
