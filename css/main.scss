@@ -816,7 +816,7 @@ nav {
     
                     display: flex;
         
-                    justify-content:space-around;
+                    justify-content:flex-end;
                     // justify-content: space-between;
     
                     align-items: center;
@@ -841,6 +841,7 @@ nav {
                         &:hover {
                             filter: opacity(.5);
                         }
+                        margin-left: 2.5em;
                     }
         
                     

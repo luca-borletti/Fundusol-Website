@@ -823,8 +823,9 @@ nav li a:hover {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -842,6 +843,7 @@ nav li a:hover {
     max-height: 2.25em;
     -webkit-transition: all 0.25s ease-in-out;
     transition: all 0.25s ease-in-out;
+    margin-left: 2.5em;
   }
   footer .top-container .social-medias .youtube-icon:hover {
     -webkit-filter: opacity(0.5);
