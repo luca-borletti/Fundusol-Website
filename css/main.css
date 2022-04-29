@@ -227,7 +227,7 @@ section {
   margin: 0;
 }
 
-.primary-cta {
+.primary-cta, .navbar-cta {
   background: var(--primary-blue);
   color: white;
   text-decoration: none;
@@ -240,11 +240,11 @@ section {
   transition: all 0.4s ease 0s;
 }
 
-.primary-cta p {
+.primary-cta p, .navbar-cta p {
   margin: 0;
 }
 
-.primary-cta span {
+.primary-cta span, .navbar-cta span {
   display: inline-block;
   position: relative;
   -webkit-transition: 0.2s;
@@ -252,7 +252,7 @@ section {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.primary-cta span:after {
+.primary-cta span:after, .navbar-cta span:after {
   content: '\00bb';
   opacity: 0;
   -webkit-transition: 0.2s;
@@ -260,7 +260,7 @@ section {
   display: none;
 }
 
-.primary-cta:hover {
+.primary-cta:hover, .navbar-cta:hover {
   -webkit-transition: all 0.4s ease 0s;
   transition: all 0.4s ease 0s;
   outline: 1px solid var(--primary-blue);
@@ -268,14 +268,19 @@ section {
   background: white;
 }
 
-.primary-cta:hover span {
+.primary-cta:hover span, .navbar-cta:hover span {
   padding-left: 15px;
 }
 
-.primary-cta:hover span:after {
+.primary-cta:hover span:after, .navbar-cta:hover span:after {
   opacity: 1;
   right: 0;
   display: unset;
+}
+
+.navbar-cta {
+  margin-right: 1em;
+  display: none;
 }
 
 .mobile-section {
@@ -725,6 +730,10 @@ nav li a:hover {
   transition: all 1s ease-in-out;
 }
 
+.notTop nav ul.primary-nav li .navbar-cta {
+  margin-top: -.9em;
+}
+
 .notTop nav ul.primary-nav li .anim-container a {
   margin: 0;
   padding: 0;
@@ -735,6 +744,15 @@ nav li a:hover {
 }
 
 @media only screen and (min-width: 1080px) {
+  .navbar-cta {
+    display: unset !important;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    max-height: 40%;
+    font-size: 1.2em;
+    font-weight: 600;
+  }
   .cards-section .container ul {
     display: -webkit-box;
     display: -ms-flexbox;

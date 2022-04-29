@@ -196,7 +196,7 @@ section {
     }
 }
 
-.primary-cta {
+.primary-cta, .navbar-cta {
     background: var(--primary-blue);
     color: white;
     text-decoration: none;
@@ -253,6 +253,11 @@ section {
             display: unset;
         }
     }
+}
+
+.navbar-cta {
+    margin-right: 1em;
+    display: none;
 }
 
 .mobile-section {
@@ -446,6 +451,7 @@ nav {
 ////////////////////////////////////////////////////////////////////////////////
 
 @media only screen and (min-width: 780px) {
+
     .left-info-pic-section, .right-info-pic-section {
         .info-pic-container .img-col {
             margin-top: 0 !important;
@@ -696,6 +702,9 @@ nav {
             margin: 0;
             display: flex;
             li {
+                .navbar-cta {
+                    margin-top: -.9em;
+                }
                 // vertical-align: middle;
                 margin-left: .5em;
                 display: flex;
@@ -725,6 +734,17 @@ nav {
 ////////////////////////////////////////////////////////////////////////////////
 
 @media only screen and (min-width: 1080px) {
+    .navbar-cta {
+        display: unset !important;
+        align-self: center;
+        max-height: 40%;
+        font-size: 1.2em;
+        font-weight: 600;
+        // line-height: 100%;
+        // align-self: center;
+        // vertical-align: middle;
+    }
+    
     .cards-section .container {
         ul {
             display: flex;
