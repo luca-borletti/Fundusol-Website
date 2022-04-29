@@ -1671,6 +1671,10 @@ span.soil-quality {
     p, h3 {
         display:unset !important;
     }
+    span:after {
+
+        display: none !important;
+    }
     p {
         font-size: 1.2em;
         margin: 0 0 1em 0;
@@ -1713,12 +1717,35 @@ section.team-section .container, .solar-tech-container {
         transition: all 1s cubic-bezier(0.164, 0.83, 0.43, 1);
         
         li.team-member, li.solar-tech {
+            
             .top-photo {
                 img {
                     max-width: 100%;
                     max-height: 8em;
                     user-select: none; 
                 }
+            }
+
+            span {
+                display: inline-block;
+                user-select: none;
+                position: relative;
+                transition: all 0.4s ease 0s;
+                // font-size: 2em;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 40px;
+                // font-weight: 100;
+            }
+        
+            span:after {
+                // content: '\032D';
+                content: '\032C';
+                // position: absolute;
+                opacity: 0;
+                // top: 0;
+                // right: -20px;
+                transition: all 0.4s ease 0s;
+                display: none;
             }
 
             opacity: 1;
@@ -1805,7 +1832,14 @@ section.team-section .container, .solar-tech-container {
             -webkit-transform: scale(1.03, 1.03);
             transform: scale(1.03, 1.03);
             opacity: 1;
-            
+            span {
+                padding-top: 5px;
+            }
+            span:after {
+                opacity: 1;
+                right: 0;
+                display: unset;
+            }
 }
             
         li.team-member:hover::after, li.solar-tech:hover::after {
