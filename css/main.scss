@@ -445,6 +445,11 @@ nav {
 ////////////////////////////////////////////////////////////////////////////////
 
 @media only screen and (min-width: 780px) {
+    .left-info-pic-section, .right-info-pic-section {
+        .info-pic-container .img-col {
+            margin-top: 0 !important;
+        }
+    } 
     .boosting-col .svg-col {
         max-width: 50%;
         padding-right: 3em;
@@ -1210,7 +1215,7 @@ nav {
 // }
 
 .constrain {
-    max-width: 45% !important;
+    max-width: 60% !important;
     // max-width: 15rem !important;
 }
         

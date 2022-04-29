@@ -466,6 +466,9 @@ nav li a:hover {
 }
 
 @media only screen and (min-width: 780px) {
+  .left-info-pic-section .info-pic-container .img-col, .right-info-pic-section .info-pic-container .img-col {
+    margin-top: 0 !important;
+  }
   .boosting-col .svg-col {
     max-width: 50%;
     padding-right: 3em;
@@ -1191,7 +1194,7 @@ nav li a:hover {
 }
 
 .constrain {
-  max-width: 45% !important;
+  max-width: 60% !important;
 }
 
 .right-info-pic-section {
