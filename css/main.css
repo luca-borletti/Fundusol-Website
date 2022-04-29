@@ -923,6 +923,37 @@ nav li a:hover {
   opacity: 1;
 }
 
+#boosting-dia-h1 {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+#boosting-dia-p-1 {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+#boosting-dia-p-2 {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+#boosting-dia-img {
+  max-height: 100%;
+  max-width: 100%;
+  border-radius: 2em;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
 .dia-button {
   cursor: pointer;
   pointer-events: all;
@@ -1222,6 +1253,11 @@ nav li a:hover {
   padding-top: 3.5em;
 }
 
+.increasing-crop-yield-section .info-pic-container .boosting-col .text-col, .maximizing-solar-section .info-pic-container .boosting-col .text-col, .boosting-savings-section .info-pic-container .boosting-col .text-col {
+  margin: 3em;
+  width: 50%;
+}
+
 .increasing-crop-yield-section .info-pic-container .text-col h1, .increasing-crop-yield-section .info-pic-container .text-col .boosting-col .text-col h1, .maximizing-solar-section .info-pic-container .text-col h1, .maximizing-solar-section .info-pic-container .text-col .boosting-col .text-col h1, .boosting-savings-section .info-pic-container .text-col h1, .boosting-savings-section .info-pic-container .text-col .boosting-col .text-col h1 {
   font-weight: 400;
   font-size: 2.2em;
@@ -1238,6 +1274,10 @@ nav li a:hover {
 
 .increasing-crop-yield-section .info-pic-container .text-col li::marker, .maximizing-solar-section .info-pic-container .text-col li::marker, .boosting-savings-section .info-pic-container .text-col li::marker {
   font-weight: 500;
+}
+
+.increasing-crop-yield-section .info-pic-container .text-col ol, .maximizing-solar-section .info-pic-container .text-col ol, .boosting-savings-section .info-pic-container .text-col ol {
+  margin-left: 3em;
 }
 
 .increasing-crop-yield-section .info-pic-container .text-col ol li, .maximizing-solar-section .info-pic-container .text-col ol li, .boosting-savings-section .info-pic-container .text-col ol li {
@@ -1485,16 +1525,47 @@ span.soil-quality {
   color: #9c6137;
 }
 
-@-webkit-keyframes hillsAnim {
-  0% {
-    fill: var(--primary-green);
+@-webkit-keyframes fadeBg {
+  30% {
+    fill: var(--primary-darkgray);
   }
-  5% {
-    fill: var(--primary-green);
+  45% {
+    fill: var(--primary-darkgray);
   }
-  25% {
-    fill: var(--primary-green);
+  60% {
+    fill: var(--primary-darkgray);
   }
+  70% {
+  }
+  88% {
+    fill: var(--primary-darkgray);
+  }
+  100% {
+    fill: var(--primary-darkgray);
+  }
+}
+
+@keyframes fadeBg {
+  30% {
+    fill: var(--primary-darkgray);
+  }
+  45% {
+    fill: var(--primary-darkgray);
+  }
+  60% {
+    fill: var(--primary-darkgray);
+  }
+  70% {
+  }
+  88% {
+    fill: var(--primary-darkgray);
+  }
+  100% {
+    fill: var(--primary-darkgray);
+  }
+}
+
+@-webkit-keyframes fadeLogo {
   30% {
     fill: #EBEBEB;
   }
@@ -1505,8 +1576,7 @@ span.soil-quality {
     fill: #EBEBEB;
   }
   70% {
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
+    fill: #EBEBEB;
   }
   88% {
     fill: #EBEBEB;
@@ -1516,16 +1586,7 @@ span.soil-quality {
   }
 }
 
-@keyframes hillsAnim {
-  0% {
-    fill: var(--primary-green);
-  }
-  5% {
-    fill: var(--primary-green);
-  }
-  25% {
-    fill: var(--primary-green);
-  }
+@keyframes fadeLogo {
   30% {
     fill: #EBEBEB;
   }
@@ -1536,8 +1597,7 @@ span.soil-quality {
     fill: #EBEBEB;
   }
   70% {
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
+    fill: #EBEBEB;
   }
   88% {
     fill: #EBEBEB;
@@ -1547,14 +1607,15 @@ span.soil-quality {
   }
 }
 
-.logo-hills {
-  -webkit-animation-name: hillsAnim;
-          animation-name: hillsAnim;
+.logo-bg {
+  -webkit-animation-name: fadeBg;
+          animation-name: fadeBg;
   -webkit-animation-timing-function: ease-in-out;
           animation-timing-function: ease-in-out;
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
-  animation-direction: reverse;
+  -webkit-animation-duration: 7s;
+          animation-duration: 7s;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
   -webkit-animation-delay: 3s;
           animation-delay: 3s;
   -webkit-animation-iteration-count: infinite;
@@ -1562,8 +1623,18 @@ span.soil-quality {
 }
 
 .logo-element {
-  -webkit-clip-path: url(#logo-circle);
-          clip-path: url(#logo-circle);
+  -webkit-animation-name: fadeLogo;
+          animation-name: fadeLogo;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-duration: 7s;
+          animation-duration: 7s;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
 }
 
 .stanford-farm {

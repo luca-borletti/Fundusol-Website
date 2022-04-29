@@ -432,13 +432,14 @@ nav {
 }
 
 
-.dia-clicked {
 
-}
+// .dia-clicked {
 
-.dia-unclicked {
+// }
 
-}
+// .dia-unclicked {
+
+// }
 
 ////////////////////////////////////////////////////////////////////////////////
 /////////////////////////// CHANGING TO 780 VIEWPORT ///////////////////////////
@@ -966,6 +967,24 @@ nav {
 ////////////////////////////////////////////////////////////////////////////////
 
 
+#boosting-dia-h1 {
+    user-select: none;
+}
+#boosting-dia-p-1 {
+    user-select: none;
+}
+#boosting-dia-p-2 {
+    user-select: none;
+}
+
+#boosting-dia-img {
+    max-height: 100%;
+    max-width: 100%;
+    border-radius: 2em;
+    user-select: none;
+    // display: none;
+}
+
 .dia-button {
     cursor: pointer;
     pointer-events:all;
@@ -1256,10 +1275,16 @@ nav {
 .increasing-crop-yield-section, .maximizing-solar-section, .boosting-savings-section  {
     margin: 0;
     padding: var(--full-padding);
-    
     .info-pic-container {
         border-top: solid var(--primary-darkgray);
         padding-top: 3.5em;
+        .boosting-col .text-col {
+            margin: 3em;
+            width: 50%;
+            // display: flex;
+            // align-content: center;
+            // flex-direction: column;
+        }
         .text-col {
             // display: flex;
             h1, .boosting-col .text-col h1{
@@ -1278,6 +1303,9 @@ nav {
                 font-weight: 500;
                 // word-spacing:1em;
                 // margin-right: 1em;
+            }
+            ol {
+                margin-left: 3em;
             }
             ol li {
                 padding-left:1em;
@@ -1501,16 +1529,28 @@ span.soil-quality {
 /////////////////////////// PARTNERING PAGE CLASSES ////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
-@keyframes hillsAnim {
-    0% {
-        fill: var(--primary-green);
+@keyframes fadeBg {
+    30% {
+        fill: var(--primary-darkgray);
     }
-    5% {
-        fill: var(--primary-green);
+    45% {
+        fill: var(--primary-darkgray);
     }
-    25% {
-        fill: var(--primary-green);
+    60% {
+        fill: var(--primary-darkgray);
     }
+    70% {
+        // transform: translateX(100%);
+    }
+    88% {
+        fill: var(--primary-darkgray);
+    }
+    100% {
+        fill: var(--primary-darkgray);
+    }
+}
+
+@keyframes fadeLogo {
     30% {
         fill: #EBEBEB;
     }
@@ -1521,7 +1561,8 @@ span.soil-quality {
         fill: #EBEBEB;
     }
     70% {
-        transform: translateX(100%);
+        // transform: translateX(100%);
+        fill: #EBEBEB;
     }
     88% {
         fill: #EBEBEB;
@@ -1530,6 +1571,35 @@ span.soil-quality {
         fill: #EBEBEB;
     }
 }
+// @keyframes hillsAnim {
+//     0% {
+//         fill: var(--primary-green);
+//     }
+//     5% {
+//         fill: var(--primary-green);
+//     }
+//     20% {
+//         fill: var(--primary-green);
+//     }
+//     30% {
+//         fill: #EBEBEB;
+//     }
+//     45% {
+//         fill: #EBEBEB;
+//     }
+//     60% {
+//         fill: #EBEBEB;
+//     }
+//     70% {
+//         transform: translateX(100%);
+//     }
+//     88% {
+//         fill: #EBEBEB;
+//     }
+//     100% {
+//         fill: #EBEBEB;
+//     }
+// }
 // @keyframes hillsAnim {
 //     0% {
 //         fill: var(--primary-green);
@@ -1557,20 +1627,39 @@ span.soil-quality {
 //     }
 // }
 
-.logo-hills {
-    animation-name: hillsAnim;
+// .logo-hills {
+//     animation-name: hillsAnim;
+//     animation-timing-function: linear;
+//     animation-duration: 20s;
+//     animation-direction: normal;
+//     animation-delay: 1s;
+//     // transition-delay: 3s;
+//     animation-iteration-count: infinite;
+//     // transition: all ease-in-out;
+// }
+
+.logo-bg {
+    animation-name: fadeBg;
     animation-timing-function: ease-in-out;
-    animation-duration: 3s;
-    animation-direction:reverse;
+    animation-duration: 7s;
+    animation-direction: alternate;
     animation-delay: 3s;
     animation-iteration-count: infinite;
-    // transition: all ease-in-out;
 }
-
 
 .logo-element {
-    clip-path: url(#logo-circle);
+    animation-name: fadeLogo;
+    animation-timing-function: ease-in-out;
+    animation-duration: 7s;
+    animation-direction: alternate;
+    animation-delay: 3s;
+    animation-iteration-count: infinite;
 }
+
+
+// .logo-element {
+//     clip-path: url(#logo-circle);
+// }
 
 // #logo-circle {
     // display: none;
