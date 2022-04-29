@@ -952,6 +952,14 @@ nav li a:hover {
           user-select: none;
 }
 
+.disappear-image {
+  visibility: hidden;
+}
+
+.appear-image {
+  visibility: unset;
+}
+
 .dia-button {
   cursor: pointer;
   pointer-events: all;

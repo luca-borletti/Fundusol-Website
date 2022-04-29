@@ -993,6 +993,16 @@ nav {
     // display: none;
 }
 
+.disappear-image {
+    // display: none !important;
+    visibility: hidden;
+}
+
+.appear-image {
+    // display: unset !important;
+    visibility: unset;
+}
+
 .dia-button {
     cursor: pointer;
     pointer-events:all;
