@@ -655,45 +655,74 @@
               bifacial = document.getElementById("bifacial-panels")
               backtracking = document.getElementById("backtracking")
 
-        drones.addEventListener("click", () => {
+        drones.addEventListener("click", (a) => {
             if (!drones.classList.contains("expand-member")) {
                 drones.classList.add("expand-member");
                 bifacial.classList.add("disappear-member");
                 backtracking.classList.add("disappear-member");
+                a.stopPropagation();
             }
-            else {
-                drones.classList.remove("expand-member");
-                bifacial.classList.remove("disappear-member");
-                backtracking.classList.remove("disappear-member");
-            }
+            // else {
+            //     drones.classList.remove("expand-member");
+            //     bifacial.classList.remove("disappear-member");
+            //     backtracking.classList.remove("disappear-member");
+            // }
         })
 
-        bifacial.addEventListener("click", () => {
+        bifacial.addEventListener("click", (b) => {
             if (!bifacial.classList.contains("expand-member")) {
                 bifacial.classList.add("expand-member");
                 drones.classList.add("disappear-member");
                 backtracking.classList.add("disappear-member");
+                b.stopPropagation();
             }
-            else {
-                bifacial.classList.remove("expand-member");
-                drones.classList.remove("disappear-member");
-                backtracking.classList.remove("disappear-member");
-            }
+            // else {
+            //     bifacial.classList.remove("expand-member");
+            //     drones.classList.remove("disappear-member");
+            //     backtracking.classList.remove("disappear-member");
+            // }
         })
         
-        backtracking.addEventListener("click", () => {
+        backtracking.addEventListener("click", (c) => {
             if (!backtracking.classList.contains("expand-member")) {
                 backtracking.classList.add("expand-member");
                 drones.classList.add("disappear-member");
                 bifacial.classList.add("disappear-member");
+                c.stopPropagation();
             }
-            else {
+            // else {
+            //     backtracking.classList.remove("expand-member");
+            //     drones.classList.remove("disappear-member");
+            //     bifacial.classList.remove("disappear-member");
+            // }
+        })
+
+        $(document).click(function() {
+            if (backtracking.classList.contains("expand-member")) {
                 backtracking.classList.remove("expand-member");
                 drones.classList.remove("disappear-member");
                 bifacial.classList.remove("disappear-member");
             }
-        })
+            if (bifacial.classList.contains("expand-member")) {
+                bifacial.classList.remove("expand-member");
+                drones.classList.remove("disappear-member");
+                backtracking.classList.remove("disappear-member");
+            }
+            if (drones.classList.contains("expand-member")) {
+                drones.classList.remove("expand-member");
+                bifacial.classList.remove("disappear-member");
+                backtracking.classList.remove("disappear-member");
+            }
+        });
         </script>
+    
+    <!-- <script>
+        $(document).click(function() {
+            if () {
+                $('#email-signup').hide();
+            }
+        });
+    </script> -->
     <script>
         const mobileBtn = document.getElementById("mobile-cta")
               nav = document.querySelector("nav")

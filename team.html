@@ -331,66 +331,95 @@
               este = document.getElementById("este")
               pete = document.getElementById("pete");
 
-        michael.addEventListener("click", () => {
+        michael.addEventListener("click", (a) => {
             if (!michael.classList.contains("expand-member")) {
                 michael.classList.add("expand-member");
                 luca.classList.add("disappear-member");
                 este.classList.add("disappear-member");
                 pete.classList.add("disappear-member");
+                a.stopPropagation();
             }
-            else {
-                michael.classList.remove("expand-member");
-                luca.classList.remove("disappear-member");
-                este.classList.remove("disappear-member");
-                pete.classList.remove("disappear-member");
-            }
+            // else {
+            //     michael.classList.remove("expand-member");
+            //     luca.classList.remove("disappear-member");
+            //     este.classList.remove("disappear-member");
+            //     pete.classList.remove("disappear-member");
+            // }
         })
 
-        luca.addEventListener("click", () => {
+        luca.addEventListener("click", (b) => {
             if (!luca.classList.contains("expand-member")) {
                 luca.classList.add("expand-member");
                 michael.classList.add("disappear-member");
                 este.classList.add("disappear-member");
                 pete.classList.add("disappear-member");
+                b.stopPropagation();
             }
-            else {
-                luca.classList.remove("expand-member");
-                michael.classList.remove("disappear-member");
-                este.classList.remove("disappear-member");
-                pete.classList.remove("disappear-member");
-            }
+            // else {
+                // luca.classList.remove("expand-member");
+                // michael.classList.remove("disappear-member");
+                // este.classList.remove("disappear-member");
+                // pete.classList.remove("disappear-member");
+            // }
         })
         
-        este.addEventListener("click", () => {
+        este.addEventListener("click", (c) => {
             if (!este.classList.contains("expand-member")) {
                 este.classList.add("expand-member");
                 michael.classList.add("disappear-member");
                 luca.classList.add("disappear-member");
                 pete.classList.add("disappear-member");
+                c.stopPropagation();
             }
-            else {
-                este.classList.remove("expand-member");
-                michael.classList.remove("disappear-member");
-                luca.classList.remove("disappear-member");
-                pete.classList.remove("disappear-member");
-            }
+            // else {
+                // este.classList.remove("expand-member");
+                // michael.classList.remove("disappear-member");
+                // luca.classList.remove("disappear-member");
+                // pete.classList.remove("disappear-member");
+            // }
         })
 
-        pete.addEventListener("click", () => {
+        pete.addEventListener("click", (d) => {
             if (!pete.classList.contains("expand-member")) {
                 pete.classList.add("expand-member");
                 michael.classList.add("disappear-member");
                 luca.classList.add("disappear-member");
                 este.classList.add("disappear-member");
+                d.stopPropagation();
             }
-            else {
+            // else {
+            //     pete.classList.remove("expand-member");
+            //     michael.classList.remove("disappear-member");
+            //     luca.classList.remove("disappear-member");
+            //     este.classList.remove("disappear-member");
+            // }
+        })
+        $(document).click(function() {
+            if (pete.classList.contains("expand-member")) {
                 pete.classList.remove("expand-member");
                 michael.classList.remove("disappear-member");
                 luca.classList.remove("disappear-member");
                 este.classList.remove("disappear-member");
             }
-        })
-
+            if (este.classList.contains("expand-member")) {
+                este.classList.remove("expand-member");
+                michael.classList.remove("disappear-member");
+                luca.classList.remove("disappear-member");
+                pete.classList.remove("disappear-member");
+            }
+            if (luca.classList.contains("expand-member")) {
+                luca.classList.remove("expand-member");
+                michael.classList.remove("disappear-member");
+                este.classList.remove("disappear-member");
+                pete.classList.remove("disappear-member");
+            }
+            if (michael.classList.contains("expand-member")) {
+                michael.classList.remove("expand-member");
+                luca.classList.remove("disappear-member");
+                este.classList.remove("disappear-member");
+                pete.classList.remove("disappear-member");
+            }
+        });
         
         </script>
         <script type="text/javascript" language="javascript">
