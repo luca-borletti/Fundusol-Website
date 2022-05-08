@@ -210,7 +210,7 @@ section {
     p {
         margin: 0;
     }
-    // transition: all 1s ease-in-out;
+    // transition: all .5s ease-in-out;
     // display: flex;
     // border: 5px none var(--primary-blue);
     // outline: 5px none var(--primary-blue);
@@ -235,7 +235,7 @@ section {
 
 
     &:hover {
-        // transition: all 1s ease-in-out;
+        // transition: all .5s ease-in-out;
         // border: 5px solid var(--primary-blue);
         transition: all 0.4s ease 0s;
         outline: 1px solid var(--primary-blue);
@@ -451,7 +451,12 @@ nav {
 ////////////////////////////////////////////////////////////////////////////////
 
 @media only screen and (min-width: 780px) {
-
+    li.solar-tech {
+        margin-bottom: 1em !important;
+    }
+    .logo-image-col {
+        margin-bottom: 0em !important;
+    }
     .left-info-pic-section, .right-info-pic-section {
         .info-pic-container .img-col {
             margin-top: 0 !important;
@@ -464,6 +469,12 @@ nav {
         // border-width: 5px;
         border-right: solid black;
         margin: 3em 0;
+    }
+    .boosting-col {
+        .text-col {
+            width: 50% !important;
+        }
+        flex-direction: row !important;
     }
     
     .left-info-pic-section, .right-info-pic-section  {
@@ -519,7 +530,7 @@ nav {
         }
     }
     .navbar .logo {
-        transition: all 1s ease-in-out;
+        transition: all .5s ease-in-out;
     }
 
     .navbar {
@@ -550,7 +561,7 @@ nav {
                     a {
                         margin: 0;
                         padding: 0;
-                        transition: font-size 1s ease-in-out, font-weight 0s;
+                        transition: font-size .5s ease-in-out, font-weight 0s;
                         color: black;
                         // font-size: 1em;
                         font-size: 1.2em;
@@ -568,7 +579,7 @@ nav {
                 // width: 110px;
                 width: 120px;
                 justify-content:center;
-                transition: all 1s ease-in-out;
+                transition: all .5s ease-in-out;
             }
         }
 
@@ -647,18 +658,18 @@ nav {
 .navbar {
     // -webkit-transition: all 1s cubic-bezier(0.164, 0.83, 0.43, 1);
     // transition: all 1s cubic-bezier(0.164, 0.83, 0.43, 1);
-    transition: all 1s ease-in-out;
+    transition: all .5s ease-in-out;
 }
 
 // .atTop {
 //     padding: 1em;
 //     // background-color: red !important;
-//     transition: all 1s ease-in-out;
+//     transition: all .5s ease-in-out;
 //     // -webkit-transition: all 0.5s cubic-bezier(0.164, 0.83, 0.43, 1);
 //     // transition: all 0.5s cubic-bezier(0.164, 0.83, 0.43, 1);
 //     .logo {
 //         height: 3.3em;
-//         transition: all 1s ease-in-out;
+//         transition: all .5s ease-in-out;
 //     }
 
 //     nav {
@@ -672,10 +683,10 @@ nav {
 //                 width: 120px;
 //                 justify-content:center;
 
-//                 transition: all 1s ease-in-out;
+//                 transition: all .5s ease-in-out;
 //                 a {
 //                     transition: font-size 1s ease-in-out, font-weight 0s;
-//                     // transition: all 1s ease-in-out;
+//                     // transition: all .5s ease-in-out;
 //                     // transition: 0s font-weight;
 //                     // transition: hover 1s ease-in-out;
 //                     // text-align: center;
@@ -690,10 +701,10 @@ nav {
 
 .notTop {
     padding: .75em 1em;
-    transition: all 1s ease-in-out;
+    transition: all .5s ease-in-out;
     .logo {
         height: 3em;
-        transition: all 1s ease-in-out;
+        transition: all .5s ease-in-out;
     }
 
     nav {
@@ -703,7 +714,7 @@ nav {
             display: flex;
             li {
                 .navbar-cta {
-                    margin-top: -.9em;
+                    margin-top: -1.6em;
                 }
                 // vertical-align: middle;
                 margin-left: .5em;
@@ -711,14 +722,14 @@ nav {
                 margin-top: 1.1em;
                 width: 120px;
                 justify-content:center;
-                transition: all 1s ease-in-out;
+                transition: all .5s ease-in-out;
                 // padding: .1em 1em;
                 .anim-container {
                     a {
                         margin: 0;
                         // margin-top: .5em;
                         padding: 0;
-                        transition: font-size 1s ease-in-out, font-weight 0s;
+                        transition: font-size .5s ease-in-out, font-weight 0s;
                         font-size: 1em;
                         color: black;
                         // margin-left: 1em !important;
@@ -1323,7 +1334,7 @@ nav {
         padding-top: 3.5em;
         .boosting-col .text-col {
             margin: 3em;
-            width: 50%;
+            // width: 50%;
             // display: flex;
             // align-content: center;
             // flex-direction: column;
@@ -1379,6 +1390,7 @@ nav {
 }
 
 .boosting-col {
+    margin-top: 3em;
     display: flex;
     flex-direction: column;
     .svg-col {
@@ -1389,7 +1401,7 @@ nav {
             // CHANGE FROM MOBILE
         }
     }
-    flex-direction: row;
+    // flex-direction: row;
     // ADD DIVIDER IN PC VERSION
     // .text-col {
         
@@ -1717,11 +1729,16 @@ span.soil-quality {
 // }
 
 .stanford-farm { 
-    max-height: 40rem;
+    // max-height: 40rem;
+    // max-width: 40%;
+    max-width: 80%;
+    // justify-self: left !important;
+    // justify-self: left;
     height: auto;
     border-radius: 2em;
 }
 .stanford-img-col {
+    // justify-content: left;
     flex: 1 1 30%;
 }
 
@@ -1729,6 +1746,7 @@ span.soil-quality {
     svg {
         max-height: 20rem;
     }
+    margin-bottom: 2em;
 }
 
 #convection-currents {
@@ -1956,6 +1974,7 @@ section.team-section .container, .solar-tech-container {
         }
         li.solar-tech {
             margin: 1em 2em;
+            margin-bottom: 4em;
             padding-top: 2em;
             width: 16em;
             // width: 14em !important;
