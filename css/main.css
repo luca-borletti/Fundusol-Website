@@ -410,7 +410,7 @@ nav ul.primary-nav {
   margin-top: 5em;
 }
 
-nav li a {
+nav li .anim-container a {
   color: white;
   text-decoration: none;
   display: block;
@@ -419,7 +419,7 @@ nav li a {
   text-align: right;
 }
 
-nav li a:hover {
+nav li .anim-container a:hover {
   font-weight: 600;
 }
 
@@ -470,7 +470,37 @@ nav li a:hover {
           transform: translate3d(0, 0, 0);
 }
 
+@media only screen and (max-width: 779px) {
+  nav {
+    position: fixed;
+    z-index: 999;
+    width: 35%;
+    right: 0;
+    top: 0;
+    background: var(--primary-darkgray);
+    height: 100vh;
+    padding: 1em;
+  }
+  nav ul.primary-nav {
+    margin-top: 5em;
+  }
+  nav li .anim-container a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: .5em;
+    font-size: 1.5em;
+    text-align: right;
+  }
+  nav li .anim-container a:hover {
+    font-weight: 600;
+  }
+}
+
 @media only screen and (min-width: 780px) {
+  .maximizing-solar-section .info-pic-container .text-col ol {
+    margin-left: 3em !important;
+  }
   li.solar-tech {
     margin-bottom: 1em !important;
   }
@@ -1314,10 +1344,6 @@ nav li a:hover {
 
 .increasing-crop-yield-section .info-pic-container .text-col li::marker, .maximizing-solar-section .info-pic-container .text-col li::marker, .boosting-savings-section .info-pic-container .text-col li::marker {
   font-weight: 500;
-}
-
-.increasing-crop-yield-section .info-pic-container .text-col ol, .maximizing-solar-section .info-pic-container .text-col ol, .boosting-savings-section .info-pic-container .text-col ol {
-  margin-left: 3em;
 }
 
 .increasing-crop-yield-section .info-pic-container .text-col ol li, .maximizing-solar-section .info-pic-container .text-col ol li, .boosting-savings-section .info-pic-container .text-col ol li {

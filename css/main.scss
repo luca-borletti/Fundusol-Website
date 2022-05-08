@@ -372,20 +372,22 @@ nav {
         margin-top: 5em;
     }
     li {
-        a {
-            // color: var(--primary-darkgray);
-            color: white;
-            text-decoration: none;
-            display: block;
-            padding: .5em;
-            font-size: 1.5em;
-            text-align: right;
-
-
-            &:hover {
-                // transition: none;
-                // transition-delay:0s;
-                font-weight:600;
+        .anim-container {
+            a {
+                // color: var(--primary-darkgray);
+                color: white;
+                text-decoration: none;
+                display: block;
+                padding: .5em;
+                font-size: 1.5em;
+                text-align: right;
+    
+    
+                &:hover {
+                    // transition: none;
+                    // transition-delay:0s;
+                    font-weight:600;
+                }
             }
         }
     }
@@ -450,7 +452,53 @@ nav {
 /////////////////////////// CHANGING TO 780 VIEWPORT ///////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
+@media only screen and (max-width: 779px) {
+    nav {
+        position: fixed;
+        z-index: 999;
+        width: 35%;
+        right: 0;
+        top: 0;
+        // background: var(--primary-offwhite);
+        background: var(--primary-darkgray);
+        // background: black;
+        height: 100vh;
+        padding: 1em;
+        ul.primary-nav {
+            margin-top: 5em;
+        }
+        li {
+            .anim-container {
+                a {
+                    // color: var(--primary-darkgray);
+                    color: white;
+                    text-decoration: none;
+                    display: block;
+                    padding: .5em;
+                    font-size: 1.5em;
+                    text-align: right;
+        
+        
+                    &:hover {
+                        // transition: none;
+                        // transition-delay:0s;
+                        font-weight:600;
+                    }
+                }
+            }
+        }
+    }
+    // .navbar {
+    //     nav {
+    //         display: none;
+    //     }
+    // }
+}
+
 @media only screen and (min-width: 780px) {
+    .maximizing-solar-section .info-pic-container .text-col ol {
+        margin-left: 3em !important;
+    }
     li.solar-tech {
         margin-bottom: 1em !important;
     }
@@ -1358,9 +1406,9 @@ nav {
                 // word-spacing:1em;
                 // margin-right: 1em;
             }
-            ol {
-                margin-left: 3em;
-            }
+            // ol {
+            //     margin-left: 3em;
+            // }
             ol li {
                 padding-left:1em;
             }
