@@ -1,28 +1,47 @@
 window.onload = function() {
-
+    function returnTools() {
+        pencil1.classList.remove("pencil_1_active");
+        pencil2.classList.remove("pencil_2_active");
+        blueprint.classList.remove("blueprint_active");
+        hammer.classList.remove("hammer_active");
+        wrench.classList.remove("wrench_active");
+    }
     
-
     var hovering = false;
     
     const toolbelt = document.getElementById('toolbelt');
-
+    
     const gPencils = document.getElementById('g_pencils');
     const pencil1 = document.getElementById('g_pencil_1');
     const pencil2 = document.getElementById('g_pencil_2');
-
+    
     const blueprint = document.getElementById('g_bp');
-
+    
     const hammer = document.getElementById('g_hammer');
     
     const wrench = document.getElementById('g_wrench');
 
     gPencils.addEventListener("mouseover", () => {
+        returnTools();
         pencil1.classList.add("pencil_1_active");
         pencil2.classList.add("pencil_2_active");
     });
+
     blueprint.addEventListener("mouseover", () => {
+        returnTools();
         blueprint.classList.add("blueprint_active");
     });
+
+    // toolbelt.addEventListener("mouseout", () => {
+    //     setTimeout(function() {
+    //         pencil1.classList.remove("pencil_1_active");
+    //         pencil2.classList.remove("pencil_2_active");
+    //         blueprint.classList.remove("blueprint_active");
+    //         hammer.classList.remove("hammer_active");
+    //         wrench.classList.remove("wrench_active");
+    //     }, 3000);
+    // });
+
     // gPencils.addEventListener("mouseover", () => {
     //     if (!hovering) {
     //         hovering = true;
