@@ -32,6 +32,18 @@ window.onload = function() {
         blueprint.classList.add("blueprint_active");
     });
 
+    wrench.addEventListener("mouseover", () => {
+        returnTools();
+        wrench.classList.add("wrench_active");
+        hammer.classList.add("hammer_active");
+    });
+
+    hammer.addEventListener("mouseover", () => {
+        returnTools();
+        wrench.classList.add("wrench_active");
+        hammer.classList.add("hammer_active");
+    });
+
     // toolbelt.addEventListener("mouseout", () => {
     //     setTimeout(function() {
     //         pencil1.classList.remove("pencil_1_active");

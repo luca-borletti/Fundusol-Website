@@ -103,10 +103,10 @@ p, h1, span {
 
 
 g, path {
-    transition: all ease-in .7s;
+    transition: all cubic-bezier(0.075, 0.82, 0.165, 1) .7s;
 }
 #pencil_1, #pencil_2, #bp, #wrench, #hammer {
-    transition: all ease-in .7s;
+    transition: all cubic-bezier(0.075, 0.82, 0.165, 1) .7s;
 }
 
 // #g_pencils:hover {
@@ -126,18 +126,25 @@ g, path {
 
 
 .pencil_1_active {
-    transition: all ease-in .7s;
+    transition: all cubic-bezier(0.075, 0.82, 0.165, 1) .7s;
     transform: translate(171.853px + 50px, 318.93px + -50px) rotate(5deg);
 }
 .pencil_2_active {
-    transition: all ease-in .7s;
+    transition: all cubic-bezier(0.075, 0.82, 0.165, 1) .7s;
     transform: translate(231.343px + 60px, 338.865px + -60px) rotate(10deg);
 }
 .blueprint_active {
-    transition: all ease-in .7s;
+    transition: all cubic-bezier(0.075, 0.82, 0.165, 1) .7s;
     transform: translate(493.038px + 0, 354.28px + -70px) rotate(-5deg);
 }
-
+.hammer_active {
+    transition: all cubic-bezier(0.075, 0.82, 0.165, 1) .7s;
+    transform: translate(690.738px + -10px, 326.905px + -70px) rotate(-5deg);
+}
+.wrench_active {
+    transition: all cubic-bezier(0.075, 0.82, 0.165, 1) .7s;
+    transform: translate(842.317px + 10px, 375.937px + -70px) rotate(5deg);
+}
 
 
 

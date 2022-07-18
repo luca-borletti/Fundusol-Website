@@ -116,33 +116,47 @@ p, h1, span {
 }
 
 g, path {
-  -webkit-transition: all ease-in .7s;
-  transition: all ease-in .7s;
+  -webkit-transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
+  transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
 }
 
 #pencil_1, #pencil_2, #bp, #wrench, #hammer {
-  -webkit-transition: all ease-in .7s;
-  transition: all ease-in .7s;
+  -webkit-transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
+  transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
 }
 
 .pencil_1_active {
-  -webkit-transition: all ease-in .7s;
-  transition: all ease-in .7s;
+  -webkit-transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
+  transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
   -webkit-transform: translate(221.853px, 268.93px) rotate(5deg);
           transform: translate(221.853px, 268.93px) rotate(5deg);
 }
 
 .pencil_2_active {
-  -webkit-transition: all ease-in .7s;
-  transition: all ease-in .7s;
+  -webkit-transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
+  transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
   -webkit-transform: translate(291.343px, 278.865px) rotate(10deg);
           transform: translate(291.343px, 278.865px) rotate(10deg);
 }
 
 .blueprint_active {
-  -webkit-transition: all ease-in .7s;
-  transition: all ease-in .7s;
+  -webkit-transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
+  transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
   -webkit-transform: translate(493.038px, 284.28px) rotate(-5deg);
           transform: translate(493.038px, 284.28px) rotate(-5deg);
+}
+
+.hammer_active {
+  -webkit-transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
+  transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
+  -webkit-transform: translate(680.738px, 256.905px) rotate(-5deg);
+          transform: translate(680.738px, 256.905px) rotate(-5deg);
+}
+
+.wrench_active {
+  -webkit-transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
+  transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
+  -webkit-transform: translate(852.317px, 305.937px) rotate(5deg);
+          transform: translate(852.317px, 305.937px) rotate(5deg);
 }
 /*# sourceMappingURL=main.css.map */
