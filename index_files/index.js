@@ -1,12 +1,29 @@
 window.onload = function() {
+    var path = document.getElementById('projects_path');
+    var length = path.getTotalLength(path);
+    console.log(length);
+
     function returnTools() {
         pencil1.classList.remove("pencil_1_active");
         pencil2.classList.remove("pencil_2_active");
         blueprint.classList.remove("blueprint_active");
         hammer.classList.remove("hammer_active");
         wrench.classList.remove("wrench_active");
+        
+        schoolPath.classList.remove("school_path_active");
+        schoolPath.classList.add("school_path_inactive");
+
+        workPath.classList.remove("work_path_active");
+        workPath.classList.add("work_path_inactive");
+
+        projectsPath.classList.remove("projects_path_active");
+        projectsPath.classList.add("projects_path_inactive");
+        
+        projectsText.classList.add("projects_text_inactive");
+        workText.classList.add("work_text_inactive");
+        schoolText.classList.add("school_text_inactive");
     }
-    
+
     var hovering = false;
     
     const toolbelt = document.getElementById('toolbelt');
@@ -21,27 +38,73 @@ window.onload = function() {
     
     const wrench = document.getElementById('g_wrench');
 
+    const schoolPath = document.getElementById('school_path');
+    const workPath = document.getElementById('work_path');
+    const projectsPath = document.getElementById('projects_path');
+    const projectsText = document.getElementById('projects_text');
+    const schoolText = document.getElementById('school_text');
+    const workText = document.getElementById('work_text');
+    const gProjects = document.getElementById('g_projects');
+    const gSchool = document.getElementById('g_school');
+    const gWork = document.getElementById('g_work');
+
+    // returnTools();
+    // projectsText.style.display = "none";
+    // workText.style.display = "none";
+    // schoolText.style.display = "none";
+
+
     gPencils.addEventListener("mouseover", () => {
         returnTools();
+        gSchool.style.display = "unset";
         pencil1.classList.add("pencil_1_active");
         pencil2.classList.add("pencil_2_active");
+        
+        schoolPath.classList.remove("school_path_inactive");
+        schoolPath.classList.add("school_path_active");
+
+        schoolText.classList.remove("school_text_inactive");
     });
 
     blueprint.addEventListener("mouseover", () => {
         returnTools();
+        gProjects.style.display = "unset";
+
         blueprint.classList.add("blueprint_active");
+        
+        projectsPath.classList.remove("projects_path_inactive");
+        projectsPath.classList.add("projects_path_active");
+
+        projectsText.classList.remove("projects_text_inactive");
+
     });
 
     wrench.addEventListener("mouseover", () => {
         returnTools();
-        wrench.classList.add("wrench_active");
+        gWork.style.display = "unset";
+
         hammer.classList.add("hammer_active");
+        wrench.classList.add("wrench_active");
+        
+        workPath.classList.remove("work_path_inactive");
+        workPath.classList.add("work_path_active");
+        
+        workText.classList.remove("work_text_inactive");
+
     });
 
     hammer.addEventListener("mouseover", () => {
         returnTools();
-        wrench.classList.add("wrench_active");
+        gWork.style.display = "unset";
+        
         hammer.classList.add("hammer_active");
+        wrench.classList.add("wrench_active");
+        
+        workPath.classList.remove("work_path_inactive");
+        workPath.classList.add("work_path_active");
+
+        workText.classList.remove("work_text_inactive");
+
     });
 
     // toolbelt.addEventListener("mouseout", () => {
