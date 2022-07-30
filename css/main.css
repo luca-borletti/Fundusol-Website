@@ -47,7 +47,7 @@ p, h1, span {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 15px 50px;
+  padding: 30px 50px 0 50px;
   height: 10vh;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -125,11 +125,15 @@ g, path {
   transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
 }
 
+#g_pencils, #g_wrench, #g_hammer, #g_bp, #school, #g_school, #g_projects, #g_work {
+  cursor: pointer;
+}
+
 .pencil_1_active {
   -webkit-transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
   transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
   -webkit-transform: translate(171.853px, 258.93px) rotate(2deg);
-          transform: translate(171.853px, 258.93px) rotate(2deg);
+  transform: translate(171.853px, 258.93px) rotate(2deg);
   -webkit-filter: brightness(110%) saturate(140%);
           filter: brightness(110%) saturate(140%);
 }
@@ -138,7 +142,7 @@ g, path {
   -webkit-transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
   transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
   -webkit-transform: translate(234.343px, 293.865px) rotate(3deg);
-          transform: translate(234.343px, 293.865px) rotate(3deg);
+  transform: translate(234.343px, 293.865px) rotate(3deg);
   -webkit-filter: brightness(110%) saturate(140%);
           filter: brightness(110%) saturate(140%);
 }
@@ -147,7 +151,7 @@ g, path {
   -webkit-transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
   transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
   -webkit-transform: translate(493.038px, 284.28px) rotate(-5deg);
-          transform: translate(493.038px, 284.28px) rotate(-5deg);
+  transform: translate(493.038px, 284.28px) rotate(-5deg);
   -webkit-filter: brightness(110%) saturate(140%);
           filter: brightness(110%) saturate(140%);
 }
@@ -156,7 +160,7 @@ g, path {
   -webkit-transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
   transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
   -webkit-transform: translate(680.738px, 256.905px) rotate(-5deg);
-          transform: translate(680.738px, 256.905px) rotate(-5deg);
+  transform: translate(680.738px, 256.905px) rotate(-5deg);
   -webkit-filter: brightness(110%) saturate(140%);
           filter: brightness(110%) saturate(140%);
 }
@@ -165,7 +169,7 @@ g, path {
   -webkit-transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
   transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
   -webkit-transform: translate(862.317px, 305.937px) rotate(5deg);
-          transform: translate(862.317px, 305.937px) rotate(5deg);
+  transform: translate(862.317px, 305.937px) rotate(5deg);
   -webkit-filter: brightness(110%) saturate(140%);
           filter: brightness(110%) saturate(140%);
 }
@@ -267,5 +271,13 @@ g, path {
   opacity: 0;
   -webkit-transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
   transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
+}
+
+.invisible {
+  opacity: 0;
+}
+
+.visible {
+  opacity: 1;
 }
 /*# sourceMappingURL=main.css.map */

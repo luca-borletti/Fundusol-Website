@@ -47,7 +47,7 @@ p, h1, span {
     justify-content: space-between;
     align-items: center;
     
-    padding: 15px 50px;
+    padding: 30px 50px 0 50px;
     height: 10vh;
     box-sizing: border-box;
 
@@ -91,9 +91,6 @@ p, h1, span {
     display: flex;
     justify-content: center;
     align-items: center;
-    // align-items: center;
-    // vertical-align: center;
-    // flex-direction: column;
     svg#toolbelt {
         width: 50%;
         max-height: 90vh;
@@ -109,48 +106,56 @@ g, path {
     transition: all cubic-bezier(0.075, 0.82, 0.165, 1) .7s;
 }
 
-// #g_pencils:hover {
-//     #g_pencil_1 {
-//         transition: all ease-in .7s;
-//         transform: translate(171.853px + 50px, 318.93px + -50px) rotate(5deg);
-//     }
-//     // #pencil_1 {
-//     //     transition: all ease-in .7s;
-//     //     transform: translate(50px, -50px);
-//     // }
-//     #g_pencil_2 {
-//         transition: all ease-in .7s;
-//         transform: translate(231.343px + 60px, 338.865px + -60px) rotate(10deg);
-//     }
-// }
-
+#g_pencils, #g_wrench, #g_hammer, #g_bp, #school, #g_school, #g_projects, #g_work {
+    cursor: pointer;
+}
 
 .pencil_1_active {
     transition: all cubic-bezier(0.075, 0.82, 0.165, 1) .7s;
+    -webkit-transform: translate(171.853px + 0px, 318.93px + -60px) rotate(2deg);
+    -ms-transform: translate(171.853px + 0px, 318.93px + -60px) rotate(2deg);
+    -moz-transform: translate(171.853px + 0px, 318.93px + -60px) rotate(2deg);
+    -o-transform: translate(171.853px + 0px, 318.93px + -60px) rotate(2deg);
     transform: translate(171.853px + 0px, 318.93px + -60px) rotate(2deg);
     filter: brightness(110%) saturate(140%);
 }
+
 .pencil_2_active {
     transition: all cubic-bezier(0.075, 0.82, 0.165, 1) .7s;
+    -webkit-transform: translate(231.343px + 3px, 338.865px + -45px) rotate(3deg);
+    -ms-transform: translate(231.343px + 3px, 338.865px + -45px) rotate(3deg);
+    -moz-transform: translate(231.343px + 3px, 338.865px + -45px) rotate(3deg);
+    -o-transform: translate(231.343px + 3px, 338.865px + -45px) rotate(3deg);
     transform: translate(231.343px + 3px, 338.865px + -45px) rotate(3deg);
     filter: brightness(110%) saturate(140%); 
 }
 .blueprint_active {
     transition: all cubic-bezier(0.075, 0.82, 0.165, 1) .7s;
+    -webkit-transform: translate(493.038px + 0, 354.28px + -70px) rotate(-5deg);
+    -ms-transform: translate(493.038px + 0, 354.28px + -70px) rotate(-5deg);
+    -moz-transform: translate(493.038px + 0, 354.28px + -70px) rotate(-5deg);
+    -o-transform: translate(493.038px + 0, 354.28px + -70px) rotate(-5deg);
     transform: translate(493.038px + 0, 354.28px + -70px) rotate(-5deg);
     filter: brightness(110%) saturate(140%); 
 }
 .hammer_active {
     transition: all cubic-bezier(0.075, 0.82, 0.165, 1) .7s;
+    -webkit-transform: translate(690.738px + -10px, 326.905px + -70px) rotate(-5deg);
+    -ms-transform: translate(690.738px + -10px, 326.905px + -70px) rotate(-5deg);
+    -moz-transform: translate(690.738px + -10px, 326.905px + -70px) rotate(-5deg);
+    -o-transform: translate(690.738px + -10px, 326.905px + -70px) rotate(-5deg);
     transform: translate(690.738px + -10px, 326.905px + -70px) rotate(-5deg);
     filter: brightness(110%) saturate(140%); 
 }
 .wrench_active {
     transition: all cubic-bezier(0.075, 0.82, 0.165, 1) .7s;
+    -webkit-transform: translate(842.317px + 20px, 375.937px + -70px) rotate(5deg);
+    -ms-transform: translate(842.317px + 20px, 375.937px + -70px) rotate(5deg);
+    -moz-transform: translate(842.317px + 20px, 375.937px + -70px) rotate(5deg);
+    -o-transform: translate(842.317px + 20px, 375.937px + -70px) rotate(5deg);
     transform: translate(842.317px + 20px, 375.937px + -70px) rotate(5deg);
     filter: brightness(110%) saturate(140%); 
 }
-
 
 .school_path_active {
     stroke-dasharray: 421.3840026855469;
@@ -211,21 +216,21 @@ g, path {
 
 #projects_text, #work_text, #school_text {
     transition: all cubic-bezier(0.075, 0.82, 0.165, 1) .7s;
-    // opacity: 1;
-    
 }
 
 .projects_text_inactive, .work_text_inactive, .school_text_inactive {
-    // display: none;
     display: unset;
     opacity: 0;
     transition: all cubic-bezier(0.075, 0.82, 0.165, 1) .7s;
 }
 
-// #g_work, #g_school, #g_projects {
-//     display: none;
-// }
+.invisible {
+    opacity: 0;
+}
 
+.visible {
+    opacity: 1;
+}
 
 ////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////// DEPRECATED ///////////////////////////////////
