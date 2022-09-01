@@ -6,6 +6,8 @@
   --primary-darkgray: #262626;
   --full-padding: 60px;
   --grid-column-count: 12;
+  --contact-darkgray: #232529;
+  --contact-lightgray: #6A6E78;
 }
 
 body {
