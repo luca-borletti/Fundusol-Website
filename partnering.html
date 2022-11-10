@@ -8,10 +8,12 @@
     <meta name="description" content="Expanding agrivoltaics to benefit struggling farms and mitigate the effects of climate change">
     <meta name="author" content="Luca Borletti">
     <meta name="keywords" content="Agrivoltaics, Startup, Solar, Farming">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/main.css"> 
     <link rel="icon" href="./assets/icon.png">
     <script src="./index_files/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
+    
     
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@fundusol" />
@@ -138,14 +140,53 @@
     <section class="left-info-pic-section">
         <div class="info-pic-container">
             <div class="text-col">
-                <h1>For Farms</h1>
-                <p>
+                <h1>Send us a message!</h1>
+                <!-- <p>
                     To help us learn about your farm, contribute
                     to our agrivoltaics research, and potentially
                     partner with us in the future, please fill
                     out this 5 minute survey.
                 </p> 
-                <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSe_rnL4XzBWxEbSu_wXXFRasWNXmAWQQt8XBQp9qVcErmZRzg/viewform" class="primary-cta">Fill out our survey <span></a>
+                <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSe_rnL4XzBWxEbSu_wXXFRasWNXmAWQQt8XBQp9qVcErmZRzg/viewform" class="primary-cta">Fill out our survey <span></a> -->
+                    <form action="https://formspree.io/f/mwkzaawz" method="POST">
+                        <!-- Name input -->
+                        <div class="mb-3">
+                          <label class="form-label contact-form-label" for="name">Full Name</label>
+                          <input class="form-control" id="name" type="text" name="name" id="full-name" placeholder="First and Last" data-sb-validations="required" />
+                          <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
+                        </div>
+                    
+                        <!-- Email address input -->
+                        <div class="mb-3">
+                          <label class="form-label contact-form-label" for="emailAddress">Email Address</label>
+                          <input class="form-control" type="email" name="_replyto" id="email-address" placeholder="example@fundusol.com" data-sb-validations="required, email" />
+                          <div class="invalid-feedback" data-sb-feedback="emailAddress:required">Email Address is required.</div>
+                          <div class="invalid-feedback" data-sb-feedback="emailAddress:email">Email is invalid.</div>
+                        </div>
+                    
+                        <!-- Message input -->
+                        <div class="mb-3">
+                          <label class="form-label contact-form-label" for="message">Message</label>
+                          <textarea placeholder="Tell us about yourself..." class="form-control" rows="5" name="message" id="message" style="height: 10rem;" data-sb-validations="required"></textarea>
+                          <div class="invalid-feedback" data-sb-feedback="message:required">Message is required.</div>
+                        </div>
+                    
+                        <!-- Form submissions success message -->
+                        <div class="d-none" id="submitSuccessMessage">
+                          <div class="text-center mb-3">Form submission successful!</div>
+                        </div>
+                    
+                        <!-- Form submissions error message -->
+                        <div class="d-none" id="submitErrorMessage">
+                          <div class="text-center text-danger mb-3">Error while sending message!</div>
+                        </div>
+                    
+                        <!-- Form submit button -->
+                        <div class="d-grid">
+                          <button class="btn btn-primary btn-lg" type="submit">Submit</button>
+                        </div>
+                    
+                    </form>
             </div>
             <div class="img-col stanford-img-col">
                 <img class = "stanford-farm" src="/assets/stanford-farm-pic.jpg" alt="" class="">
@@ -154,18 +195,14 @@
         </div>
     </section>
 
-    <section class="right-info-pic-section">
+    <!-- <section class="right-info-pic-section">
         <div class="info-pic-container">
             <div class="logo-image-col img-col">
-                <!-- !!!!!!!!!!!!! -->
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 58.709 58.709">
                     
                     <g transform="translate(0 0)">
                         <g transform="translate(0 0)">
-                            <!-- <clipPath id="logo-circle"> 
-                                <circle cx="29.297" cy="29.297" r="29.297" transform="translate(0.116 0.116)" fill="#306ef6"/>
-                            </clipPath> -->
-                            <circle class = "logo-bg" cx="29.297" cy="29.297" r="29.297" transform="translate(0.116 0.116)" fill="#306ef6"/>
+                             <circle class = "logo-bg" cx="29.297" cy="29.297" r="29.297" transform="translate(0.116 0.116)" fill="#306ef6"/>
                             <g transform="translate(0.116 0.116)">
                                 <path d="M34.4,5.4A30.294,30.294,0,0,0,22.655,7.841a8.922,8.922,0,0,1,.814,3.953,9.576,9.576,0,0,1-9.533,9.533,8.866,8.866,0,0,1-4.883-1.4A28.605,28.605,0,0,0,5.1,34.7,29.3,29.3,0,1,0,34.4,5.4Z" transform="translate(-5.1 -5.4)" fill="none"/>
                                 <path class = "logo-element" d="M22.9,11.453A10.894,10.894,0,0,0,22.086,7.5,28.431,28.431,0,0,0,8.6,19.591a9.949,9.949,0,0,0,4.883,1.4A9.477,9.477,0,0,0,22.9,11.453Z" transform="translate(-4.531 -5.059)" fill="#fadf5f"/>
@@ -188,9 +225,7 @@
                 <a href="mailto:fundusol.energy@gmail.com" class="cta-partner-contact primary-cta">Contact Us<span></a>
             </div>
         </div>
-
-        <!-- TODO BUTTON -->
-    </section>
+    </section> -->
 
     <footer>
         <div class="top-container">

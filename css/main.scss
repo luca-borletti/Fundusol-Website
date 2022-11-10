@@ -81,8 +81,16 @@ section {
     padding: 4em 2em;
 }
 
-.hero-image {
+.service-image {
     background-image: url("/assets/agri-front-page.jpeg");
+}
+
+.hero-image {
+    background-image: url("/assets/agri-front-page2.jpg");
+}
+
+.hero-image, .service-image {
+    // background-image: url("/assets/agri-front-page.jpeg");
     background-color: var(--primary-offwhite);
     min-height: 500px;
     position: relative;
@@ -194,6 +202,28 @@ section {
             }
         }
     }
+}
+
+.service-image {
+    h1 {
+        font-weight: 600;
+        font-size: 3em;
+        margin: 0 0 .5em 0;
+        padding: 0;
+    }
+    p {
+        font-weight: 300;
+        font-size: 1.75em;
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        width: 40% !important;
+        // padding: 3em !important;
+        padding-bottom: 3em !important;
+        padding-top: 2.5em !important;
+    }
+    min-height: 600px;
 }
 
 .primary-cta, .navbar-cta {
