@@ -483,6 +483,12 @@ nav {
 ////////////////////////////////////////////////////////////////////////////////
 
 @media only screen and (max-width: 779px) {
+    .service-image {
+        .container {
+            // width: unset !important;
+            width: -webkit-min-content !important;
+        }
+    }
     nav {
         position: fixed;
         z-index: 999;
@@ -526,7 +532,7 @@ nav {
 }
 
 @media only screen and (min-width: 780px) {
-    .maximizing-solar-section .info-pic-container .text-col ol {
+    .why-agrivoltaics-section .maximizing-solar-section .info-pic-container .text-col ol {
         margin-left: 3em !important;
     }
     li.solar-tech {
@@ -1404,7 +1410,7 @@ nav {
 //     margin-bottom: 10em !important;
 // }
 
-.increasing-crop-yield-section, .maximizing-solar-section, .boosting-savings-section  {
+.increasing-crop-yield-section, .maximizing-solar-section, .boosting-savings-section, .why-agrivoltaics-section  {
     margin: 0;
     padding: var(--full-padding);
     .info-pic-container {
@@ -1464,6 +1470,12 @@ nav {
                 margin: 1em;
             }
         }
+    }
+}
+
+.why-agrivoltaics-section {
+    .info-pic-container {
+        text-align: center;
     }
 }
 
