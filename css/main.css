@@ -202,9 +202,8 @@ section {
   padding: 0;
 }
 .service-image .container {
+  margin-top: 10em !important;
   width: 40% !important;
-  padding-bottom: 3em !important;
-  padding-top: 2.5em !important;
 }
 
 .primary-cta, .navbar-cta {
@@ -529,6 +528,14 @@ nav li .anim-container a:hover {
     transition: font-size 0.5s ease-in-out, font-weight 0s;
     color: black;
     font-size: 1.2em;
+  }
+  .service-image {
+    min-height: 500px;
+  }
+  .service-image .container {
+    margin-top: 13em;
+    padding-bottom: 3em !important;
+    padding-top: 2.5em !important;
   }
   .hero-image {
     height: 100vh;

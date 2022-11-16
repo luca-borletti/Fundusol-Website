@@ -218,10 +218,11 @@ section {
         padding: 0;
     }
     .container {
+        margin-top: 10em !important;
         width: 40% !important;
         // padding: 3em !important;
-        padding-bottom: 3em !important;
-        padding-top: 2.5em !important;
+        // padding-bottom: 3em !important;
+        // padding-top: 2.5em !important;
     }
     min-height: 600px;
 }
@@ -680,6 +681,14 @@ nav {
             
             // }
             
+    }
+    .service-image {
+        .container {
+            margin-top: 13em;
+            padding-bottom: 3em !important;
+            padding-top: 2.5em !important;
+        }
+        min-height: 500px;
     }
 
     .hero-image {
