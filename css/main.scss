@@ -483,10 +483,19 @@ nav {
 ////////////////////////////////////////////////////////////////////////////////
 
 @media only screen and (max-width: 779px) {
+    
     .service-image {
         .container {
             // width: unset !important;
             width: -webkit-min-content !important;
+            // width: 80% !important;
+        }
+    }
+    .hero-image {
+        .container {
+            // width: unset !important;
+            // width: -webkit-min-content !important;
+            width: 80% !important;
         }
     }
     nav {
@@ -853,6 +862,7 @@ nav {
                 // text-align: end;
                 // justify-content: center;
                 // align-items: center;
+                // opacity: .5;
                 img {
                     // justify-content: center;
                     // margin-bottom: 2em;
@@ -968,7 +978,7 @@ nav {
             // width: 1em;
             
             
-            opacity: .5;
+            // opacity: .5;
             // color: #828D95;
 
             display: flex;

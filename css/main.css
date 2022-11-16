@@ -402,6 +402,9 @@ nav li .anim-container a:hover {
   .service-image .container {
     width: -webkit-min-content !important;
   }
+  .hero-image .container {
+    width: 80% !important;
+  }
   nav {
     position: fixed;
     z-index: 999;
@@ -735,7 +738,6 @@ nav li .anim-container a:hover {
 .cards-section .container li {
   padding: 1.5em 3.5em 0.75em 3.5em;
   background: var(--primary-offwhite);
-  opacity: 0.5;
   display: flex;
   flex-direction: column;
   border-radius: 2em;
