@@ -472,12 +472,12 @@ nav li .anim-container a:hover {
     max-width: 50%;
     padding-right: 3em;
     border-right: solid black;
-    margin: 3em 0;
+    margin: 0 0;
   }
   .boosting-col {
     flex-direction: row !important;
   }
-  .boosting-col .text-col {
+  .boosting-col .text-col, .boosting-col .cta-col {
     width: 50% !important;
   }
   .left-info-pic-section .info-pic-container, .right-info-pic-section .info-pic-container, .w-left-info-pic-section .info-pic-container, .w-right-info-pic-section .info-pic-container {
@@ -498,14 +498,24 @@ nav li .anim-container a:hover {
     flex-direction: row !important;
   }
   .heatmap-col .heatmap-gif {
-    max-width: 40% !important;
+    max-width: 35% !important;
+    margin-bottom: 0 !important;
   }
-  .heatmap-col .text-col {
-    margin-left: 5% !important;
+  .heatmap-col .fostering-yield-img {
+    width: 55%;
+    margin-bottom: 0 !important;
+  }
+  .heatmap-col .heatmap-arrow {
+    width: 5%;
+    display: unset !important;
   }
   .heatmap-col .text-col p {
     margin-bottom: 5em !important;
     margin-top: 2em !important;
+  }
+  .heatmap-col .heatmap-text-col {
+    text-align: left !important;
+    margin-left: -5em !important;
   }
   .mobile-menu, .mobile-menu-exit {
     display: none;
@@ -1157,7 +1167,7 @@ nav li .anim-container a:hover {
   border-top: solid var(--primary-darkgray);
   padding-top: 3.5em;
 }
-.increasing-crop-yield-section .info-pic-container .boosting-col .text-col, .maximizing-solar-section .info-pic-container .boosting-col .text-col, .boosting-savings-section .info-pic-container .boosting-col .text-col, .why-agrivoltaics-section .info-pic-container .boosting-col .text-col {
+.increasing-crop-yield-section .info-pic-container .boosting-col .text-col, .increasing-crop-yield-section .info-pic-container .boosting-col .cta-col, .maximizing-solar-section .info-pic-container .boosting-col .text-col, .maximizing-solar-section .info-pic-container .boosting-col .cta-col, .boosting-savings-section .info-pic-container .boosting-col .text-col, .boosting-savings-section .info-pic-container .boosting-col .cta-col, .why-agrivoltaics-section .info-pic-container .boosting-col .text-col, .why-agrivoltaics-section .info-pic-container .boosting-col .cta-col {
   margin: 3em;
 }
 .increasing-crop-yield-section .info-pic-container .text-col h1, .increasing-crop-yield-section .info-pic-container .text-col .boosting-col .text-col h1, .maximizing-solar-section .info-pic-container .text-col h1, .maximizing-solar-section .info-pic-container .text-col .boosting-col .text-col h1, .boosting-savings-section .info-pic-container .text-col h1, .boosting-savings-section .info-pic-container .text-col .boosting-col .text-col h1, .why-agrivoltaics-section .info-pic-container .text-col h1, .why-agrivoltaics-section .info-pic-container .text-col .boosting-col .text-col h1 {
@@ -1185,11 +1195,19 @@ nav li .anim-container a:hover {
   flex-direction: column;
 }
 .increasing-crop-yield-section .info-pic-container .heatmap-col .heatmap-gif, .maximizing-solar-section .info-pic-container .heatmap-col .heatmap-gif, .boosting-savings-section .info-pic-container .heatmap-col .heatmap-gif, .why-agrivoltaics-section .info-pic-container .heatmap-col .heatmap-gif {
-  max-width: 80%;
   border-radius: 1.7em;
   margin-bottom: 3em;
 }
+.increasing-crop-yield-section .info-pic-container .heatmap-col .fostering-yield-img, .maximizing-solar-section .info-pic-container .heatmap-col .fostering-yield-img, .boosting-savings-section .info-pic-container .heatmap-col .fostering-yield-img, .why-agrivoltaics-section .info-pic-container .heatmap-col .fostering-yield-img {
+  border-radius: 1.7em;
+  margin-bottom: 3em;
+}
+.increasing-crop-yield-section .info-pic-container .heatmap-col .heatmap-arrow, .maximizing-solar-section .info-pic-container .heatmap-col .heatmap-arrow, .boosting-savings-section .info-pic-container .heatmap-col .heatmap-arrow, .why-agrivoltaics-section .info-pic-container .heatmap-col .heatmap-arrow {
+  width: 5%;
+  display: none;
+}
 .increasing-crop-yield-section .info-pic-container .heatmap-col .text-col, .maximizing-solar-section .info-pic-container .heatmap-col .text-col, .boosting-savings-section .info-pic-container .heatmap-col .text-col, .why-agrivoltaics-section .info-pic-container .heatmap-col .text-col {
+  margin-left: 5%;
   align-self: left;
 }
 .increasing-crop-yield-section .info-pic-container .heatmap-col svg, .maximizing-solar-section .info-pic-container .heatmap-col svg, .boosting-savings-section .info-pic-container .heatmap-col svg, .why-agrivoltaics-section .info-pic-container .heatmap-col svg {
@@ -1210,6 +1228,18 @@ nav li .anim-container a:hover {
   margin-top: 3em;
   display: flex;
   flex-direction: column;
+}
+.boosting-col #mb-diagram {
+  width: 50%;
+}
+.boosting-col .cta-col {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+.boosting-col .cta-col a.primary-cta {
+  margin: auto;
+  border-radius: 0.3em;
 }
 .boosting-col .svg-col svg {
   width: 100%;

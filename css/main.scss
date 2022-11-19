@@ -603,10 +603,10 @@ nav {
         // border-right: #262626;
         // border-width: 5px;
         border-right: solid black;
-        margin: 3em 0;
+        margin: 0 0;
     }
     .boosting-col {
-        .text-col {
+        .text-col, .cta-col {
             width: 50% !important;
         }
         flex-direction: row !important;
@@ -634,10 +634,19 @@ nav {
         align-items: center !important;
         flex-direction: row !important;
         .heatmap-gif {
-            max-width: 40% !important;
+            max-width: 35% !important;
+            margin-bottom: 0 !important;
+        }
+        .fostering-yield-img {
+            width: 55%;
+            margin-bottom: 0 !important;
+        }
+        .heatmap-arrow {
+            width: 5%;
+            display: unset !important;
         }
         .text-col {
-            margin-left: 5% !important;
+            // margin-left: 5% !important;
             // p br {
                 // display: block !important;
                 // margin: 10em 0 !important;
@@ -651,6 +660,11 @@ nav {
             //     content: "awdwad";
             // }
         }
+        .heatmap-text-col {
+            text-align: left !important;
+            margin-left: -5em !important;
+        }
+        
     }
 
     .mobile-menu, .mobile-menu-exit {
@@ -1557,7 +1571,7 @@ nav {
     .info-pic-container {
         border-top: solid var(--primary-darkgray);
         padding-top: 3.5em;
-        .boosting-col .text-col {
+        .boosting-col .text-col, .boosting-col .cta-col {
             margin: 3em;
             // width: 50%;
             // display: flex;
@@ -1594,14 +1608,24 @@ nav {
         .heatmap-col {
             margin-top: 3em;
             .heatmap-gif {
-                max-width: 80%;
+                // width: 35%;
                 // max-width: 50% !important;
                 border-radius: 1.7em;
                 margin-bottom: 3em;
             }
+            .fostering-yield-img {
+                // width: 55%;
+                // max-width: 50% !important;
+                border-radius: 1.7em;
+                margin-bottom: 3em;
+            }
+            .heatmap-arrow {
+                width: 5%;
+                display:none;
+            }
             justify-content: space-between;
             .text-col {
-                // margin-left: 5%;
+                margin-left: 5%;
                 // CHANGE FROM MOBILE
                 align-self: left;
             }
@@ -1639,6 +1663,18 @@ nav {
     margin-top: 3em;
     display: flex;
     flex-direction: column;
+    #mb-diagram {
+        width: 50%;
+    }
+    .cta-col {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        a.primary-cta {
+            margin: auto;
+            border-radius: .3em;
+        }
+    }
     .svg-col {
         svg {
             width: 100%;
