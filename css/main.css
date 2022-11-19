@@ -397,6 +397,11 @@ nav li .anim-container a:hover {
   transform: translate3d(0, 0, 0);
 }
 
+@media only screen and (max-width: 900px) {
+  section.team-section .container ul, .solar-tech-container ul {
+    flex-wrap: wrap;
+  }
+}
 @media only screen and (max-width: 779px) {
   .service-image .container {
     width: -webkit-min-content !important;
@@ -433,6 +438,9 @@ nav li .anim-container a:hover {
   .why-agrivoltaics-section .maximizing-solar-section .info-pic-container .text-col ol {
     margin-left: 3em !important;
   }
+  .why-agrivoltaics-section .info-pic-container {
+    text-align: center !important;
+  }
   li.solar-tech {
     margin-bottom: 1em !important;
   }
@@ -441,6 +449,24 @@ nav li .anim-container a:hover {
   }
   .left-info-pic-section .info-pic-container .img-col, .right-info-pic-section .info-pic-container .img-col {
     margin-top: 0 !important;
+  }
+  .w-left-info-pic-section .info-pic-container .why-img, .w-right-info-pic-section .info-pic-container .why-img {
+    max-width: 40% !important;
+    border-radius: 2em;
+  }
+  .w-left-info-pic-section .info-pic-container .icon-text-col .icon-part, .w-right-info-pic-section .info-pic-container .icon-text-col .icon-part {
+    display: unset !important;
+  }
+  .w-left-info-pic-section .info-pic-container .icon-text-col {
+    text-align: left !important;
+    margin-right: 5em !important;
+  }
+  .w-right-info-pic-section .info-pic-container {
+    text-align: right;
+  }
+  .w-right-info-pic-section .info-pic-container .icon-text-col {
+    text-align: right !important;
+    margin-left: 5em !important;
   }
   .boosting-col .svg-col {
     max-width: 50%;
@@ -454,17 +480,17 @@ nav li .anim-container a:hover {
   .boosting-col .text-col {
     width: 50% !important;
   }
-  .left-info-pic-section .info-pic-container, .right-info-pic-section .info-pic-container {
+  .left-info-pic-section .info-pic-container, .right-info-pic-section .info-pic-container, .w-left-info-pic-section .info-pic-container, .w-right-info-pic-section .info-pic-container {
     display: flex;
   }
-  .left-info-pic-section .info-pic-container .img-col, .right-info-pic-section .info-pic-container .img-col {
+  .left-info-pic-section .info-pic-container .img-col, .right-info-pic-section .info-pic-container .img-col, .w-left-info-pic-section .info-pic-container .img-col, .w-right-info-pic-section .info-pic-container .img-col {
     justify-content: right !important;
     -webkit-justify-content: flex-end !important;
   }
-  .right-info-pic-section .info-pic-container .img-col {
+  .right-info-pic-section .info-pic-container .img-col, .w-left-info-pic-section .info-pic-container .img-col {
     justify-content: left !important;
   }
-  .right-info-pic-section .info-pic-container .text-col {
+  .right-info-pic-section .info-pic-container .text-col, .w-left-info-pic-section .info-pic-container .text-col {
     text-align: center;
   }
   .heatmap-col {
@@ -969,49 +995,110 @@ nav li .anim-container a:hover {
     opacity: 0;
   }
 }
-.left-info-pic-section, .right-info-pic-section {
+.red-bad-text {
+  color: rgb(238, 53, 67);
+}
+
+.green-good-text {
+  color: rgb(85, 139, 47);
+}
+
+.left-info-pic-section, .right-info-pic-section, .w-left-info-pic-section, .w-right-info-pic-section {
   margin: 0;
   padding: var(--full-padding);
 }
-.left-info-pic-section .info-pic-container, .right-info-pic-section .info-pic-container {
+.left-info-pic-section h1, .right-info-pic-section h1, .w-left-info-pic-section h1, .w-right-info-pic-section h1 {
+  font-weight: 400;
+  font-size: 2.2em;
+  margin: 0 0 1.5em 0;
+  padding: 0;
+}
+.left-info-pic-section .info-pic-container, .right-info-pic-section .info-pic-container, .w-left-info-pic-section .info-pic-container, .w-right-info-pic-section .info-pic-container {
   justify-content: space-between;
   padding: 0;
   align-items: center;
   text-align: left;
 }
-.left-info-pic-section .info-pic-container .text-col, .right-info-pic-section .info-pic-container .text-col {
-  flex: 1;
+.left-info-pic-section .info-pic-container .why-img, .right-info-pic-section .info-pic-container .why-img, .w-left-info-pic-section .info-pic-container .why-img, .w-right-info-pic-section .info-pic-container .why-img {
+  width: 90%;
+  border-radius: 1em;
 }
-.left-info-pic-section .info-pic-container .text-col h1, .right-info-pic-section .info-pic-container .text-col h1 {
+.left-info-pic-section .info-pic-container .icon-text-col, .right-info-pic-section .info-pic-container .icon-text-col, .w-left-info-pic-section .info-pic-container .icon-text-col, .w-right-info-pic-section .info-pic-container .icon-text-col {
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+}
+.left-info-pic-section .info-pic-container .icon-text-col .icon-part, .right-info-pic-section .info-pic-container .icon-text-col .icon-part, .w-left-info-pic-section .info-pic-container .icon-text-col .icon-part, .w-right-info-pic-section .info-pic-container .icon-text-col .icon-part {
+  display: none;
+  height: 3em;
+  margin-right: 2em;
+}
+.left-info-pic-section .info-pic-container .icon-text-col #good-ef, .right-info-pic-section .info-pic-container .icon-text-col #good-ef, .w-left-info-pic-section .info-pic-container .icon-text-col #good-ef, .w-right-info-pic-section .info-pic-container .icon-text-col #good-ef {
+  height: 4em;
+}
+.left-info-pic-section .info-pic-container .icon-text-col #good-cl, .right-info-pic-section .info-pic-container .icon-text-col #good-cl, .w-left-info-pic-section .info-pic-container .icon-text-col #good-cl, .w-right-info-pic-section .info-pic-container .icon-text-col #good-cl {
+  height: 4em;
+  margin-top: -0.5em;
+}
+.left-info-pic-section .info-pic-container .icon-text-col #bad-cl, .right-info-pic-section .info-pic-container .icon-text-col #bad-cl, .w-left-info-pic-section .info-pic-container .icon-text-col #bad-cl, .w-right-info-pic-section .info-pic-container .icon-text-col #bad-cl {
+  height: 4em;
+  margin-top: -0.5em;
+}
+.left-info-pic-section .info-pic-container .icon-text-col #good-dm, .right-info-pic-section .info-pic-container .icon-text-col #good-dm, .w-left-info-pic-section .info-pic-container .icon-text-col #good-dm, .w-right-info-pic-section .info-pic-container .icon-text-col #good-dm {
+  height: 4em;
+  margin-top: -0.5em;
+}
+.left-info-pic-section .info-pic-container .icon-text-col #bad-dm, .right-info-pic-section .info-pic-container .icon-text-col #bad-dm, .w-left-info-pic-section .info-pic-container .icon-text-col #bad-dm, .w-right-info-pic-section .info-pic-container .icon-text-col #bad-dm {
+  height: 4em;
+  margin-top: -0.5em;
+}
+.left-info-pic-section .info-pic-container .icon-text-col .text-part h1, .right-info-pic-section .info-pic-container .icon-text-col .text-part h1, .w-left-info-pic-section .info-pic-container .icon-text-col .text-part h1, .w-right-info-pic-section .info-pic-container .icon-text-col .text-part h1 {
   font-weight: 400;
   font-size: 2.2em;
   margin: 0 0 0.5em 0;
   padding: 0;
 }
-.left-info-pic-section .info-pic-container .text-col p, .right-info-pic-section .info-pic-container .text-col p {
+.left-info-pic-section .info-pic-container .icon-text-col .text-part p, .right-info-pic-section .info-pic-container .icon-text-col .text-part p, .w-left-info-pic-section .info-pic-container .icon-text-col .text-part p, .w-right-info-pic-section .info-pic-container .icon-text-col .text-part p {
   font-weight: 300;
   font-size: 1.7em;
   margin: 0 0 1em 0;
   padding: 0;
 }
-.left-info-pic-section .info-pic-container #cf, .right-info-pic-section .info-pic-container #cf {
+.left-info-pic-section .info-pic-container .text-col, .right-info-pic-section .info-pic-container .text-col, .w-left-info-pic-section .info-pic-container .text-col, .w-right-info-pic-section .info-pic-container .text-col {
+  flex: 1;
+}
+.left-info-pic-section .info-pic-container .text-col h1, .right-info-pic-section .info-pic-container .text-col h1, .w-left-info-pic-section .info-pic-container .text-col h1, .w-right-info-pic-section .info-pic-container .text-col h1 {
+  font-weight: 400;
+  font-size: 2.2em;
+  margin: 0 0 0.5em 0;
+  padding: 0;
+}
+.left-info-pic-section .info-pic-container .text-col p, .right-info-pic-section .info-pic-container .text-col p, .w-left-info-pic-section .info-pic-container .text-col p, .w-right-info-pic-section .info-pic-container .text-col p {
+  font-weight: 300;
+  font-size: 1.7em;
+  margin: 0 0 1em 0;
+  padding: 0;
+}
+.left-info-pic-section .info-pic-container #cf, .right-info-pic-section .info-pic-container #cf, .w-left-info-pic-section .info-pic-container #cf, .w-right-info-pic-section .info-pic-container #cf {
   position: relative;
   flex: 1 0 auto;
   max-width: 75%;
   float: right;
   aspect-ratio: 1/1;
 }
-.left-info-pic-section .info-pic-container #cf svg, .right-info-pic-section .info-pic-container #cf svg {
+.left-info-pic-section .info-pic-container #cf svg, .right-info-pic-section .info-pic-container #cf svg, .w-left-info-pic-section .info-pic-container #cf svg, .w-right-info-pic-section .info-pic-container #cf svg {
   display: block;
 }
-.left-info-pic-section .info-pic-container #cf img, .left-info-pic-section .info-pic-container #cf svg, .right-info-pic-section .info-pic-container #cf img, .right-info-pic-section .info-pic-container #cf svg {
+.left-info-pic-section .info-pic-container #cf img, .left-info-pic-section .info-pic-container #cf svg, .right-info-pic-section .info-pic-container #cf img, .right-info-pic-section .info-pic-container #cf svg, .w-left-info-pic-section .info-pic-container #cf img, .w-left-info-pic-section .info-pic-container #cf svg, .w-right-info-pic-section .info-pic-container #cf img, .w-right-info-pic-section .info-pic-container #cf svg {
   position: absolute;
   left: 0;
   max-width: 100%;
   max-height: 100%;
   transition: opacity 3s ease-in-out;
 }
-.left-info-pic-section .info-pic-container #cf img.top, .right-info-pic-section .info-pic-container #cf img.top {
+.left-info-pic-section .info-pic-container #cf img.top, .right-info-pic-section .info-pic-container #cf img.top, .w-left-info-pic-section .info-pic-container #cf img.top, .w-right-info-pic-section .info-pic-container #cf img.top {
   -webkit-animation-name: cf3FadeInOut;
           animation-name: cf3FadeInOut;
   -webkit-animation-timing-function: ease-in-out;
@@ -1023,7 +1110,7 @@ nav li .anim-container a:hover {
   -webkit-animation-direction: alternate;
           animation-direction: alternate;
 }
-.left-info-pic-section .info-pic-container .img-col, .right-info-pic-section .info-pic-container .img-col {
+.left-info-pic-section .info-pic-container .img-col, .left-info-pic-section .info-pic-container .why-img-col, .right-info-pic-section .info-pic-container .img-col, .right-info-pic-section .info-pic-container .why-img-col, .w-left-info-pic-section .info-pic-container .img-col, .w-left-info-pic-section .info-pic-container .why-img-col, .w-right-info-pic-section .info-pic-container .img-col, .w-right-info-pic-section .info-pic-container .why-img-col {
   flex: 1;
   position: relative;
   display: flex;
@@ -1031,14 +1118,19 @@ nav li .anim-container a:hover {
   margin-top: 3em;
   align-items: center;
 }
-.left-info-pic-section .info-pic-container .img-col .basics, .right-info-pic-section .info-pic-container .img-col .basics {
+.left-info-pic-section .info-pic-container .img-col .basics, .left-info-pic-section .info-pic-container .why-img-col .basics, .right-info-pic-section .info-pic-container .img-col .basics, .right-info-pic-section .info-pic-container .why-img-col .basics, .w-left-info-pic-section .info-pic-container .img-col .basics, .w-left-info-pic-section .info-pic-container .why-img-col .basics, .w-right-info-pic-section .info-pic-container .img-col .basics, .w-right-info-pic-section .info-pic-container .why-img-col .basics {
   display: inline-flex;
   flex-basis: 0;
   position: absolute;
 }
-.left-info-pic-section .info-pic-container .img-col .benefits-pic, .right-info-pic-section .info-pic-container .img-col .benefits-pic {
+.left-info-pic-section .info-pic-container .img-col .benefits-pic, .left-info-pic-section .info-pic-container .why-img-col .benefits-pic, .right-info-pic-section .info-pic-container .img-col .benefits-pic, .right-info-pic-section .info-pic-container .why-img-col .benefits-pic, .w-left-info-pic-section .info-pic-container .img-col .benefits-pic, .w-left-info-pic-section .info-pic-container .why-img-col .benefits-pic, .w-right-info-pic-section .info-pic-container .img-col .benefits-pic, .w-right-info-pic-section .info-pic-container .why-img-col .benefits-pic {
   max-width: 55%;
   height: auto;
+}
+
+.w-right-info-pic-section .info-pic-container .icon-text-col .icon-part {
+  margin-right: 0 !important;
+  margin-left: 2em !important;
 }
 
 .constrain {
@@ -1105,7 +1197,13 @@ nav li .anim-container a:hover {
 }
 
 .why-agrivoltaics-section .info-pic-container {
-  text-align: center;
+  text-align: left;
+  border-top: none;
+  border-bottom: solid var(--primary-darkgray);
+}
+
+.w-left-info-pic-section, .w-right-info-pic-section {
+  padding-top: 0;
 }
 
 .boosting-col {
@@ -1499,9 +1597,6 @@ section.team-section {
 .solar-tech-container {
   margin-top: 3em;
 }
-.solar-tech-container ul {
-  justify-content: space-between !important;
-}
 .solar-tech-container ul li.solar-tech {
   width: 20rem !important;
 }
@@ -1511,7 +1606,6 @@ section.team-section {
 
 section.team-section .container ul, .solar-tech-container ul {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   transition: all 1s cubic-bezier(0.164, 0.83, 0.43, 1);
 }
