@@ -435,6 +435,12 @@ nav li .anim-container a:hover {
   }
 }
 @media only screen and (min-width: 780px) {
+  .mobile-invis {
+    display: unset !important;
+  }
+  .pc-invis {
+    display: none !important;
+  }
   .why-agrivoltaics-section .maximizing-solar-section .info-pic-container .text-col ol {
     margin-left: 3em !important;
   }
@@ -451,6 +457,8 @@ nav li .anim-container a:hover {
     margin-top: 0 !important;
   }
   .w-left-info-pic-section .info-pic-container .why-img, .w-right-info-pic-section .info-pic-container .why-img {
+    max-height: 25vh;
+    width: auto !important;
     max-width: 40% !important;
     border-radius: 2em;
   }
@@ -660,6 +668,14 @@ nav li .anim-container a:hover {
 }
 .navbar {
   transition: all 0.5s ease-in-out;
+}
+
+.mobile-invis {
+  display: none;
+}
+
+.pc-invis {
+  display: unset;
 }
 
 .notTop {
@@ -1147,6 +1163,10 @@ nav li .anim-container a:hover {
   max-width: 60% !important;
 }
 
+.gray-bg {
+  background-color: #EBEBEB !important;
+}
+
 .right-info-pic-section {
   background-color: #EBEBEB;
 }
@@ -1169,6 +1189,12 @@ nav li .anim-container a:hover {
 }
 .increasing-crop-yield-section .info-pic-container .boosting-col .text-col, .increasing-crop-yield-section .info-pic-container .boosting-col .cta-col, .maximizing-solar-section .info-pic-container .boosting-col .text-col, .maximizing-solar-section .info-pic-container .boosting-col .cta-col, .boosting-savings-section .info-pic-container .boosting-col .text-col, .boosting-savings-section .info-pic-container .boosting-col .cta-col, .why-agrivoltaics-section .info-pic-container .boosting-col .text-col, .why-agrivoltaics-section .info-pic-container .boosting-col .cta-col {
   margin: 3em;
+}
+.increasing-crop-yield-section .info-pic-container .text-col h1.large-why, .maximizing-solar-section .info-pic-container .text-col h1.large-why, .boosting-savings-section .info-pic-container .text-col h1.large-why, .why-agrivoltaics-section .info-pic-container .text-col h1.large-why {
+  font-weight: 400;
+  font-size: 4em;
+  margin: 0 0 0.5em 0;
+  padding: 0;
 }
 .increasing-crop-yield-section .info-pic-container .text-col h1, .increasing-crop-yield-section .info-pic-container .text-col .boosting-col .text-col h1, .maximizing-solar-section .info-pic-container .text-col h1, .maximizing-solar-section .info-pic-container .text-col .boosting-col .text-col h1, .boosting-savings-section .info-pic-container .text-col h1, .boosting-savings-section .info-pic-container .text-col .boosting-col .text-col h1, .why-agrivoltaics-section .info-pic-container .text-col h1, .why-agrivoltaics-section .info-pic-container .text-col .boosting-col .text-col h1 {
   font-weight: 400;
