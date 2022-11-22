@@ -502,6 +502,7 @@ nav li .anim-container a:hover {
     text-align: center;
   }
   .heatmap-col {
+    display: flex !important;
     align-items: center !important;
     flex-direction: row !important;
   }
@@ -1264,9 +1265,9 @@ nav li .anim-container a:hover {
   padding-left: 1em;
 }
 .increasing-crop-yield-section .info-pic-container .heatmap-col, .maximizing-solar-section .info-pic-container .heatmap-col, .boosting-savings-section .info-pic-container .heatmap-col, .why-agrivoltaics-section .info-pic-container .heatmap-col {
+  display: none;
   margin-top: 3em;
   justify-content: space-between;
-  display: flex;
   flex-direction: column;
 }
 .increasing-crop-yield-section .info-pic-container .heatmap-col .heatmap-gif, .maximizing-solar-section .info-pic-container .heatmap-col .heatmap-gif, .boosting-savings-section .info-pic-container .heatmap-col .heatmap-gif, .why-agrivoltaics-section .info-pic-container .heatmap-col .heatmap-gif {

@@ -639,6 +639,7 @@ nav {
     }
     
     .heatmap-col {
+        display: flex !important;
         align-items: center !important;
         flex-direction: row !important;
         .heatmap-gif {
@@ -1699,6 +1700,7 @@ nav {
         }
 
         .heatmap-col {
+            display: none;
             margin-top: 3em;
             .heatmap-gif {
                 // width: 35%;
@@ -1722,7 +1724,7 @@ nav {
                 // CHANGE FROM MOBILE
                 align-self: left;
             }
-            display: flex;
+            // display: flex;
             flex-direction: column;
             svg {
                 margin: 1em;
