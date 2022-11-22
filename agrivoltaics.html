@@ -153,11 +153,11 @@
             </div>
         </section>
     </section>
-    
+
     <section class="left-info-pic-section">
         <div class="info-pic-container">
             <div class="text-col">
-                <h1>The Basics</h1>
+                <h1>The basics</h1>
                 <p>
                     Put simply, agrivoltaics is the placement of
                     <span class="solar-panels">solar panels</span> 
@@ -197,7 +197,7 @@
                 </svg>
             </div>
             <div class="text-col">
-                <h1><br>The Science</h1>
+                <h1><br>The science</h1>
                 <p> <span class = "cool-science"></span> <span class = "warm-science"></span>
                     The shade provided by the solar panels <span class = "cool-science">cools</span> 
                     the air underneath.
@@ -219,7 +219,7 @@
     <section class="left-info-pic-section">
         <div class="info-pic-container">
             <div class="text-col">
-                <h1>The Benefits</h1>
+                <h1>The benefits</h1>
                 <!-- <p>
                     Under reduced heat stress, shade-tolerant <span class="crop-yield">crops
                     perform better</span>.
@@ -244,9 +244,45 @@
                 </div>
             </div>
         </div>
+        <h1 id="three-ways-title">Three more ways agrivoltaics could advance your farm...</h1>
+        <section id="why-agri-nav">
+            <section class="cards-section">
+                <div class="container">
+                    <ul>
+                        <li class="page-card" onclick="smoothScroll(energyFreedom)">
+                            <h1>Energy Freedom</h1>
+                        </li>
+                        <li class="page-card" onclick="smoothScroll(cropAndLivestockProtection)">
+                            <h1>Crop & Livestock Protection</h1>
+                        </li>
+                        <li class="page-card" onclick="smoothScroll(droughtMitigation)">
+                            <h1>Drought Mitigation</h1>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </section>
     </section>
+    
+    <!-- <section id="why-agri-nav">
+        <section class="cards-section">
+            <div class="container">
+                <ul>
+                    <li class="page-card" onclick="smoothScroll(boostingSavingsSection)">
+                        <h1>Energy Freedom</h1>
+                    </li>
+                    <li class="page-card" onclick="smoothScroll(maximizingSolarSection)">
+                        <h1>Crop and Livestock Protection</h1>
+                    </li>
+                    <li class="page-card" onclick="smoothScroll(increasingCropYieldSection)">
+                        <h1>Drought Mitigation</h1>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </section> -->
 
-    <section class="why-agrivoltaics-section gray-bg">
+    <section class="why-agrivoltaics-section gray-bg" id="energy-freedom">
         <div class="info-pic-container">
             <div class="text-col">
                 <h1 class="large-why">Energy Freedom</h1>
@@ -254,7 +290,7 @@
         </div>
     </section>
     <section class="w-left-info-pic-section gray-bg">
-        <h1 class="red-bad-text">
+        <h1 class="red-bad-text large-why-agri">
             To protect you from...
         </h1>
         <div class="info-pic-container">
@@ -290,7 +326,7 @@
         </div>
     </section>
     <section class="w-left-info-pic-section gray-bg">
-        <h1 class="green-good-text">
+        <h1 class="green-good-text large-why-agri">
             Agrivoltaics provides you with...
         </h1>
         <div class="info-pic-container">
@@ -326,7 +362,7 @@
         </div>
     </section>
 
-    <section class="why-agrivoltaics-section">
+    <section class="why-agrivoltaics-section" id="crop-and-livestock-protection">
         <div class="info-pic-container">
             <div class="text-col">
                 <h1 class="large-why">Crop and Livestock Protection</h1>
@@ -334,7 +370,7 @@
         </div>
     </section>
     <section class="w-left-info-pic-section">
-        <h1 class="red-bad-text">
+        <h1 class="red-bad-text large-why-agri">
             To protect you from...
         </h1>
         <div class="info-pic-container">
@@ -370,7 +406,7 @@
         </div>
     </section>
     <section class="w-left-info-pic-section">
-        <h1 class="green-good-text">
+        <h1 class="green-good-text large-why-agri">
             Agrivoltaics provides you with...
         </h1>
         <div class="info-pic-container">
@@ -407,7 +443,7 @@
     </section>
 
 
-    <section class="why-agrivoltaics-section gray-bg">
+    <section class="why-agrivoltaics-section gray-bg" id="drought-mitigation">
         <div class="info-pic-container">
             <div class="text-col">
                 <h1 class="large-why">Drought Mitigation</h1>
@@ -415,7 +451,7 @@
         </div>
     </section>
     <section class="w-left-info-pic-section gray-bg">
-        <h1 class="red-bad-text">
+        <h1 class="red-bad-text large-why-agri">
             To protect you from...
         </h1>
         <div class="info-pic-container">
@@ -451,7 +487,7 @@
         </div>
     </section>
     <section class="w-left-info-pic-section gray-bg">
-        <h1 class="green-good-text">
+        <h1 class="green-good-text large-why-agri">
             Agrivoltaics provides you with...
         </h1>
         <div class="info-pic-container">
@@ -733,6 +769,22 @@
     }
 
     </script>
+
+<script>
+    const energyFreedom = document.getElementById('energy-freedom'); 
+    const cropAndLivestockProtection = document.getElementById('crop-and-livestock-protection'); 
+    const droughtMitigation = document.getElementById('drought-mitigation'); 
+
+    // smoothScroll(boostingSavingsSection)
+    // smoothScroll(maximizingSolarSection)
+    // smoothScroll(increasingCropYieldSection)
+
+    function smoothScroll(object){
+        object.scrollIntoView({
+            behavior: 'smooth'
+        });
+    }
+</script>
 
 <!-- <script type="text/javascript"> 
     if (navigator.userAgent.indexOf('Safari') != -1 && 

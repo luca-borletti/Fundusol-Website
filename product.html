@@ -139,24 +139,32 @@
             <h1>The Fundusol Approach</h1>
             <p>Optimizing agrivoltaics for <span>your</span> farm</p>
         </div>
-        <div class="approach-facets">
+        <section class="cards-section">
+            <div class="container">
+                <ul>
+                    <!-- <li class="page-card" onclick="location.href='#boosting-savings-section';"> -->
+                    <li class="page-card" onclick="smoothScroll(boostingSavingsSection)">
+                        <h1>Boosting Savings</h1>
+                    </li>
+                    <!-- <li class="page-card" onclick="location.href='#maximizing-solar-section';"> -->
+                    <li class="page-card" onclick="smoothScroll(maximizingSolarSection)">
+                        <h1>Growing Energy</h1>
+                    </li>
+                    <!-- <li class="page-card" onclick="location.href='#increasing-crop-yield-section';"> -->
+                    <li class="page-card" onclick="smoothScroll(increasingCropYieldSection)">
+                        <h1>Increasing Crop Yield</h1>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- <div class="approach-facets">
             <div class="crop-facet">
                 <h1>
                     Increasing Crop Yield
-                    <!-- Fostering Yield -->
                 </h1>
-                <!-- <a href="">
-                    <h1>
-                        Increasing Crop Yield
-                    </h1>
-                    <div class="underline-anim">
-                        
-                    </div>
-                </a> -->
             </div>
             <div class="solar-facet">
                 <h1>
-                    <!-- Maximizing Solar Output -->
                     Growing Energy
                 </h1>
             </div>
@@ -165,14 +173,14 @@
                     Boosting Savings
                 </h1>
             </div>
-        </div>
+        </div> -->
     </section>
 
     <div class="farm-data-animation">
         <!-- need the photo lol -->
     </div>
 
-    <section class="boosting-savings-section">
+    <section class="boosting-savings-section" id="boosting-savings-section">
         <div class="info-pic-container">
             <div class="text-col">
                 <h1>Boosting Savings</h1>
@@ -210,15 +218,19 @@
                     </li>
                 </ol>
             </div> -->
-            <!-- <div class="boosting-col">
-                <img src="assets/business-model-diagram.jpg" alt="" id="mb-diagram">
+            <div class="boosting-col">
+                <!-- <img src="assets/business-model-diagram.jpg" alt="" id="mb-diagram"> -->
+                <div class="cta-col mobile-invis-var">
+                    <h1 id="upfront-cost-0">$0</h1> <h1 id="upfront-cost-1">&nbsp&nbsp upfront investment</h1>
+                </div>
                 <div class="svg-col">
                 </div>
                 <div class="cta-col">
                     <a href="partnering.html" class="primary-cta">Request a quote<span></span></a>
                 </div>
-            </div> -->
-            <div class="boosting-col">
+            </div>
+            <a href="partnering.html" class="primary-cta pc-invis">Request a quote<span></span></a>
+            <!-- <div class="boosting-col">
                 <div class="svg-col">
                     <svg xmlns="http://www.w3.org/2000/svg" width="943.615" height="572.363" viewBox="0 0 943.615 572.363">
                         <g transform="translate(-7769.732 -11736.421)">
@@ -324,13 +336,13 @@
                         <img id="boosting-dia-img" src="" alt="">
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
 
         
     </section>
 
-    <section class="maximizing-solar-section">
+    <section class="maximizing-solar-section" id="maximizing-solar-section">
         <div class="info-pic-container">
             <div class="text-col">
                 <h1>Growing Energy</h1>
@@ -348,7 +360,7 @@
             </div> -->
             <div class="solar-tech-container">
                 <ul>
-                    <li class = "solar-tech" id="drones">
+                    <li class = "solar-tech display-none" id="drones">
                         <div class="top-photo">
                             <img src="assets/drone.svg" alt="">
                         </div>
@@ -361,7 +373,6 @@
                             replace them before they cause long-term energy 
                             losses.
                         </p>
-                        <!-- <span> -->
                     </li>
                     <li class = "solar-tech" id="bifacial-panels">
                         <div class="top-photo">
@@ -405,7 +416,7 @@
         </div>
     </section>
 
-    <section class="increasing-crop-yield-section">
+    <section class="increasing-crop-yield-section" id="increasing-crop-yield-section">
     <!-- <section class="increasing-crop-yield-section"> -->
         <div class="info-pic-container">
             <div class="text-col">
@@ -693,6 +704,22 @@
         image.src = "";
     }
 
+    </script>
+
+    <script>
+        const boostingSavingsSection = document.getElementById('boosting-savings-section'); 
+        const maximizingSolarSection = document.getElementById('maximizing-solar-section'); 
+        const increasingCropYieldSection = document.getElementById('increasing-crop-yield-section'); 
+
+        // smoothScroll(boostingSavingsSection)
+        // smoothScroll(maximizingSolarSection)
+        // smoothScroll(increasingCropYieldSection)
+
+        function smoothScroll(object){
+            object.scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
     </script>
 
 <!-- <script type="text/javascript"> 
