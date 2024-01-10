@@ -8,6 +8,7 @@
     <meta name="description" content="Join us in our mission to empower farmers and mitigate the effects of climate change">
     <meta name="author" content="Luca Borletti">
     <meta name="keywords" content="Agrivoltaics, Startup, Solar, Farming, Internship, Jobs">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/main.css"> 
     <link rel="icon" href="./assets/icon.png">
     <script src="./index_files/jquery.min.js"></script>
@@ -28,7 +29,7 @@
 <body>
     <div class = "navbar">
         <div class = "container">
-            <a href="careers.html"><svg xmlns="http://www.w3.org/2000/svg" width="380" height="58.709" viewBox="0 0 400 58.709">
+            <a href="careers.html"><svg style="overflow: visible;" xmlns="http://www.w3.org/2000/svg" width="380" height="58.709" viewBox="0 0 400 58.709">
                 <defs>
                   <style>
                     .cls-1 {
@@ -89,7 +90,7 @@
                           </svg>
                           </a>
             
-            <img id = "mobile-cta" class = "mobile-menu" src="assets/menu.svg" alt="Open Navigation">
+            <!-- <img id = "mobile-cta" class = "mobile-menu" src="assets/menu.svg" alt="Open Navigation"> -->
 
             <nav style="display: none;">
                 <img id = "mobile-exit" class = "mobile-menu-exit" src="assets/exit.svg" alt="">
@@ -125,15 +126,6 @@
         </div>
     </div>
 
-    <!-- <section class="team-header-section">
-        <div class="team-header-container">
-            <h1>Building a Sustainable Future with Agrivoltaics.</h1>
-            <p>
-                Be part of our mission to revolutionize agriculture and energy with advanced computational modeling.
-            </p>
-        </div>
-    </section> -->
-
     <section class="left-info-pic-section">
         <div class="info-pic-container" id="recruiting-section">
             <div class="text-col recruit-col">
@@ -167,110 +159,446 @@
             </div>
         </div>
     </section>
-    
-    <!-- <section class="white-role">
-        <h1>
-            Key roles:
-        </h1>
-    </section> -->
 
-    <section class="gray-role">
-        <h2>
-            Software Engineer
-        </h2>
-        <form action="https://formspree.io/f/mwkzaawz" method="POST" id="fundusol-form"   enctype="multipart/form-data">
-            <!-- Name input -->
-            <div class="mb-3">
-              <label class="form-label contact-form-label" for="name">Full Name</label>
-              <input class="form-control" id="name" type="text" name="name" id="full-name" placeholder="First and Last" data-sb-validations="required" />
-              <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
-            </div>
+    <section class="gray-role p-5" id="part-time">
+        <div class="mt-4 d-flex flex-row justify-content-between align-items-center">
+            <h2 class="m-0">
+                Part-time Internship positions:
+            </h2>
+            <p class="mb-0 text-right"><em class="text-muted">Spring, 2024</em></p>
+        </div>
         
-            <!-- Email address input -->
-            <div class="mb-3">
-              <label class="form-label contact-form-label" for="emailAddress">Email Address</label>
-              <input class="form-control" type="email" name="_replyto" id="email-address" placeholder="example@fundusol.com" data-sb-validations="required, email" />
-              <div class="invalid-feedback" data-sb-feedback="emailAddress:required">Email Address is required.</div>
-              <div class="invalid-feedback" data-sb-feedback="emailAddress:email">Email is invalid.</div>
-            </div>
-        
-            <!-- Message input -->
-            <div class="mb-3">
-              <label class="form-label contact-form-label" for="message">Why are you interested in working at Fundusol?</label>
-              <textarea placeholder="Tell us here :)" class="form-control" rows="5" name="message" id="message" style="height: 10rem;" data-sb-validations="required"></textarea>
-              <div class="invalid-feedback" data-sb-feedback="message:required">Message is required.</div>
-            </div>
-            
-            <!-- File input -->
-            <div class="mb-3">
-              <label class="form-label contact-form-label" for="message">Resume / CV:</label>
-              <!-- <textarea placeholder="Tell us here :)" class="form-control" rows="5" name="message" id="message" style="height: 10rem;" data-sb-validations="required"></textarea> -->
-              <input class="form-control-file" type="file" name="upload" data-sb-validations="required" >
-              <!-- <div class="invalid-feedback" data-sb-feedback="message:required">Message is required.</div> -->
-            </div>
-
-        
-            <!-- Form submissions success message -->
-            <div class="d-none" id="submitSuccessMessage">
-              <div class="text-center mb-3">Form submission successful!</div>
-            </div>
-        
-            <!-- Form submissions error message -->
-            <div class="d-none" id="submitErrorMessage">
-              <div class="text-center text-danger mb-3">Error while sending message!</div>
-            </div>
-        
-            <!-- Form submit button -->
-            <div class="d-grid">
-              <button class="btn btn-primary btn-lg" type="submit">Submit</button>
-            </div>
-        
-        </form>
-        <!-- <div class="info-pic-container">
-            <div class="text-col">
-
-            </div>
-        </div> -->
     </section>
 
-    <!-- <section class="right-info-pic-section">
-        <div class="info-pic-container">
-            <div class="logo-image-col img-col">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 58.709 58.709">
-                    
-                    <g transform="translate(0 0)">
-                        <g transform="translate(0 0)">
-                             <circle class = "logo-bg" cx="29.297" cy="29.297" r="29.297" transform="translate(0.116 0.116)" fill="#306ef6"/>
-                            <g transform="translate(0.116 0.116)">
-                                <path d="M34.4,5.4A30.294,30.294,0,0,0,22.655,7.841a8.922,8.922,0,0,1,.814,3.953,9.576,9.576,0,0,1-9.533,9.533,8.866,8.866,0,0,1-4.883-1.4A28.605,28.605,0,0,0,5.1,34.7,29.3,29.3,0,1,0,34.4,5.4Z" transform="translate(-5.1 -5.4)" fill="none"/>
-                                <path class = "logo-element" d="M22.9,11.453A10.894,10.894,0,0,0,22.086,7.5,28.431,28.431,0,0,0,8.6,19.591a9.949,9.949,0,0,0,4.883,1.4A9.477,9.477,0,0,0,22.9,11.453Z" transform="translate(-4.531 -5.059)" fill="#fadf5f"/>
-                            </g>
-                            <path d="M17.788,58.662A72.736,72.736,0,0,1,62.779,41.223a31.32,31.32,0,0,0,.814-6.627,29.3,29.3,0,1,0-45.8,24.065Z" transform="translate(-5 -5.3)" fill="none"/>
-                            <path class = "logo-element logo-hills" d="M32.608,58.854A29.3,29.3,0,0,0,61.091,36.3,72.47,72.47,0,0,0,16.1,53.738,28.649,28.649,0,0,0,32.608,58.854Z" transform="translate(-3.196 -0.261)" fill="#94e044"/>
-                            <path class = "logo-element" d="M45.734,27.931H17.6L22.948,17.7H51.2Z" transform="translate(-2.952 -3.284)" fill="#fff"/>
-                            <path class = "logo-element" d="M34.341,39.631H17.6L22.948,29.4H39.8Z" transform="translate(-2.952 -1.382)" fill="#fff"/>
-                        </g>
-                    </g>
-                </svg>
+    <div id="accordion">
+        <div class="role-section">
+          <div class="card-header py-4 px-5" id="headingSWE1">
+            <a class="w-75" data-toggle="collapse" href="#collapseSWE1" role="button" aria-expanded="false" aria-controls="collapseSWE1">
+                <div class="d-flex flex-row justify-content-between align-items-center">
+                    <div class="">
+                        <div class="role-title underline-anim">
+                            Software Engineering
+                        </div>
+                        <div class="role-description">
+                            <p class="mb-1">Collaborate with solar engineers and agricultural scientists to create sophisticated simulation and design platforms for Agrivoltaics.</p>
+                            <p class="mb-0"><em class="text-muted">Spring, 2024</em></p>
+                        </div>
+                    </div>
+
+                    <div class="apply-button">
+                        <a href="apply.html">
+                            <div class="role-title underline-anim">
+                                Apply <span class="disappear-mobile">Now</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </a>
+          </div>
+      
+          <div id="collapseSWE1" class="collapse px-4" aria-labelledby="headingSWE1" data-parent="#accordion">
+            <div class="card-body px-5">
+                You will have the opportunity to work on one of the following tracks:
+                <br>
+                <br>
+                <ol>
+                    <li>Application Development: Collaborate with solar engineers and agricultural scientists to create sophisticated simulation and design platforms for Agrivoltaics. You will be primarily working with Python, with opportunities to learn and apply other technologies.</li><br>
+                    <li>Web Development: Design and implement customer-oriented websites, serving as a vital interface for farmers, solar developers, and venture capitalists. Your main toolkit will include TypeScript and React, focusing on creating intuitive and responsive user experiences.</li><br>
+                    <li>Model Engineering: Work closely with software and machine learning experts to develop efficient systems that optimize cost savings for farmers. Your expertise in Python, C++, or C, coupled with a strong grasp of applied machine learning techniques, will be crucial in this endeavor.</li>
+                </ol>
             </div>
-            <div class="text-col">
-                <h1>For Prospective Partners</h1>
-                <p>
-                    If you are affiliated with a company in the
-                    solar or agricultural industries and are interested
-                    in agrivoltaics, we would love to meet you!
-                </p> 
-                <a href="mailto:fundusol.energy@gmail.com" class="cta-partner-contact primary-cta">Contact Us<span></a>
+          </div>
+        </div>
+
+        <div class="role-section">
+            <div class="card-header py-4 px-5" id="headingAg">
+              <a class="w-75" data-toggle="collapse" href="#collapseAg" role="button" aria-expanded="false" aria-controls="collapseAg">
+                  <div class="d-flex flex-row justify-content-between align-items-center">
+                      <div class="">
+                          <div class="role-title underline-anim">
+                            Agricultural Science
+                          </div>
+                          <div class="role-description">
+                                <p  class="mb-1">Collaborate with a team of software engineers and data scientists to develop predictive models for Agrivoltaic systems.</p>
+                                <p class="mb-0"><em class="text-muted">Spring, 2024</em></p>
+                          </div>
+                      </div>
+  
+                      <div class="apply-button">
+                          <a href="apply.html">
+                              <div class="role-title underline-anim">
+                                  Apply <span class="disappear-mobile">Now</span>
+                              </div>
+                          </a>
+                      </div>
+                  </div>
+              </a>
+            </div>
+        
+            <div id="collapseAg" class="collapse px-4" aria-labelledby="headingAg" data-parent="#accordion">
+              <div class="card-body px-5">
+                <h5>Key Responsibilities:</h5>
+        <ol>
+            <li>Collaborate with a team of software engineers and data scientists to develop predictive models for Agrivoltaic systems.</li><br>
+            <li>Contribute to research and development in ML/AI applications within the agricultural sector.</li>
+        </ol>
+
+        <h5>Qualifications:</h5>
+        <ol>
+            <li>Research experience in Machine Learning/AI, specifically applied to Agriculture.</li><br>
+            <li>Eagerness to learn and contribute to a team focused on sustainable agriculture and renewable energy.</li>
+        </ol>
+              </div>
             </div>
         </div>
+
+        <div class="role-section">
+            <div class="card-header py-4 px-5" id="headingData">
+              <a class="w-75" data-toggle="collapse" href="#collapseData" role="button" aria-expanded="false" aria-controls="collapseData">
+                  <div class="d-flex flex-row justify-content-between align-items-center">
+                      <div class="">
+                          <div class="role-title underline-anim">
+                            Data Science
+                          </div>
+                          <div class="role-description">
+                                <p  class="mb-1">Develop and implement data visualizations to communicate crop and solar performance.</p>
+                                <p class="mb-0"><em class="text-muted">Spring, 2024</em></p>
+                          </div>
+                      </div>
+  
+                      <div class="apply-button">
+                          <a href="apply.html">
+                              <div class="role-title underline-anim">
+                                  Apply <span class="disappear-mobile">Now</span>
+                              </div>
+                          </a>
+                      </div>
+                  </div>
+              </a>
+            </div>
+        
+            <div id="collapseData" class="collapse px-4" aria-labelledby="headingData" data-parent="#accordion">
+              <div class="card-body px-5">
+                <h5>Key Responsibilities:</h5>
+        <ol>
+            <li>Develop and implement data visualizations to communicate crop and solar performance.</li><br>
+            <li>Work closely with our data team to analyze and interpret complex datasets.</li>
+        </ol>
+
+        <h5>Qualifications:</h5>
+        <ol>
+            <li>Previous experience or a strong portfolio in data science.</li><br>
+            <li>A passion for data visualization and the ability to convey complex information in an understandable manner.</li>
+        </ol>
+              </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="gray-role p-5" id="full-time">
+        <div class="mt-4 d-flex flex-row justify-content-between align-items-center">
+            <h2 class="m-0">
+                Full-time Internship positions:
+            </h2>
+            <p class="mb-0 text-right"><em class="text-muted">Summer, 2024</em></p>
+        </div>
+        
+    </section>
+
+    <div id="accordion">
+        <div class="role-section">
+            <div class="card-header py-4 px-5" id="headingMarketing">
+              <a class="w-75" data-toggle="collapse" href="#collapseMarketing" role="button" aria-expanded="false" aria-controls="collapseMarketing">
+                  <div class="d-flex flex-row justify-content-between align-items-center">
+                      <div class="">
+                          <div class="role-title underline-anim">
+                            Marketing
+                          </div>
+                          <div class="role-description">
+                                <p  class="mb-1">Convince farmers around the country to develop Agrivoltaics systems on their farms with Fundusol.</p>
+                                <p class="mb-0"><em class="text-muted">Summer, 2024</em></p>
+                          </div>
+                      </div>
+  
+                      <div class="apply-button">
+                          <a href="apply.html">
+                              <div class="role-title underline-anim">
+                                  Apply <span class="disappear-mobile">Now</span>
+                              </div>
+                          </a>
+                      </div>
+                  </div>
+              </a>
+            </div>
+        
+            <div id="collapseMarketing" class="collapse px-4" aria-labelledby="headingMarketing" data-parent="#accordion">
+              <div class="card-body px-5">
+                Develop marketing materials, meet with farmers, and represent Fundusol at AgTech conferences. This role is for those with marketing experience for energy companies, startups or agricultural products.
+              </div>
+            </div>
+        </div>
+
+        <div class="role-section">
+            <div class="card-header py-4 px-5" id="headingWebDevelopment">
+              <a class="w-75" data-toggle="collapse" href="#collapseWebDevelopment" role="button" aria-expanded="false" aria-controls="collapseWebDevelopment">
+                  <div class="d-flex flex-row justify-content-between align-items-center">
+                      <div class="">
+                          <div class="role-title underline-anim">
+                            Web Development
+                          </div>
+                          <div class="role-description">
+                                <p  class="mb-1">Develop internal and external websites and mobile applications.</p>
+                                <p class="mb-0"><em class="text-muted">Summer, 2024</em></p>
+                          </div>
+                      </div>
+  
+                      <div class="apply-button">
+                          <a href="apply.html">
+                              <div class="role-title underline-anim">
+                                  Apply <span class="disappear-mobile">Now</span>
+                              </div>
+                          </a>
+                      </div>
+                  </div>
+              </a>
+            </div>
+        
+            <div id="collapseWebDevelopment" class="collapse px-4" aria-labelledby="headingWebDevelopment" data-parent="#accordion">
+              <div class="card-body px-5">
+                These may include a user interface for financial projections or a user interface for solar array design. This task requires a proficient understanding of code versioning tools and a good understanding of advanced JavaScript libraries and frameworks such as ReactJS.
+              </div>
+            </div>
+        </div>
+        <div class="role-section">
+            <div class="card-header py-4 px-5" id="headingSolarProjectDevelopment">
+              <a class="w-75" data-toggle="collapse" href="#collapseSolarProjectDevelopment" role="button" aria-expanded="false" aria-controls="collapseSolarProjectDevelopment">
+                  <div class="d-flex flex-row justify-content-between align-items-center">
+                      <div class="">
+                          <div class="role-title underline-anim">
+                            Solar Project Development
+                          </div>
+                          <div class="role-description">
+                                <p  class="mb-1">Work with developers, utilities, and CO-OPs to build Agrivoltaics projects around the country.</p>
+                                <p class="mb-0"><em class="text-muted">Summer, 2024</em></p>
+                          </div>
+                      </div>
+  
+                      <div class="apply-button">
+                          <a href="apply.html">
+                              <div class="role-title underline-anim">
+                                  Apply <span class="disappear-mobile">Now</span>
+                              </div>
+                          </a>
+                      </div>
+                  </div>
+              </a>
+            </div>
+        
+            <div id="collapseSolarProjectDevelopment" class="collapse px-4" aria-labelledby="headingSolarProjectDevelopment" data-parent="#accordion">
+              <div class="card-body px-5">
+                You will work with Fundusol's system design team, interface with financial institutions, coordinate with regulatory bodies, and develop relationships with clients to deploy Agrivoltaics systems. This role is for those with past experience in solar project finance, permitting, regulation, site selection, etc. with developers, utilities, or CO-OPs.
+              </div>
+            </div>
+        </div>
+        <div class="role-section">
+            <div class="card-header py-4 px-5" id="headingDataScience">
+              <a class="w-75" data-toggle="collapse" href="#collapseDataScience" role="button" aria-expanded="false" aria-controls="collapseDataScience">
+                  <div class="d-flex flex-row justify-content-between align-items-center">
+                      <div class="">
+                          <div class="role-title underline-anim">
+                            Data Science
+                          </div>
+                          <div class="role-description">
+                                <p  class="mb-1">Create meaningful visuals on crop and solar performance for clients, partners, and internal Fundusol applications.</p>
+                                <p class="mb-0"><em class="text-muted">Summer, 2024</em></p>
+                          </div>
+                      </div>
+  
+                      <div class="apply-button">
+                          <a href="apply.html">
+                              <div class="role-title underline-anim">
+                                  Apply <span class="disappear-mobile">Now</span>
+                              </div>
+                          </a>
+                      </div>
+                  </div>
+              </a>
+            </div>
+        
+            <div id="collapseDataScience" class="collapse px-4" aria-labelledby="headingDataScience" data-parent="#accordion">
+              <div class="card-body px-5">
+                Potential projects include (but are not limited to, and will incorporate your suggestions): experimenting with seasonal solar tracking algorithms to maximize agricultural and solar outcomes at any given time; iterating Fundusol’s internal crop yield predictive algorithms across every county in the United States to inform a marketing tool; creating a live visualization tool for Agrivoltaics experimentation and extrapolating results; creating a machine learning tool that improves crop yield prediction. This role is for those with data science, data visualization, or machine learning.
+              </div>
+            </div>
+        </div>
+        <div class="role-section">
+            <div class="card-header py-4 px-5" id="headingDigitalTwinDevelopment">
+              <a class="w-75" data-toggle="collapse" href="#collapseDigitalTwinDevelopment" role="button" aria-expanded="false" aria-controls="collapseDigitalTwinDevelopment">
+                  <div class="d-flex flex-row justify-content-between align-items-center">
+                      <div class="">
+                          <div class="role-title underline-anim">
+                            Digital Twin Development
+                          </div>
+                          <div class="role-description">
+                                <p  class="mb-1">Create a digital twin for Agrivoltaics microclimate effect modeling.</p>
+                                <p class="mb-0"><em class="text-muted">Summer, 2024</em></p>
+                          </div>
+                      </div>
+  
+                      <div class="apply-button">
+                          <a href="apply.html">
+                              <div class="role-title underline-anim">
+                                  Apply <span class="disappear-mobile">Now</span>
+                              </div>
+                          </a>
+                      </div>
+                  </div>
+              </a>
+            </div>
+        
+            <div id="collapseDigitalTwinDevelopment" class="collapse px-4" aria-labelledby="headingDigitalTwinDevelopment" data-parent="#accordion">
+              <div class="card-body px-5">
+                This role is for those with experience working in the simulation space, specifically with Python, MATLAB, R, or C++.
+              </div>
+            </div>
+        </div>
+        <div class="role-section">
+            <div class="card-header py-4 px-5" id="headingAgriculturalModelCalibration">
+              <a class="w-75" data-toggle="collapse" href="#collapseAgriculturalModelCalibration" role="button" aria-expanded="false" aria-controls="collapseAgriculturalModelCalibration">
+                  <div class="d-flex flex-row justify-content-between align-items-center">
+                      <div class="">
+                          <div class="role-title underline-anim">
+                            Agricultural Model Calibration
+                          </div>
+                          <div class="role-description">
+                                <p  class="mb-1">Calibrate existing rigorous crop yield prediction models with data collected from Fundusol’s Agrivoltaics systems.</p>
+                                <p class="mb-0"><em class="text-muted">Summer, 2024</em></p>
+                          </div>
+                      </div>
+  
+                      <div class="apply-button">
+                          <a href="apply.html">
+                              <div class="role-title underline-anim">
+                                  Apply <span class="disappear-mobile">Now</span>
+                              </div>
+                          </a>
+                      </div>
+                  </div>
+              </a>
+            </div>
+        
+            <div id="collapseAgriculturalModelCalibration" class="collapse px-4" aria-labelledby="headingAgriculturalModelCalibration" data-parent="#accordion">
+              <div class="card-body px-5">
+                Interns may lead on-site data collection of humidity, temperature, biomass, etc. This role is for those with experience in crop science, operating Agricultural data collection devices, or crop yield model calibration.
+              </div>
+            </div>
+        </div>
+        <div class="role-section">
+            <div class="card-header py-4 px-5" id="headingPhysicsEngineer">
+              <a class="w-75" data-toggle="collapse" href="#collapsePhysicsEngineer" role="button" aria-expanded="false" aria-controls="collapsePhysicsEngineer">
+                  <div class="d-flex flex-row justify-content-between align-items-center">
+                      <div class="">
+                          <div class="role-title underline-anim">
+                            Physics Engineer
+                          </div>
+                          <div class="role-description">
+                                <p  class="mb-1">Prototype and bring to market novel Agricultrual optimization equipment to create the optimal climate for crops.</p>
+                                <p class="mb-0"><em class="text-muted">Summer, 2024</em></p>
+                          </div>
+                      </div>
+  
+                      <div class="apply-button">
+                          <a href="apply.html">
+                              <div class="role-title underline-anim">
+                                  Apply <span class="disappear-mobile">Now</span>
+                              </div>
+                          </a>
+                      </div>
+                  </div>
+              </a>
+            </div>
+        
+            <div id="collapsePhysicsEngineer" class="collapse px-4" aria-labelledby="headingPhysicsEngineer" data-parent="#accordion">
+              <div class="card-body px-5">
+                Interns will have the opportunity to brainstorm product ideas, rigorously design and model their product, and bring the product to market. This role is for those with experience in electrical engineering, engineering physics, mechanical engineering, or bringing deep-tech products to market. 
+              </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <section class="gray-role">
+        <h2>
+            Software Engineering Internship
+        </h2>
+
+        <h3>Key Responsibilities:</h3>
+        <ol>
+            <li><strong>Application Development:</strong> Collaborate with solar engineers and agricultural scientists to create sophisticated simulation and design platforms for Agrivoltaics. You will be primarily working with Python, with opportunities to learn and apply other technologies.</li>
+            <li><strong>Web Development:</strong> Design and implement customer-oriented websites, serving as a vital interface for farmers, solar developers, and venture capitalists. Your main toolkit will include TypeScript and React, focusing on creating intuitive and responsive user experiences.</li>
+            <li><strong>Model Engineering:</strong> Work closely with software and machine learning experts to develop efficient systems that optimize cost savings for farmers. Your expertise in Python, C++, or C, coupled with a strong grasp of applied machine learning techniques, will be crucial in this endeavor.</li>
+        </ol>
+    
+        <h3>Qualifications:</h3>
+        <ol>
+            <li>Proficiency in Python is essential.</li>
+            <li>Strong skills in web development technologies, preferably TypeScript and React.</li>
+            <li>Familiarity with C++ or C.</li>
+            <li>Experience or a strong interest in applied machine learning is highly advantageous.</li>
+            <li>Excellent problem-solving skills and a passion for innovation at the intersection of technology and agriculture.</li>
+        </ol>
+    
+        <h3>What We Offer:</h3>
+        <ol>
+            <li>A dynamic and interdisciplinary work environment.</li>
+            <li>Opportunities for professional growth and learning in multiple areas of software engineering.</li>
+            <li>The chance to contribute to sustainable agriculture and renewable energy initiatives.</li>
+            <li>Competitive compensation and benefits package.</li>
+        </ol>
+
+    </section>
+    <section class="white-role">
+        <h2>
+            Agricultural Scientist Internship
+        </h2>
+
+        <h3>Key Responsibilities:</h3>
+        <ol>
+            <li>Collaborate with a team of software engineers and data scientists to develop predictive models for Agrivoltaic systems.</li>
+            <li>Contribute to research and development in ML/AI applications within the agricultural sector.</li>
+        </ol>
+
+        <h3>Qualifications:</h3>
+        <ol>
+            <li>Research experience in Machine Learning/AI, specifically applied to Agriculture.</li>
+            <li>Eagerness to learn and contribute to a team focused on sustainable agriculture and renewable energy.</li>
+        </ol>
+
+    </section>
+    <section class="gray-role">
+        <h2>
+            Data Science Internship
+        </h2>
+
+        <h3>Key Responsibilities:</h3>
+        <ol>
+            <li>Develop and implement data visualizations to communicate crop and solar performance.</li>
+            <li>Work closely with our data team to analyze and interpret complex datasets.</li>
+        </ol>
+
+        <h3>Qualifications:</h3>
+        <ol>
+            <li>Previous experience or a strong portfolio in data science.</li>
+            <li>A passion for data visualization and the ability to convey complex information in an understandable manner.</li>
+        </ol>
+
+
     </section> -->
+
+    
 
     <footer>
         <div class="top-container">
             <div class="contact-info">
-                <!-- <div class="anim-container"></div> -->
-                <!-- class = "underline-anim" -->
-                <!-- </div> -->
                 <div class="anim-container">
                     <a class="underline-anim" href="mailto:mbendok@fundusol.com,lborletti@fundusol.com">Email Us</a>
                 </div>
@@ -297,7 +625,7 @@
         </div>
         <div class="bottom-container">
             <div class="copyright">
-                © 2022 Fundusol LLC.
+                © 2024 Fundusol LLC.
             </div>
             <div class="made-by">
                 Made by
@@ -341,5 +669,33 @@
             });
         });
    </script>
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script>
+    // Get all the role-section divs
+    const roleSections = document.querySelectorAll('.role-section');
+
+    // Loop through each role-section div
+    roleSections.forEach(roleSection => {
+        // Add event listener for hover
+        roleSection.addEventListener('mouseover', () => {
+            // Get the corresponding underline-anim link
+            const underlineAnimLink = roleSection.querySelector('.underline-anim');
+            // Trigger the hover event on the underline-anim link
+            console.log("hover")
+            underlineAnimLink.dispatchEvent(new Event('mouseover'));
+        });
+
+        // Add event listener for mouseout
+        roleSection.addEventListener('mouseout', () => {
+            // Get the corresponding underline-anim link
+            const underlineAnimLink = roleSection.querySelector('.underline-anim');
+            // Trigger the mouseout event on the underline-anim link
+            console.log("mouseout") 
+            underlineAnimLink.dispatchEvent(new Event('mouseout'));
+        });
+    });
+</script>
 </body>
 </html>
