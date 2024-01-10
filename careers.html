@@ -526,74 +526,6 @@
         </div>
     </div>
 
-    <!-- <section class="gray-role">
-        <h2>
-            Software Engineering Internship
-        </h2>
-
-        <h3>Key Responsibilities:</h3>
-        <ol>
-            <li><strong>Application Development:</strong> Collaborate with solar engineers and agricultural scientists to create sophisticated simulation and design platforms for Agrivoltaics. You will be primarily working with Python, with opportunities to learn and apply other technologies.</li>
-            <li><strong>Web Development:</strong> Design and implement customer-oriented websites, serving as a vital interface for farmers, solar developers, and venture capitalists. Your main toolkit will include TypeScript and React, focusing on creating intuitive and responsive user experiences.</li>
-            <li><strong>Model Engineering:</strong> Work closely with software and machine learning experts to develop efficient systems that optimize cost savings for farmers. Your expertise in Python, C++, or C, coupled with a strong grasp of applied machine learning techniques, will be crucial in this endeavor.</li>
-        </ol>
-    
-        <h3>Qualifications:</h3>
-        <ol>
-            <li>Proficiency in Python is essential.</li>
-            <li>Strong skills in web development technologies, preferably TypeScript and React.</li>
-            <li>Familiarity with C++ or C.</li>
-            <li>Experience or a strong interest in applied machine learning is highly advantageous.</li>
-            <li>Excellent problem-solving skills and a passion for innovation at the intersection of technology and agriculture.</li>
-        </ol>
-    
-        <h3>What We Offer:</h3>
-        <ol>
-            <li>A dynamic and interdisciplinary work environment.</li>
-            <li>Opportunities for professional growth and learning in multiple areas of software engineering.</li>
-            <li>The chance to contribute to sustainable agriculture and renewable energy initiatives.</li>
-            <li>Competitive compensation and benefits package.</li>
-        </ol>
-
-    </section>
-    <section class="white-role">
-        <h2>
-            Agricultural Scientist Internship
-        </h2>
-
-        <h3>Key Responsibilities:</h3>
-        <ol>
-            <li>Collaborate with a team of software engineers and data scientists to develop predictive models for Agrivoltaic systems.</li>
-            <li>Contribute to research and development in ML/AI applications within the agricultural sector.</li>
-        </ol>
-
-        <h3>Qualifications:</h3>
-        <ol>
-            <li>Research experience in Machine Learning/AI, specifically applied to Agriculture.</li>
-            <li>Eagerness to learn and contribute to a team focused on sustainable agriculture and renewable energy.</li>
-        </ol>
-
-    </section>
-    <section class="gray-role">
-        <h2>
-            Data Science Internship
-        </h2>
-
-        <h3>Key Responsibilities:</h3>
-        <ol>
-            <li>Develop and implement data visualizations to communicate crop and solar performance.</li>
-            <li>Work closely with our data team to analyze and interpret complex datasets.</li>
-        </ol>
-
-        <h3>Qualifications:</h3>
-        <ol>
-            <li>Previous experience or a strong portfolio in data science.</li>
-            <li>A passion for data visualization and the ability to convey complex information in an understandable manner.</li>
-        </ol>
-
-
-    </section> -->
-
     
 
     <footer>
@@ -606,10 +538,8 @@
                     Stanford, CA 94309
                 </div>
             </div>
-            
-            <!-- <a href="index.html"><img class = "footer-logo" src="assets/logo-white.svg" alt="Fundusol"></a> -->
+        
             <a href="index.html">
-                <!-- <img src="assets/logo-notext.svg" class = "footer-logo" alt=""> -->
                 <picture>
                     <source media="(min-width: 1080px)" class = "footer-logo" id = "source-footer" srcset="assets/logo-white.png">
                     <img src="assets/logo-notext.svg" class = "footer-logo" alt="">
@@ -619,7 +549,6 @@
 
             <div class="social-medias">
                 <a target="_blank" href="https://www.instagram.com/fundusol/"><img class = "instagram-icon" src="assets/instagram-icon.svg" alt=""></a>
-                <!-- <a href=""><img class = "facebook-icon" src="assets/facebook-icon.svg" alt=""></a> -->
                 <a target="_blank" href="https://www.youtube.com/channel/UCBCQtgEVeU8ALlQpzEuw5Rg/featured"><img class = "youtube-icon" src="assets/youtube-icon.svg" alt=""></a>
             </div>
         </div>
@@ -672,30 +601,5 @@
    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-<script>
-    // Get all the role-section divs
-    const roleSections = document.querySelectorAll('.role-section');
-
-    // Loop through each role-section div
-    roleSections.forEach(roleSection => {
-        // Add event listener for hover
-        roleSection.addEventListener('mouseover', () => {
-            // Get the corresponding underline-anim link
-            const underlineAnimLink = roleSection.querySelector('.underline-anim');
-            // Trigger the hover event on the underline-anim link
-            console.log("hover")
-            underlineAnimLink.dispatchEvent(new Event('mouseover'));
-        });
-
-        // Add event listener for mouseout
-        roleSection.addEventListener('mouseout', () => {
-            // Get the corresponding underline-anim link
-            const underlineAnimLink = roleSection.querySelector('.underline-anim');
-            // Trigger the mouseout event on the underline-anim link
-            console.log("mouseout") 
-            underlineAnimLink.dispatchEvent(new Event('mouseout'));
-        });
-    });
-</script>
 </body>
 </html>
