@@ -398,6 +398,27 @@ footer {
 	// }
 }
 
+#container-recruit {
+	.container {
+		display: flex !important;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: space-between;
+		max-width: unset !important;
+	}
+	nav {
+		justify-content: end;
+		align-items: center;
+		ul {
+			align-items: center !important;
+			li {
+				align-items: center !important;
+				margin-top: 0;
+			}
+		}
+	}
+}
+
 nav.menu-btn {
 	display: block;
 }

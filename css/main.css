@@ -327,6 +327,25 @@ footer .bottom-container .made-by .wave-container span {
   }
 }
 
+#container-recruit .container {
+  display: flex !important;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  max-width: unset !important;
+}
+#container-recruit nav {
+  justify-content: end;
+  align-items: center;
+}
+#container-recruit nav ul {
+  align-items: center !important;
+}
+#container-recruit nav ul li {
+  align-items: center !important;
+  margin-top: 0;
+}
+
 nav.menu-btn {
   display: block;
 }
